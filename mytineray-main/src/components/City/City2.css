@@ -1,0 +1,112 @@
+.cover-container{
+    height: 100;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.video{
+   position: absolute;
+   top: 120px;
+   left: 0;
+   width: 100%;
+   height: 150px;
+   overflow:hidden;
+   object-fit:cover;
+   z-index: -2;
+}
+.nombreciudad{
+   
+   font-family: "Oswal";
+   margin-top: 50px;
+    z-index: 1;
+}
+
+.nombreciudad>h1{
+    font-size: 100px; 
+    color: rgb(155, 136, 211);
+    text-shadow: 1px 1px 2px black;
+}
+/* cards */
+
+.bodys{
+    display: flex;
+    align-items: center;
+    justify-content:left;
+    min-height: 30vh;
+    margin-top: 30px;
+}
+
+.cartas{
+    background: rgb(159, 228, 222);
+    height: 380px;
+    width: 300px;
+    margin:auto;
+    border-radius: 35px;
+    padding: 10px 10px;
+    justify-content: center;
+    
+}
+.cartas .contenedor {
+    color: rgb(236, 102, 230);
+    text-align: center;
+   
+}
+
+.usuario1{
+    height: 200px;
+    width: 200px;
+    background:white;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 50%;
+  
+    
+}
+.c1{
+    width: 100%;
+    height: 100%;
+}
+.encabezado{
+     margin: 20px 0;
+     font-size: 50px;
+     font-weight: 600;
+     text-shadow: 2px 1px 5px black;
+ }
+
+.usuario2{
+    height: 200px;
+    width: 200px;
+    background: white;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 50%;
+
+}
+.c2{
+    width: 100%;
+    height: 100%;
+}
+
+.usuario3{
+    height: 200px;
+    width: 200px;
+    background:white;
+    justify-content: center;
+    margin-left: 30px;
+    border-radius: 50%;
+}
+.c3{
+    width: 100%;
+    height: 100%;
+}
+
+.cart1{
+    width: 100%;
+    height: 100vh;
+}
+
+

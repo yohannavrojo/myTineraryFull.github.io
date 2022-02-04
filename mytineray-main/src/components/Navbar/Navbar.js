@@ -1,0 +1,67 @@
+import { useState } from "react";
+import {
+  Container,
+  Wrapper,
+  IconContainer,
+  Menu,
+  MenuItem,
+  MenuItemLink,
+  MobileMenuIcon,
+} from "../Navbar/Navbar-elements";
+import { SiYourtraveldottv } from "react-icons/si";
+import { FaBars, FaTimes,FaRegUserCircle } from "react-icons/fa";
+import { IconContext } from "react-icons";
+import { Outlet,Link } from "react-router-dom";
+
+const Narbar = () => {
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+  const handleShowMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
+  return (
+    <>
+      <Container>
+        <Wrapper>
+          <IconContext.Provider value={{ color: "#b6a1c6", size: "2.5em" }}>
+            <IconContainer showMobileMenu={showMobileMenu}>
+              < SiYourtraveldottv  />
+              
+            </IconContainer>
+
+            <MobileMenuIcon onClick={() => handleShowMobileMenu()}>
+              {showMobileMenu ? <FaTimes /> : <FaBars />}
+            </MobileMenuIcon>
+
+            <Menu showMobileMenu={showMobileMenu}>
+              <MenuItem onClick={() => handleShowMobileMenu()}>
+               <Link to="/" > <MenuItemLink>HOME</MenuItemLink></Link> 
+                <hr />
+              </MenuItem>
+              <MenuItem onClick={() => handleShowMobileMenu()}>
+              <Link to="/Cities" >  <MenuItemLink>CITIES</MenuItemLink></Link>
+                <hr />
+              </MenuItem>
+               <MenuItem onClick={() => handleShowMobileMenu()}>
+               
+                <MenuItemLink>
+               <Link to="/Signup"><FaRegUserCircle 
+                 onClick={() => handleShowMobileMenu()}/></Link>
+                 
+                 </MenuItemLink>
+                <hr />
+              </MenuItem>
+               </Menu>
+              
+          </IconContext.Provider>
+
+        </Wrapper>
+      </Container>
+
+<Outlet/>
+    </>
+  );
+};
+
+export default Narbar;
+
