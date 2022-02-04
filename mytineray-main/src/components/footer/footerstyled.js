@@ -7,7 +7,6 @@ background: linear-gradient(157deg, rgba(247,151,226,0.8589987020198704) 18%, rg
 height: auto;
 width: 100vw;
 
-
 `;
 
 export const Wrapper = styled.div `
