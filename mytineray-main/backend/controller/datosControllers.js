@@ -11,7 +11,7 @@ const citiesController = {
             
         } catch (err) {
             error = err
-            console.log(error)
+            console.log(error);
             
         }
 
