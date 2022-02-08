@@ -11,14 +11,14 @@ const citiesController = {
             
         } catch (err) {
             error = err
-            console.log(error);
+            console.log(error)
             
         }
 
         res.json({// armamos operadores ternarios 
-            response:error?"ERROR":{cities},
-            success:error?false:true,
-            error:error
+            response: error? "ERROR":{cities},
+            success: error? false: true,
+            error: error
         })
 
     } // req=require res=response
