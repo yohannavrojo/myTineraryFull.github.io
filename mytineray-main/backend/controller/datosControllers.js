@@ -1,7 +1,7 @@
-const Cities = require("../models/cities")
+const Cities = require("../models/cities.js")
 
 const citiesController = {
-    ObtenerTodosLosDatos:async(req,res) => { // recibe una peticion y en relacion a esta da una respuesta 
+    ObtenerTodosLosDatos: async(req,res) => { // recibe una peticion y en relacion a esta da una respuesta 
       
         let cities
         let error = null
@@ -13,7 +13,7 @@ const citiesController = {
             error = err
             console.log(error)
             
-        }
+            }
 
         res.json({// armamos operadores ternarios 
             response: error? "ERROR":{cities},
