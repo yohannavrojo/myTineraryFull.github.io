@@ -63,7 +63,6 @@ function Cartascity() {
             </div>
           </div>
         </div>
-      
     </>
   );
 }

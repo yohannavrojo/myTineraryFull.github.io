@@ -1,17 +1,16 @@
-
-
 .blog-card{
     position: absolute;
     height: 670px;
     width: 95%;
-    max-width: 1400px;
+ display: flex;
+ flex-wrap: wrap;
     margin-top:50px;
     border-radius: 25px;
     background: white;
     box-shadow: 0px 10px 50px rgba(166, 145, 245, 0.76);
-  margin-left: 160px;
+  margin-left: 70px;
 }
-  .inner-part{
+.inner-part{
     position: absolute;
     display: flex;
     height: 360px;
@@ -20,11 +19,13 @@
     padding: 0 50px;
     margin-top: 180px;
   }
+
   #imgTap:checked ~ .inner-part {
     padding: 0;
     transition: .1s ease-in;
   }
-  .inner-part .img{
+
+.inner-part .img{
     height: 560px;
     width: 560px;
     flex-shrink: 0;
@@ -69,7 +70,7 @@
   #tap-3:checked ~ .inner-part .content-3{
     opacity: 1;
     margin-left: 0px;
-    z-index: 100;
+    z-index: 1;
     transition-delay: 0.3s;
   }
   
@@ -77,7 +78,7 @@
     font-size: 60px;
     font-weight: 700;
     color: #0d0925;
-    
+   
   }
   .content .text1{
     color: #4e4a67;
