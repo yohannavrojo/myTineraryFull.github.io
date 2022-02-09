@@ -2,13 +2,12 @@
     position: absolute;
     height: 670px;
     width: 95%;
- display: flex;
- flex-wrap: wrap;
+    max-width: 1400px;
     margin-top:50px;
     border-radius: 25px;
     background: white;
     box-shadow: 0px 10px 50px rgba(166, 145, 245, 0.76);
-  margin-left: 70px;
+  margin-left: 160px;
 }
 .inner-part{
     position: absolute;
@@ -78,7 +77,7 @@
     font-size: 60px;
     font-weight: 700;
     color: #0d0925;
-   
+    
   }
   .content .text1{
     color: #4e4a67;
