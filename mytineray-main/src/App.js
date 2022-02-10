@@ -20,6 +20,13 @@ export default function App() {
       console.log(data);
     });
 
+    const itinerary = []
+
+  axios.get("http://localhost:4000/api/itinerary")
+  .then(response => {
+    itinerary.push(response.data.response.itinerary)   
+  })
+
   
 
   return (
