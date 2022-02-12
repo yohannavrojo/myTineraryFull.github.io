@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -12,29 +12,33 @@ import FooterContainer from "./components/footer/footer";
 import CITY from "./components/City/CITY.js";
 
 export default function App() {
+
   const data = []
+  async function test(){}
+useEffect(()=>{
   axios.get("http://localhost:4000/api/datos")
 
     .then((response) => {
       data.push(...response.data.response.cities);
-      console.log(data);
-    });
+     
+    })
 
-    const itinerary = []
+
+  const itinerary = []
 
   axios.get("http://localhost:4000/api/itinerary")
   .then(response => {
-    itinerary.push(response.data.response.itinerary)   
+    itinerary.push(...response.data.response.itinerary)   
   })
 
-  
+ },[]) 
 
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
         <Route index element={<Home />} />
-        <Route path="/Cities" element={<Cities />} />
+        <Route path="/Cities" element={<Cities data={data}  />} />
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Signin" element={<Signin />} />
         <Route path="/CITY" element={<CITY />} />

@@ -1,7 +1,7 @@
 import React from "react";
 import "../City/Cartascity.css";
-import foto2 from "../imagenes/imagenes itinerary/abudabi2.jpg";
-import foto1 from "../imagenes/imagenes itinerary/abudabi1.jpg"
+import foto2 from "../imagenes/acuarela.jpg";
+import foto1 from "../imagenes/argelia2.jpg"
 function Cartascity() {
   return (
     <>

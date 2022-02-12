@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import {Link} from "react-router-dom"
-function Card({ title, imageSource, text, url }) {
+function Card({ name, img, description }) {
+ 
   return (
     <>
       <div className="div-imagen ">
         <div className="test" style={{ margin: "90px" }}>
           <p className="text-cards">
-            {text
-              ? text
+            {description
+              ? description
               : "Quis duis et enim esse dolore ipsum labore irure culpa. Aliquip dolor proident in ea ad aute duis id qui eiusmod laboris cupidatat anim. Adipisicing eu "}{" "}
           </p>
           
@@ -21,10 +22,10 @@ function Card({ title, imageSource, text, url }) {
 
         
         <div className="title desvanecer">
-          <img className="desvanecer" src={imageSource} />
+          <img className="desvanecer" src={img} />
           <h4 className="title" style={{ margin: "30px" }}>
             {" "}
-            {title}
+            {name}
           </h4>
         </div>
       </div>
@@ -38,10 +39,9 @@ function Card({ title, imageSource, text, url }) {
 }
 
 Card.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string,
-  imageSource: PropTypes.string,
-  text: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  img: PropTypes.string,
+  description: PropTypes.string,
 };
 
 export default Card;
