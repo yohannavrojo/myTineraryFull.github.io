@@ -4,11 +4,12 @@ import covervideo from "../imagenes/video.mp4";
 import moneda from "../imagenes/current.png";
 import "../City/City2.css";
 import Carta1 from "../City/Cartascity";
-
+import Titulo from"../City/titulo";
 function CITY() {
  
   return (
     <>
+    <div className="pagina">
       <div className="cover-container">
         <video className="video" src={covervideo} autoPlay loop muted></video>
         <div className="nombreciudad">
@@ -16,7 +17,10 @@ function CITY() {
         </div>
       </div>
      
-      <body className="bodys">
+{/*  itinerario */}
+
+     
+<body className="bodys">
           <div className="cartas">
             <div className="contenedor">
               <div className="usuario1" >
@@ -49,7 +53,10 @@ function CITY() {
           
                
           </body> 
+         
  <div className="cart1">
+ <Titulo/>
+     
  <Carta1/>
             
    </div>
@@ -57,7 +64,7 @@ function CITY() {
 
            
          
-    
+   </div>
     
     </>
   );
