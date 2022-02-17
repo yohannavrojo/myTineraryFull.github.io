@@ -10,26 +10,33 @@ import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
 import FooterContainer from "./components/footer/footer";
 import CITY from "./components/City/CITY.js";
+import { actionType, initialState } from "./reducer";
+import { useStateValue } from "./StateProvider";
+
 
 export default function App() {
+ const [{cities},dispatch]=useStateValue()
 
   const data = []
-  async function test(){}
+
+
 useEffect(()=>{
   axios.get("http://localhost:4000/api/datos")
 
-    .then((response) => {
-      data.push(...response.data.response.cities);
+    .then(response =>{
+      console.log(response) 
+      dispatch({
+        type:actionType.CITIESDB,
+        cities:response.data.response.cities})
      
-    })
+      })
 
+  // const itinerary = []
 
-  const itinerary = []
-
-  axios.get("http://localhost:4000/api/itinerary")
-  .then(response => {
-    itinerary.push(...response.data.response.itinerary)   
-  })
+  // axios.get("http://localhost:4000/api/itinerary")
+  // .then(response => {
+  //   itinerary.push(...response.data.response.itinerary)   
+  // })
 
  },[]) 
 
@@ -37,11 +44,12 @@ useEffect(()=>{
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="/Cities" element={<Cities data={data}  />} />
+        <Route path="/Home" element={<Home />} />
+        <Route path="/Cities" element={<Cities />} /> 
         <Route path="/Signup" element={<Signup />} />
         <Route path="/Signin" element={<Signin />} />
-        <Route path="/CITY" element={<CITY />} />
+         <Route path="/CITY/:id" element={<CITY />} /> 
+        <Route path="*" element={<Home/>} />
       </Routes>
 
       <FooterContainer />
@@ -49,4 +57,4 @@ useEffect(()=>{
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+

@@ -1,8 +1,5 @@
 import React from "react";
-import styled from "styled-components";
 import "../general/Home.css";
-import { FcLike } from "react-icons/fc";
-import {FaRegComment} from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -43,7 +40,7 @@ const Home = () => {
               <p>
               Anyone who has been to Las Vegas knows that this town in southern Nevada, in the southwestern United States, rises up in the middle of nowhere in the arid Mojave Desert like a mirage... or an oasis.
               </p>
-             <FcLike size={'3em'}/>   <FaRegComment size={'3em'} />
+             
               <div className="boton">
               <Link to={"/Cities"}>
                   <span>Read More</span>
@@ -62,7 +59,7 @@ const Home = () => {
               It is the most populous city in the State of New York, in the United States of America, and the second largest urban agglomeration on the continent. It is the center of the New York metropolitan area,
                 which is among the five largest urban agglomerations in the world.
               </p>
-              <FcLike size={'3em'}/>   <FaRegComment size={'3em'} />
+              
               <div className="boton">
               <Link to={"/Cities"}>
                   <span>Read More</span>
@@ -81,7 +78,7 @@ const Home = () => {
               Singapore is a city-state located at the southern tip of the Malay Peninsula. In just 700 square kilometers it has a population of more than four and a half million inhabitants.
                 Singapore is characterized by plurality.
               </p>
-              <FcLike size={'3em'}/>   <FaRegComment size={'3em'} />
+              
               <div className="boton">
                 <Link to={"/Cities"}>
                   <span>Read More</span>

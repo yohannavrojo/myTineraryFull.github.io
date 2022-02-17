@@ -12,17 +12,16 @@
 
 .titulo {
 	margin-top: 750px;
-	height: auto;
+	height: 150px;
 	color: transparent;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 100px;
+	font-size: 130px;
 	font-weight: bold;
 background-image: url('../imagenes/pince.jpg');
 	background-size: cover;
 	background-clip: text;
-	
--webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
 font-family: "Oswald";
 
  
@@ -30,14 +29,12 @@ font-family: "Oswald";
 
 .text-cities-p{
 	display: grid;
-	 
-
  background: url( ../imagenes/pinceladas2.jpg);
 margin-top:40px ;
 height: 200px;
 padding-top:50px ;
 border-radius: 170px;
 font-family: "Oswald";
-color: #24721d;
+
 
 }

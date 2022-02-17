@@ -1,39 +1,39 @@
 import React from "react";
 import PropTypes from "prop-types";
-import {Link} from "react-router-dom"
-function Card({ name, img, description }) {
- 
+import { Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+
+function Card() {
+  const [{ cities }, dispatch] = useStateValue();
   return (
     <>
-      <div className="div-imagen ">
-        <div className="test" style={{ margin: "90px" }}>
-          <p className="text-cards">
-            {description
-              ? description
-              : "Quis duis et enim esse dolore ipsum labore irure culpa. Aliquip dolor proident in ea ad aute duis id qui eiusmod laboris cupidatat anim. Adipisicing eu "}{" "}
-          </p>
-          
+    {cities.map(city=>
 
+      <div className="col-md-5" key={city._id} style={{ margin: "30px" }}>
+        <div className="div-imagen ">
+          <div className="test" style={{ margin: "90px" }}>
+            <p className="text-cards">
+              {city.description}
+            </p>
+          </div>
 
-
+          <div className="title desvanecer">
+            <img className="desvanecer" src={process.env.PUBLIC_URL+`/Imagenes/imagenesciti/${city.img}`} />
+            <h4 className="title" style={{ margin: "30px" }}>
+              
+              {city.name}
+            </h4>
+          </div>
         </div>
-        
-
-
-        
-        <div className="title desvanecer">
-          <img className="desvanecer" src={img} />
-          <h4 className="title" style={{ margin: "30px" }}>
-            {" "}
-            {name}
-          </h4>
-        </div>
+        <Link to={`/CITY/${city._id}`}>
+          <div className="boton">
+            <a href="#">
+              <span>Read More</span>
+            </a>
+          </div>
+        </Link>
       </div>
-      <Link to="/CITY"><div className="boton">
-                <a href="#">
-                  <span>Read More</span>
-                </a>
-              </div></Link>
+      )}
     </>
   );
 }

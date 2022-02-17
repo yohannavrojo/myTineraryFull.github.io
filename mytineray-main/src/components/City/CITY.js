@@ -5,18 +5,28 @@ import moneda from "../imagenes/current.png";
 import "../City/City2.css";
 import Carta1 from "../City/Cartascity";
 import Titulo from"../City/titulo";
+import { useParams } from "react-router-dom";
+import {useStateValue} from "../../StateProvider"
+
 function CITY() {
- 
+ const [{cities},dispath] =useStateValue() 
+ const {id}=useParams()
+ const citySelecter= cities.filter(city=>city._id === id) 
+  
+  
+
+
   return (
     <>
-    <div className="pagina">
+    {citySelecter.map(data=>
+        <div className="pagina" >
       <div className="cover-container">
         <video className="video" src={covervideo} autoPlay loop muted></video>
         <div className="nombreciudad">
-          <h1> Nombre Ciudad </h1>
+          <h1>{data.name}</h1>
         </div>
       </div>
-     
+      
 {/*  itinerario */}
 
      
@@ -26,7 +36,7 @@ function CITY() {
               <div className="usuario1" >
               <img className="c1"  src={moneda} ></img>
               </div>
-              <header className="encabezado" >Country</header>
+              <header className="encabezado" >{data.country}</header>
             </div>
           </div>
          
@@ -36,7 +46,7 @@ function CITY() {
               <div className="usuario2">
                 <img className="c2"  src={moneda} ></img>
               </div>
-              <header className="encabezado" >Language</header>
+              <header className="encabezado" >{data.language}</header>
             </div>
           </div>
 
@@ -47,12 +57,13 @@ function CITY() {
               <div className="usuario3">
               <img className="c3"  src={moneda} ></img>
               </div>
-              <header className="encabezado" >Currency</header>
+              <header className="encabezado" >{data.currency}</header>
             </div>
           </div>
           
                
           </body> 
+         
          
  <div className="cart1">
  <Titulo/>
@@ -65,7 +76,7 @@ function CITY() {
            
          
    </div>
-    
+     )}
     </>
   );
 }
