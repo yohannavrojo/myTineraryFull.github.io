@@ -50,7 +50,7 @@ useEffect(() => {
 {/*  itinerario */}
 
      
-<body className="bodys">
+<div className="bodys">
           <div className="cartas">
             <div className="contenedor">
               <div className="usuario1" >
@@ -82,7 +82,7 @@ useEffect(() => {
           </div>
           
                
-          </body> 
+          </div> 
          
          
 
