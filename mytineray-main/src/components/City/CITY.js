@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import covervideo from "../imagenes/video.mp4";
 import moneda from "../imagenes/current.png";
 import languaje from "../imagenes/languaje.png.png";
@@ -8,14 +8,33 @@ import Itinerarios from "./Itinerarios";
 import Titulo from"../City/titulo";
 import { useParams } from "react-router-dom";
 import {useStateValue} from "../../StateProvider"
- 
+import {actionType} from "../../reducer" 
+import axios from "axios";
 
 function CITY() {
  const [{cities,itineraries},dispath] =useStateValue() 
  const {id}=useParams()
  const citySelecter= cities.filter(city=>city._id === id) 
+ console.log(citySelecter)
  const itineSelecter=itineraries.filter(itine=>itine.city=== citySelecter[0].name)  
 console.log(itineSelecter)
+
+console.log(itineraries)
+
+useEffect(() => {
+  console.log(citySelecter)
+  citySelecter.map(city=>
+     
+          axios.get(`http://localhost:4000/api/itinerary/${city.name}`)
+          .then(response => dispath({  
+            type:actionType.ITINERARIESDB ,
+            itineraries:response.data.response.itinerary
+            })
+      ))},[])
+
+
+
+
 
   return (
     <>

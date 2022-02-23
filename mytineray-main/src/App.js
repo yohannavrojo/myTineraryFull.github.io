@@ -30,14 +30,14 @@ useEffect(()=>{
      
       })
       
-      axios.get("http://localhost:4000/api/itinerary")
-   .then(response => {
-      dispatch({
-        type:actionType.ITINERARIESDB,
-       itineraries:response.data.response.itinerary //este itinerary declarado datacontroller
-      })
+  //     axios.get("http://localhost:4000/api/itinerary")
+  //  .then(response => {
+  //     dispatch({
+  //       type:actionType.ITINERARIESDB,
+  //      itineraries:response.data.response.itinerary //este itinerary declarado datacontroller
+  //     })
      
-      });
+      // });
 
  },[]) 
 

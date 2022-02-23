@@ -5,7 +5,7 @@ const {ObtenerTodosLosDatos, ObtenerItynerarios} = datosController // desestruct
 Router.route("/datos") // "datos" parte de la url de la consulta
 .get(ObtenerTodosLosDatos)
 
-Router.route("/itinerary") // "datos" parte de la url de la consulta
+Router.route("/itinerary/:city") // "datos" parte de la url de la consulta 
 .get(ObtenerItynerarios)
 
 module.exports = Router

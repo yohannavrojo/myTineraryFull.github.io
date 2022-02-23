@@ -1,7 +1,6 @@
 import React from "react";
 import "../City/Itinerarios.css";
 
-import foto1 from "../imagenes/argelia2.jpg";
 
 function Itinerarios(props) {
   const itinerarios = props.itineSelecter;
@@ -13,8 +12,8 @@ function Itinerarios(props) {
         <div>
           
           <div class="container-card">
-            {itinerarios.map((itine) => (
-            <div  class="card">
+            {itinerarios.map(itine => 
+            <div  key={itine._id} class="card">
               <figure>
                 <img src={process.env.PUBLIC_URL+`/Imagenes/imagenesitinerary/${itine.img}`} />
               </figure>
@@ -27,10 +26,11 @@ function Itinerarios(props) {
                 <h2>
                   {itine.price} {itine.time}
                 </h2>
-                <a href="#">Leer Màs</a>
+                <a href="#">Comment</a>
+                <a href="#">Like</a>
               </div>
             </div>
-          ))}
+          )}
           </div>
         </div>
       
