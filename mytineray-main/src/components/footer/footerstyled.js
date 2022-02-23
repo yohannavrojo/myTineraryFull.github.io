@@ -5,7 +5,7 @@ export const Container = styled.div `
 background: rgb(247,151,226);
 background: linear-gradient(157deg, rgba(247,151,226,0.8589987020198704) 18%, rgba(159,204,255,0.8477942202271533) 51%, rgba(215,205,205,0.9122199905352766) 69%, rgba(249,236,144,0.7805673294708508) 100%);
 height: auto;
-width: 100vw;
+
 
 `;
 

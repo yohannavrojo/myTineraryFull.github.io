@@ -15,28 +15,29 @@ import { useStateValue } from "./StateProvider";
 
 
 export default function App() {
- const [{cities},dispatch]=useStateValue()
+ const [{cities,itineraries},dispatch]=useStateValue()
 
   const data = []
 
 
 useEffect(()=>{
   axios.get("http://localhost:4000/api/datos")
-
-    .then(response =>{
-      console.log(response) 
+   .then(response =>{
+    
       dispatch({
         type:actionType.CITIESDB,
         cities:response.data.response.cities})
      
       })
-
-  // const itinerary = []
-
-  // axios.get("http://localhost:4000/api/itinerary")
-  // .then(response => {
-  //   itinerary.push(...response.data.response.itinerary)   
-  // })
+      
+      axios.get("http://localhost:4000/api/itinerary")
+   .then(response => {
+      dispatch({
+        type:actionType.ITINERARIESDB,
+       itineraries:response.data.response.itinerary //este itinerary declarado datacontroller
+      })
+     
+      });
 
  },[]) 
 

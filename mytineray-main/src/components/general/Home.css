@@ -29,18 +29,18 @@
   object-fit: cover;
 }
 
-.cards {
+.cardshome {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding: 20px;
   grid-gap: 40px;
   margin-bottom: 40px;
-  margin-left: 100px;
+ margin-left: 30px;
   
 }
-.card  {
+
+.cardh  {
   align-content: center;
-  margin-top: 30px;
   width: 400px;
   background-color: #ffffff;
   border-radius: 20px;
@@ -68,12 +68,15 @@ img {
 }
 .card1 > .container:after {
   background-image: linear-gradient(135deg, #0000ec9a, #fb36f493);
+  border-radius: 20px;
 }
 .card2 > .container:after {
   background-image: linear-gradient(135deg, #1b5b5e, #42ffdc9f);
+  border-radius: 20px;
 }
 .card3 > .container:after {
   background-image: linear-gradient(135deg, #fdcb74a9, #f84f1cc4);
+  border-radius: 20px;
 }
 .details {
   padding: 20px 10px;

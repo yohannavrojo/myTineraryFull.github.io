@@ -42,7 +42,7 @@
 
 .cartas{
     background: rgb(159, 228, 222);
-    height: 380px;
+    height: 520px;
     width: 300px;
     margin:auto;
     border-radius: 35px;
@@ -104,9 +104,6 @@
     height: 100%;
 }
 
-.cart1{
-    width: 100%;
-    height: 100vh;
-}
+
 
 

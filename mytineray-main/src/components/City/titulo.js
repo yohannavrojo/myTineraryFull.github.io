@@ -1,16 +1,13 @@
 import React from "react";
 import "../City/titulo.css";
+import 'animate.css';
+
 
 function titulo ()  {
   return (
   
   <>
-<div className="titulo-division">
-        <h2 className="titulo-container">
-          <span>Itinerary</span>
-        </h2>
-      </div>
-  
+        <h2 className="animate__animated animate__rubberBand animate__repeat-3	3">My Itinerary</h2>
   </>
     
     );

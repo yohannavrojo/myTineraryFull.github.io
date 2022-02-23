@@ -1,7 +1,7 @@
 import React from "react";
 import "../general/Home.css";
 import { Link } from "react-router-dom";
-
+// import Carousel from "../general/carouselHome";
 const Home = () => {
   
   return (
@@ -30,8 +30,8 @@ const Home = () => {
       </div>
 
       
-        <div className="cards">
-          <div className="card card1">
+        <div className="cardshome">
+          <div className="cardh card1">
             <div className="container">
               <img src={require("../imagenes/vegas.jpg")} alt="vegas" />
             </div>
@@ -49,7 +49,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card card2">
+          <div className="cardh card2">
             <div className="container">
               <img src={require("../imagenes/Nueva-York.gif")} alt="york" />
             </div>
@@ -68,7 +68,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card card3">
+          <div className="cardh card3">
             <div className="container">
               <img src={require("../imagenes/singapur .jpg")} alt="singapur" />
             </div>
@@ -87,12 +87,13 @@ const Home = () => {
               </div>
             </div>
           </div>
+        
         </div>
        
       </body>
-     
+   
 
-     
+     {/* <Carousel>hola </Carousel> */}
     </>
   );
 };

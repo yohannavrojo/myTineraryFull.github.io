@@ -1,20 +1,21 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
 import covervideo from "../imagenes/video.mp4";
 import moneda from "../imagenes/current.png";
+import languaje from "../imagenes/languaje.png.png";
+import avion from "../imagenes/avion.png";
 import "../City/City2.css";
-import Carta1 from "../City/Cartascity";
+import Itinerarios from "./Itinerarios";
 import Titulo from"../City/titulo";
 import { useParams } from "react-router-dom";
 import {useStateValue} from "../../StateProvider"
+ 
 
 function CITY() {
- const [{cities},dispath] =useStateValue() 
+ const [{cities,itineraries},dispath] =useStateValue() 
  const {id}=useParams()
  const citySelecter= cities.filter(city=>city._id === id) 
-  
-  
-
+ const itineSelecter=itineraries.filter(itine=>itine.city=== citySelecter[0].name)  
+console.log(itineSelecter)
 
   return (
     <>
@@ -34,7 +35,7 @@ function CITY() {
           <div className="cartas">
             <div className="contenedor">
               <div className="usuario1" >
-              <img className="c1"  src={moneda} ></img>
+              <img className="c1"  src={avion} ></img>
               </div>
               <header className="encabezado" >{data.country}</header>
             </div>
@@ -44,7 +45,7 @@ function CITY() {
           <div className="cartas">
             <div className="contenedor">
               <div className="usuario2">
-                <img className="c2"  src={moneda} ></img>
+                <img className="c2"  src={languaje} ></img>
               </div>
               <header className="encabezado" >{data.language}</header>
             </div>
@@ -65,17 +66,17 @@ function CITY() {
           </body> 
          
          
- <div className="cart1">
+
  <Titulo/>
      
- <Carta1/>
+  <Itinerarios itineSelecter={itineSelecter} />
             
    </div>
         
 
            
          
-   </div>
+   
      )}
     </>
   );
