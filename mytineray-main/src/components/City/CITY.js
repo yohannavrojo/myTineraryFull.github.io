@@ -39,7 +39,7 @@ useEffect(() => {
   return (
     <>
     {citySelecter.map(data=>
-        <div className="pagina" >
+        <div key={data._id} className="pagina" >
       <div className="cover-container">
         <video className="video" src={covervideo} autoPlay loop muted></video>
         <div className="nombreciudad">
