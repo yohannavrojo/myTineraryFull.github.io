@@ -14,19 +14,20 @@ async function NewUser(event){
     email:event.target[2].value,
     password:event.target[3].value,
 }
-  console.log(NuevoUsuario)
+  // console.log(NuevoUsuario)
 
 // 
 
   await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
-   .then(response=> console.log(response)
-  // displayMessages(response.data)
+   .then(response=>
+   displayMessages(response.data)
+  // console.log(response.data)
   )
-  // function displayMessages(data){
-  //   if(data.success==="falseVAL"){
-  //    data.response.error.details.map(error=>alert(error.message))
-  //   }
-  // }
+  function displayMessages(data){
+    if(data.success==="falseVAL"){
+     data.response.error.details.map(error=>alert(error.message))
+    }
+  }
 }
   return (
     <div className='form-content-right'>

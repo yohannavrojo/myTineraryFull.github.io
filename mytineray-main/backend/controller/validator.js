@@ -17,7 +17,7 @@ const validator =(req,res,next)=>{
             "string.email":"Formato de correo erroneo"
 
         }),
-        password:joi.string().max(10).min(6).trim().pattern(new RegExp("^[a-zA-Z0-9]+$")).required().messages({
+        password:joi.string().max(10).min(6).trim().pattern(new RegExp("^[a-zA-Z0-9]{3,30}$")).required().messages({
          "string.min":"la contraseña debe contener minimo 6 caracteres",
          "string.pattern.base":"la contraseña debe ser alfanumerico"
         }),
@@ -25,7 +25,7 @@ const validator =(req,res,next)=>{
 const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})
 
 if (validation.error){
-    return res.json({success:false,response:validation})
+    return res.json({success:"falseVAL",response:validation})
 }
 next()
 
