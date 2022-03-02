@@ -6,7 +6,7 @@ const Home = () => {
   
   return (
     <>
-     <body>
+    
       <div className="home">
         <div className="homeTitle">
           <p className="Title">MY ITINERARY </p>
@@ -90,7 +90,7 @@ const Home = () => {
         
         </div>
        
-      </body>
+      
    
 
      {/* <Carousel>hola </Carousel> */}
