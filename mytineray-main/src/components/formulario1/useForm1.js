@@ -6,7 +6,7 @@ const useForm = (callback, validate) => {
     lastname:"",
     email: '',
     password: '',
-    password2: ''
+   
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);

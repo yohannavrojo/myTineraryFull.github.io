@@ -8,7 +8,7 @@ const login = () => {
         <>
         
         
-<body>
+
     <form className="formulario">
     
     <h1>Sign In</h1>
@@ -29,10 +29,10 @@ const login = () => {
          </div>
          <input type="submit" value="Login" className="button"/>
          <p>By signing up, you agree to our Terms of Use and Privacy Policy.</p>
-         <p>You do not have an account?<Link to={"/Signup"}><a className="link" href="#">Sign up </a></Link>  </p>
+         <p>You do not have an account?<Link to={"/Signup"}><i className="link" href="#">Sign up </i></Link>  </p>
      </div>
     </form>
-</body>
+
         </>
     )
 }
