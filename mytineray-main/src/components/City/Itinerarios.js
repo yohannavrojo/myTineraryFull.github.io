@@ -11,13 +11,13 @@ function Itinerarios(props) {
       
         <div>
           
-          <div class="container-card">
+          <div className="container-card">
             {itinerarios.map(itine => 
-            <div  key={itine._id} class="card">
+            <div  key={itine._id} className="card">
               <figure>
                 <img src={process.env.PUBLIC_URL+`/Imagenes/imagenesitinerary/${itine.img}`} />
               </figure>
-              <div class="contenido-card">
+              <div className="contenido-card">
                 <h3 >{itine.name}</h3>
                 <p >
                  {itine.description}

@@ -1,34 +1,66 @@
 import React from 'react';
-import validate from './validateInfo1';
-import useForm from './useForm1';
 import './Form1.css';
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 
-const FormSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = useForm(
-    submitForm,
-    validate
-  );
+const FormSignup = () => {
 
+async function NewUser(event){
+  console.log(event)
+  event.preventDefault()
+  const  NuevoUsuario = {firstname:event.target[0].value,
+    lastname:event.target[1].value,
+    email:event.target[2].value,
+    password:event.target[3].value,
+}
+  console.log(NuevoUsuario)
+
+// 
+
+  await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+   .then(response=> console.log(response)
+  // displayMessages(response.data)
+  )
+  // function displayMessages(data){
+  //   if(data.success==="falseVAL"){
+  //    data.response.error.details.map(error=>alert(error.message))
+  //   }
+  // }
+}
   return (
     <div className='form-content-right'>
-      <form onSubmit={handleSubmit} className='form' noValidate>
+      <form  className='form' noValidate onSubmit={NewUser}>
         <h1>
         SIGN UP
         </h1>
         <div className='form-inputs'>
-          <label className='form-label'>User</label>
+          <label className='form-label'>Firstname</label>
           <input
             className='form-input'
             type='text'
-            name='username'
-            placeholder='Enter user'
-            value={values.username}
-            onChange={handleChange}
+            name='firstname'
+            placeholder='Enter firstname'
+            // value={values.firstname}
+            // onChange={handleChange}
           />
-          {errors.username && <p>{errors.username}</p>}
+         
         </div>
+        <div className='form-inputs'>
+          <label className='form-label'>Lastname</label>
+          <input
+            className='form-input'
+            type='text'
+            name='lastname'
+            placeholder='Enter lastname'
+            // value={values.lastname}
+            // onChange={handleChange}
+          />
+         
+        </div>
+        
+        
+        
         <div className='form-inputs'>
           <label className='form-label'>Email</label>
           <input
@@ -36,10 +68,10 @@ const FormSignup = ({ submitForm }) => {
             type='email'
             name='email'
             placeholder='Enter your email'
-            value={values.email}
-            onChange={handleChange}
+            // value={values.email}
+            // onChange={handleChange}
           />
-          {errors.email && <p>{errors.email}</p>}
+         
         </div>
         <div className='form-inputs'>
           <label className='form-label'>Password</label>
@@ -49,12 +81,12 @@ const FormSignup = ({ submitForm }) => {
             name='password'
             placeholder='
             Enter your password'
-            value={values.password}
-            onChange={handleChange}
+            // value={values.password}
+            // onChange={handleChange}
           />
-          {errors.password && <p>{errors.password}</p>}
+         
         </div>
-        <div className='form-inputs'>
+        {/* <div className='form-inputs'>
           <label className='form-label'>Confirm Password</label>
           <input
             className='form-input'
@@ -62,10 +94,10 @@ const FormSignup = ({ submitForm }) => {
             name='password2'
             placeholder='confirm password'
             value={values.password2}
-            onChange={handleChange}
+            // onChange={handleChange}
           />
-          {errors.password2 && <p>{errors.password2}</p>}
-        </div>
+         
+        </div> */}
         <button className='form-input-btn' type='submit'>
         SIGN UP
         </button>
@@ -78,6 +110,6 @@ const FormSignup = ({ submitForm }) => {
       </form>
     </div>
   );
-};
+}
 
-export default FormSignup;
+export default FormSignup
