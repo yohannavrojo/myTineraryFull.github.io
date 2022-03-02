@@ -87,18 +87,18 @@ async function NewUser(event){
           />
          
         </div>
-        {/* <div className='form-inputs'>
+        <div className='form-inputs'>
           <label className='form-label'>Confirm Password</label>
           <input
             className='form-input'
             type='password'
             name='password2'
             placeholder='confirm password'
-            value={values.password2}
+            // value={values.password2}
             // onChange={handleChange}
           />
          
-        </div> */}
+        </div>
         <button className='form-input-btn' type='submit'>
         SIGN UP
         </button>
