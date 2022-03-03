@@ -62,7 +62,7 @@ const usersController = {
     nuevoUsuario: async(req,res)=>{
 
       const {firstname,lastname, email,password} = req.body.NuevoUsuario
-      console.log(req.body)
+      // console.log(req.body)
       try{
           const UsuarioExiste= await User.findOne({email})
 

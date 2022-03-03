@@ -27,10 +27,10 @@ async function NewUser(event){
     if(data.success==="falseVAL"){
       // console.log(data)
       // console.log(data.response.error.details)
-
-     alert(data.response.error.details.map(error=>error.message))
-    }else if(data.success==="trueUE"){
-      // console.log(data)
+    alert(data.response.error.details.map(error=>error.message))
+    
+  } else if(data.success==="trueUE"){
+     console.log(data)
     }
   }
 }
