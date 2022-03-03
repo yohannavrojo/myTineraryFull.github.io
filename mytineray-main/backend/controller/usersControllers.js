@@ -14,13 +14,13 @@ async function sendEmail(email,uniqueText){
        secure:true,
        auth:{
 
-         user:"mytinerariyoha@gmail.com", //crear correo para la parctica 
+         user:"mytinerariyoha@gmail.com", //crear correo para la parctica emisor 
          pass:"mitinerari"
 
        }
       
    })
-const sender= "mytinerariyoha@gmail.com"
+const sender= "mytinerariyoha@gmail.com" // correo de verificacion recepto
 const mailOptions ={
 
   from:sender,
