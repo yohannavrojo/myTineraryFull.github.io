@@ -26,7 +26,7 @@ const mailOptions ={
   from:sender,
   to:email,
   subject:"verificacion de usuario ",
-  html:`Presiona <a href=http://localhost:4000/api/verify${uniqueText}>Aqui</a>Para validar tu email`
+  html:`Presiona <a href=http://localhost:4000/api/verify/${uniqueText}>Aqui</a>Para validar tu email`
 
 }
 await transporter.sendMail(mailOptions, function(error,response){
@@ -48,7 +48,7 @@ const usersController = {
     const{uniqueText}=req.params// toma el parametro de la clave 
     const user= await User.findOne({uniqueText:uniqueText})
     if (user) {
-      user.emailVerificado=true
+      user.emailVerificado= true
       await user.save()
       res.redirect("http://localhost:3000/Signin")
       
