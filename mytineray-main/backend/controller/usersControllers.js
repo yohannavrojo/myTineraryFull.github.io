@@ -3,6 +3,7 @@ const nodemailer= require("nodemailer")
 const crypto= require("crypto")
 const User = require("../models/user.js")
 const bcryptjs=require("bcryptjs")
+const { response } = require("express")
 
 async function sendEmail(email,uniqueText){
 
@@ -13,22 +14,22 @@ async function sendEmail(email,uniqueText){
        secure:true,
        auth:{
 
-         user:"yohavale7883@gmail.com", //crear correo para la parctica 
-         pass:process.env.NODEMAILER
+         user:"mytinerariyoha@gmail.com", //crear correo para la parctica 
+         pass:"mitinerari"
 
        }
       
    })
-const sender= "yohavale7883@gmail.com"
+const sender= "mytinerariyoha@gmail.com"
 const mailOptions ={
 
   from:sender,
   to:email,
-  subjet:"verificacion de usuario ",
+  subject:"verificacion de usuario ",
   html:`Presiona <a href=http://localhost:4000/api/verify${uniqueText}>Aqui</a>Para validar tu email`
 
 }
-await transporter.sendMail(mailOptions,function(error,response){
+await transporter.sendMail(mailOptions, function(error,response){
 
   if (error){
     console.log(error)
@@ -44,7 +45,6 @@ await transporter.sendMail(mailOptions,function(error,response){
 const usersController = {
      
   verifyEmail: async(req,res)=>{
-
     const{uniqueText}=req.params// toma el parametro de la clave 
     const user= await User.findOne({uniqueText:uniqueText})
     if (user) {
@@ -52,7 +52,9 @@ const usersController = {
       await user.save()
       res.redirect("http://localhost:3000/Signin")
       
-    }
+    }else{
+      res.json({success:false, response:"It has not been possible to verfy your email"})
+  }
 
   },
 
@@ -90,9 +92,6 @@ const usersController = {
               // await NewUser.save()
               
           }
-
-         
-
 
       }
 
