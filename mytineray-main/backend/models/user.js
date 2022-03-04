@@ -6,7 +6,7 @@ const usersSchema = new mongoose.Schema ({
     email: {type:String,require:true},
     password:{type:String,require:true},
    emailVerificado:{type:Boolean,require:true},
-   
+   connected:{type:Boolean,require:true}
 })
 
 const User = mongoose.model("users",usersSchema)

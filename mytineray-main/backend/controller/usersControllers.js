@@ -81,10 +81,12 @@ const usersController = {
           email,
           password: passwordHash,
           uniqueText,
-          emailVerificado
+          emailVerificado,
+          connected:false,
 
         })
         if (!emailVerificado) {
+          
           await NewUser.save()
           await sendEmail(email, uniqueText)
           res.json({ success: "trueUE", response: "te hemos envia un correo electronico  para verifica tu email" })
@@ -118,8 +120,9 @@ const usersController = {
               firstname: usuario.firstname,
               lastname: usuario.lastname,
               email: usuario.email,
-
+          
             }
+            usuario.connected= true
             await usuario.save()
             res.json({ success: true, from: "controller", response: { token, datoUser } })
           }
@@ -127,13 +130,23 @@ const usersController = {
 
         }  
        else{res.json({success: false, from: "controller", error:"verifica tu email para validarlo "})}
-       
+
       } 
 
     } catch (error) {console.log(error);res.json({success:false,response:null,error:error}) }
 
-  }
+  },
+cerrarsesion: async (req,res)=>{
 
+  const email = req.body.closeUser
+  
+  const user = await User.findOne({email})
+
+  usuario.connected=false
+  await user.save()
+  res.json({success:true, response:"Cerrar sesion "})
+
+}
 
 }
 module.exports = usersController
