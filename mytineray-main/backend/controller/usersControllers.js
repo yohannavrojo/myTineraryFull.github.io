@@ -123,10 +123,11 @@ const usersController = {
             await usuario.save()
             res.json({ success: true, from: "controller", response: { token, datoUser } })
           }
-       else{res.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" })}
-        }
-         
+          else{res.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" })}
+
+        }  
        else{res.json({success: false, from: "controller", error:"verifica tu email para validarlo "})}
+       
       } 
 
     } catch (error) {console.log(error);res.json({success:false,response:null,error:error}) }
