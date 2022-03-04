@@ -1,15 +1,39 @@
 import React from 'react';
 import "../login/login.css"; 
 import { Link } from "react-router-dom";
+import axios from 'axios';
 
 const login = () => {
+    async function loginUser(event){
+        // console.log(event.target[0].value)
+        event.preventDefault()
+        const userData = {
+          email:event.target[0].value,
+          password:event.target[1].value,
+      }
+        // console.log(NuevoUsuario)
+      
+      // 
+      
+        await axios.post("http://localhost:4000/api/signin",{userData})
+         .then(response=>
+         displayMessages(response.data)
+        // console.log(response.data)
+        )
+        function displayMessages(data){
+          console.log(data) // continua
+        //   dispatch 
+       
+       
+        }
+    }
     return (
         
         <>
         
         
 
-    <form className="formulario">
+    <form className="formulario" onSubmit={loginUser}>
     
     <h1>Sign In</h1>
      <div className="contenedor">
