@@ -110,9 +110,9 @@ const usersController = {
       } else {
 
         if (usuario.emailVerificado) {
-          let passwordConincide = bcryptjs.compareSync(password, usuario.password)
-          if (passwordConincide) {
-
+          let passwordCoincide = bcryptjs.compareSync(password, usuario.password)
+          
+          if (passwordCoincide) {
             const token = jwt.sign({ ...usuario }, process.env.SECRETKEY)
             const datoUser = {
               firstname: usuario.firstname,
