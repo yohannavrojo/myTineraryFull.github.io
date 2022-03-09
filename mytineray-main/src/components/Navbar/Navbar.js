@@ -13,8 +13,10 @@ import { FaBars, FaTimes,FaRegUserCircle } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Outlet,Link } from "react-router-dom";
 
+
 const Narbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  
 
   const handleShowMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
@@ -42,15 +44,15 @@ const Narbar = () => {
               <Link to="/Cities" >  <MenuItemLink>CITIES</MenuItemLink></Link>
                 <hr />
               </MenuItem>
-               <MenuItem onClick={() => handleShowMobileMenu()}>
-               
-                <MenuItemLink>
+             <MenuItem onClick={() => handleShowMobileMenu()}>
+               <MenuItemLink>
                <Link to="/Signup"><FaRegUserCircle 
                  onClick={() => handleShowMobileMenu()}/></Link>
                  
                  </MenuItemLink>
                 <hr />
               </MenuItem>
+
                </Menu>
               
           </IconContext.Provider>

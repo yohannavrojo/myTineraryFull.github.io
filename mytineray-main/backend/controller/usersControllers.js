@@ -35,7 +35,7 @@ async function sendEmail(email, uniqueText) {
       console.log(error)
     }
     else {
-      console.log("mensaje enviado")// parametros para el usuario 
+      alert("mensaje enviado")// parametros para el usuario 
     }
   })
 
@@ -62,7 +62,7 @@ const usersController = {
   nuevoUsuario: async (req, res) => {
 
     const { firstname, lastname, email, password } = req.body.NuevoUsuario
-    // console.log(req.body)
+    
     try {
       const UsuarioExiste = await User.findOne({ email })
 
@@ -91,7 +91,7 @@ const usersController = {
           await sendEmail(email, uniqueText)
           res.json({ success: "trueUE", response: "te hemos envia un correo electronico  para verifica tu email" })
         }
-        // await NewUser.save()
+       
 
       }
 
@@ -138,13 +138,15 @@ const usersController = {
   },
 cerrarsesion: async (req,res)=>{
 
-  const email = req.body.closeUser
-  
+  const email = req.body.email
+  console.log(req.body.email)
+
   const user = await User.findOne({email})
 
-  usuario.connected=false
+  user.connected=false
+  
   await user.save()
-  res.json({success:true, response:"Cerrar sesion "})
+  res.json({success:true, response:"Cerrar sesion"})
 
 }
 
