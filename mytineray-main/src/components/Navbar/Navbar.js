@@ -9,14 +9,28 @@ import {
   MobileMenuIcon,
 } from "../Navbar/Navbar-elements";
 import { SiYourtraveldottv } from "react-icons/si";
-import { FaBars, FaTimes,FaRegUserCircle } from "react-icons/fa";
+import { FaBars, FaTimes, FaRegUserCircle } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { Outlet,Link } from "react-router-dom";
-
+import { Outlet, Link } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import axios from "axios";
 
 const Narbar = () => {
+  const [{ user }, dispatch] = useStateValue();
+
+  async function cerrarSesion() {
+    const email = user.datosUser.email;
+    console.log(email);
+    
+    await axios.post("http://localhost:4000/api/signOut", { email })
+      .then(response => 
+        
+        console.log(response)
+        
+        );
+  }
+
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  
 
   const handleShowMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
@@ -27,8 +41,7 @@ const Narbar = () => {
         <Wrapper>
           <IconContext.Provider value={{ color: "#b6a1c6", size: "2.5em" }}>
             <IconContainer showMobileMenu={showMobileMenu}>
-              < SiYourtraveldottv  />
-              
+              <SiYourtraveldottv />
             </IconContainer>
 
             <MobileMenuIcon onClick={() => handleShowMobileMenu()}>
@@ -37,33 +50,49 @@ const Narbar = () => {
 
             <Menu showMobileMenu={showMobileMenu}>
               <MenuItem onClick={() => handleShowMobileMenu()}>
-               <Link to="/" > <MenuItemLink>HOME</MenuItemLink></Link> 
+                <Link to="/">
+                  {" "}
+                  <MenuItemLink>HOME</MenuItemLink>
+                </Link>
                 <hr />
               </MenuItem>
+
               <MenuItem onClick={() => handleShowMobileMenu()}>
-              <Link to="/Cities" >  <MenuItemLink>CITIES</MenuItemLink></Link>
-                <hr />
-              </MenuItem>
-             <MenuItem onClick={() => handleShowMobileMenu()}>
-               <MenuItemLink>
-               <Link to="/Signup"><FaRegUserCircle 
-                 onClick={() => handleShowMobileMenu()}/></Link>
-                 
-                 </MenuItemLink>
+                <Link to="/Cities">
+                  {" "}
+                  <MenuItemLink>CITIES</MenuItemLink>
+                </Link>
                 <hr />
               </MenuItem>
 
-               </Menu>
-              
+              <MenuItem>
+                {!user ? (
+                  <Link to="/Signin">Sign In</Link>
+                ) : (
+                  <MenuItemLink
+                    onClick={() => cerrarSesion(window.location.reload(true))}
+                  >
+                    CERRAR SESION
+                  </MenuItemLink>
+                )}
+              </MenuItem>
+
+              <MenuItem onClick={() => handleShowMobileMenu()}>
+                <MenuItemLink>
+                  <Link to="/Signup">
+                    <FaRegUserCircle onClick={() => handleShowMobileMenu()} />
+                  </Link>
+                </MenuItemLink>
+                <hr />
+              </MenuItem>
+            </Menu>
           </IconContext.Provider>
-
         </Wrapper>
       </Container>
 
-<Outlet/>
+      <Outlet />
     </>
   );
 };
 
 export default Narbar;
-
