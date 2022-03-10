@@ -9,6 +9,7 @@ const FormSignup = () => {
 async function NewUser(event){
   console.log(event)
   event.preventDefault()
+ 
   const  NuevoUsuario = {firstname:event.target[0].value,
     lastname:event.target[1].value,
     email:event.target[2].value,
