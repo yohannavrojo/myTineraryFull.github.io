@@ -90,6 +90,7 @@ const usersController = {
           await NewUser.save()
           await sendEmail(email, uniqueText)
           res.json({ success: "trueUE", response: "te hemos envia un correo electronico  para verifica tu email" })
+      
         }
        
 

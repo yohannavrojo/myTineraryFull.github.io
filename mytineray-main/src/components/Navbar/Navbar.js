@@ -70,7 +70,7 @@ const Narbar = () => {
                   <Link to="/Signin">Sign In</Link>
                 ) : (
                   <MenuItemLink
-                    onClick={() => cerrarSesion(window.location.reload(true))}
+                    onClick={() => cerrarSesion(window.location.reload(false))}
                   >
                     CERRAR SESION
                   </MenuItemLink>

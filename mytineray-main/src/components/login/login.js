@@ -10,7 +10,7 @@ const login = () => {
  
 
   async function loginUser(event) {
-    event.preventDefault();
+    event.preventDefault(); // previene el comportamiento por defecto del botón submit, que es limpiar el formulario
     const userData = {
       email: event.target[0].value,
       password: event.target[1].value,
