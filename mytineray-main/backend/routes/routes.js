@@ -21,8 +21,8 @@ Router.route("/verify/:uniqueText") // "datos" parte de la url de la consulta
 Router.route("/signin") // "datos" parte de la url de la consulta 
 .post(accesoUsuario)
 
-// Router.route("/signOut") // "datos" parte de la url de la consulta 
-// .post(cerrarsesion)
+Router.route("/signOut") // "datos" parte de la url de la consulta 
+.post(cerrarsesion)
 
 
 module.exports = Router
