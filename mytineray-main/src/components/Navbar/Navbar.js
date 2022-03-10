@@ -19,7 +19,7 @@ const Narbar = () => {
   const [{ user }, dispatch] = useStateValue();
 
   async function cerrarSesion() {
-    const email = user.datosUser.email;
+    const email = user.datoUser.email;
     console.log(email);
     
     await axios.post("http://localhost:4000/api/signOut", { email })
@@ -70,8 +70,9 @@ const Narbar = () => {
                   <Link to="/Signin">Sign In</Link>
                 ) : (
                   <MenuItemLink
-                    onClick={() => cerrarSesion(window.location.reload(false))}
+                    onClick={() => cerrarSesion()}
                   >
+                    {/* window.location.reload(true) */}
                     CERRAR SESION
                   </MenuItemLink>
                 )}

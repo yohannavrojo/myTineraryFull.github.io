@@ -26,9 +26,9 @@ const login = () => {
       )
 
     function displayMessages(data) {
-      
+      console.log(data)
       if (!data.success) {
-        console.log(data.error)
+        console.log(alert(data.error))
     }
       
     else { console.log(data.response) }
