@@ -67,12 +67,11 @@ const Narbar = () => {
 
               <MenuItem>
                 {!user ? (
-                  <Link to="/Signin">Sign In</Link>
+                  <MenuItemLink to="/Signin">SIGN IN</MenuItemLink>
                 ) : (
                   <MenuItemLink
-                    onClick={() => cerrarSesion()}
-                  >
-                    {/* window.location.reload(true) */}
+                    onClick={() => cerrarSesion( window.location.reload(true))}>
+                    {/* */}
                     CERRAR SESION
                   </MenuItemLink>
                 )}
