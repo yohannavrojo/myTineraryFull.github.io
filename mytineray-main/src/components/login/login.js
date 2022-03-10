@@ -2,14 +2,12 @@ import React from "react";
 import "../login/login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
-// import { actionType } from "../../reducer";
-// import { useStateValue } from "../../StateProvider";
+import { actionType } from "../../reducer";
+import { useStateValue } from '../../StateProvider';
 
 const login = () => {
-  // const [{ user }, dispatch] = useStateValue();
-  // function cerrarSesion() {
-  //   console.log(user);
-  // }
+  const [{ user }, dispatch] = useStateValue()
+ 
 
   async function loginUser(event) {
     event.preventDefault();
@@ -20,22 +18,30 @@ const login = () => {
 
     await axios
       .post("http://localhost:4000/api/signin", { userData })
-      .then(response => displayMessages(response.data));
+      .then(response => 
+        
+        displayMessages(response.data)
+      
+      
+      )
 
     function displayMessages(data) {
-      console.log(data.response)
-      if (data.success) {
-        console.log(data.error);
-      } else {
-        console.log(data.response);
-        // dispatch({
-        //   type: actionType.USER,
-        //   user: data.response,
-        // });
-      }
+      
+      if (!data.success) {
+        console.log(data.error)
+    }
+      
+    else { console.log(data.response) }
+       
+    dispatch({
+          type: actionType.USER,
+          user: data.response,
+        });
+      
+
     }
 
-  
+    console.log(user) //trae vacio preguntar 
   }
   return (
     <>
