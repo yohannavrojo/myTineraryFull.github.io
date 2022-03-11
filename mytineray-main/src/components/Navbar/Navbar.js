@@ -12,6 +12,7 @@ import { SiYourtraveldottv } from "react-icons/si";
 import { FaBars, FaTimes, FaRegUserCircle } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Outlet, Link } from "react-router-dom";
+import { actionType } from "../../reducer";
 import { useStateValue } from "../../StateProvider";
 import axios from "axios";
 
@@ -24,8 +25,11 @@ const Narbar = () => {
     
     await axios.post("http://localhost:4000/api/signOut", { email })
       .then(response => 
+        dispatch({
+          type: actionType.USER,
+          user: null
+        })
         
-        console.log(response)
         
         );
   }
@@ -70,7 +74,7 @@ const Narbar = () => {
                   <MenuItemLink to="/Signin">SIGN IN</MenuItemLink>
                 ) : (
                   <MenuItemLink
-                    onClick={() => cerrarSesion( window.location.reload(true))}>
+                    onClick={() => cerrarSesion()}>
                     {/* */}
                     CERRAR SESION
                   </MenuItemLink>
