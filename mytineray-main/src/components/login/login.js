@@ -1,8 +1,7 @@
 import React from "react";
 import "../login/login.css";
 import { Link } from "react-router-dom";
-import Facebook from "../Botonsignupg/Facebook";
-import Google from "../Botonsignupg/Google";
+
 import axios from "axios";
 import { actionType } from "../../reducer";
 import { useStateValue } from '../../StateProvider';
@@ -70,8 +69,8 @@ const Login = () => {
               </i>
             </Link>{" "}
           </p>
-          <Facebook/>
-          <Google/>
+          
+          
         </div>
        
 
