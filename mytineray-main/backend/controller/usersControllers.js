@@ -27,7 +27,7 @@ async function sendEmail(email, uniqueText) {
     from: sender,
     to: email,
     subject: " My Tinerary User Email verification ",
-    html: `<div style="margin: 8px; padding: 8px; background:#cf9bec;">
+    html: `<div style="margin: 20px; padding: 30px; background:#cf9bec; border:4px solid #a719ca;">
            <h1 style="color:#a719ca; font-family:Oswald ; font-size: 80px; text-align: center;">My Tinerary </h1>
            </br>
            <h2 style="color:#000000; font-style: 20px; text-align:center;"> Click<a 
