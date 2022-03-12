@@ -35,7 +35,7 @@ const responseGoogle = async (response) => {
   return(
 <GoogleLogin
           clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
-          buttonText="SignUp with Google Account"
+          buttonText="SignIn with Google Account"
           onSuccess={responseGoogle}
           onFailure={responseGoogle}
   cookiePolicy={'single_host_origin'}/>
