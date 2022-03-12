@@ -1,8 +1,18 @@
 import React from "react";
+import { actionType } from "../../reducer";
 import "../search/Search.css";
-
+import { useStateValue} from "../../StateProvider";
 
 const Search = () => {
+  const [{cities},dispatch]=useStateValue()
+    const inputSearch=(event)=>(
+        dispatch({
+          type:actionType.FILTER,
+         value:event.target.value
+        })
+
+    )
+
   return (
     <>
       <div   className="wrappers">
@@ -12,7 +22,7 @@ const Search = () => {
               <div id="myInput" onkeyup="myFunction()" className="btn btn_common">
                 <i className="fas fa-search"></i>
               </div>
-              <input type="text" className="input" placeholder="search..." />
+              <input type="text"  onChange={inputSearch} className="input" placeholder="search..." />
             </div>
           </div>
         </div>

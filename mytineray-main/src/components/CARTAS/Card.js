@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 
 function Card() {
-  const [{ cities }, dispatch] = useStateValue();
+  const [{ filterCity }, dispatch] = useStateValue();
   return (
     <>
-    {cities.map(city=>
+    {filterCity.map(city=>
 
       <div className="col-md-5" key={city._id} style={{ margin: "30px" }}>
         <div className="div-imagen ">
