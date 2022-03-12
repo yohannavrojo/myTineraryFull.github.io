@@ -1,6 +1,8 @@
 import React from 'react';
 import './Form1.css';
 import { Link } from "react-router-dom";
+import Facebook from "../Botonsignupg/Facebook";
+import Google from "../Botonsignupg/Google";
 import axios from 'axios';
 
 
@@ -114,7 +116,9 @@ async function NewUser(event){
                 
               </Link>
               
-
+              <Facebook/>
+          
+          <Google/>
         </span>
       </form>
 
