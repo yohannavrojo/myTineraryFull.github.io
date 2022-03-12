@@ -8,7 +8,7 @@ function Facebook() {
 
 const responseFacebook = async (response) => {
     
-    console.log(response);
+    // console.log(response);
     const NuevoUsuario = {
                         firstname:response.name,
                         email:response.email,
