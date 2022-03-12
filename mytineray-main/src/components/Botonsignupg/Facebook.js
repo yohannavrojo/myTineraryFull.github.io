@@ -22,13 +22,14 @@ const responseFacebook = async (response) => {
 
 
       displayMessages(response.data)
+      
       )
-
+console.log(response.data)
       
       function displayMessages(data){
       if(data.success==="falseVAL"){
         console.log(data);
-        console.log(data.response.error.details);
+        // console.log(data.response.error.details);
           alert(data.response.error.details.map(error=>error.message))
       }else if(data.success===true){
          
