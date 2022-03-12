@@ -69,7 +69,7 @@ p{
     .formulario{
         margin: auto;
         width: 600px;
-        height: 530px;
+        /* height: 530px; */
         margin-top: 150px;
         border-radius: 2%;
         margin-bottom: 90px;
