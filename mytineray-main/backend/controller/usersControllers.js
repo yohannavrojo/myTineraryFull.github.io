@@ -26,8 +26,18 @@ async function sendEmail(email, uniqueText) {
 
     from: sender,
     to: email,
-    subject: "verificacion de usuario ",
-    html: `Presiona <a href=http://localhost:4000/api/verify/${uniqueText}>Aqui</a>Para validar tu email`
+    subject: " My tinerary User Email verification ",
+    html: `<div style="margin: 6px; padding: 6px; background:rgb(207, 155, 236);">
+           <h1 style="color:#a719ca; font-family:"Oswald" ; font-size:50px; text-align:center;">My tinerary </h1>
+           </br>
+           <h2 style="color:#000000; font-style: 20px; text-align:center;"> Click<a 
+           style ="color:#6309f3; font-style:"Oswald"     
+           href=http://localhost:4000/api/verify/${uniqueText}>Aqui</a>To validate your email </h2>
+           </br>
+           </br>
+           <h6 style="color: #a03a9e; font-size: 12px;text-align: center;">All Rights Reserved Copyright - 2022</h6>
+           <h6 style="color: #a03a9e; font-size: 12px;text-align: center;"><i>powered by yohannvrojo</i> </h6>
+           </div>`
 
   }
   await transporter.sendMail(mailOptions, function (error, response) {
