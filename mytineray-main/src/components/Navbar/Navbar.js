@@ -14,6 +14,7 @@ import { IconContext } from "react-icons";
 import { Outlet, Link } from "react-router-dom";
 import { actionType } from "../../reducer";
 import { useStateValue } from "../../StateProvider";
+
 import axios from "axios";
 
 const Narbar = () => {
@@ -85,10 +86,13 @@ const Narbar = () => {
                 <MenuItemLink>
                   <Link to="/Signup">
                     <FaRegUserCircle onClick={() => handleShowMobileMenu()} />
+                 
+                 
                   </Link>
                 </MenuItemLink>
                 <hr />
               </MenuItem>
+             
             </Menu>
           </IconContext.Provider>
         </Wrapper>

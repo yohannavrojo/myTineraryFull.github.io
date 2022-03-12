@@ -17,11 +17,13 @@ const validator =(req,res,next)=>{
             "string.email":"Formato de correo erroneo"
 
         }),
-        password:joi.string().max(10).min(6).trim().pattern(new RegExp(/(?=.*[a-z])(?=.*[0-9])/)).required().messages({
+        password:joi.string().max(30).min(6).trim().pattern(new RegExp(/(?=.*[a-z])(?=.*[0-9])/)).required().messages({
          "string.min":"la contraseña debe contener minimo 6 caracteres",
          "string.pattern.base":"la contraseña debe ser alfanumerico",
-         "string.max":"The password must not exceed 18 characters"
+         "string.max":"The password must not exceed 30 characters"
         }),
+        // google:joi.boolean()
+        from: joi.string()
     })
 const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})
 

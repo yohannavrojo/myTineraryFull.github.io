@@ -5,6 +5,7 @@ const User = require("../models/user.js")
 const bcryptjs = require("bcryptjs")
 const { response } = require("express")
 const jwt = require("jsonwebtoken")
+
 async function sendEmail(email, uniqueText) {
 
   const transporter = nodemailer.createTransport({
@@ -31,11 +32,12 @@ async function sendEmail(email, uniqueText) {
   }
   await transporter.sendMail(mailOptions, function (error, response) {
 
+
     if (error) {
       console.log(error)
     }
     else {
-      alert("mensaje enviado")// parametros para el usuario 
+      console.log("mensaje enviado")// parametros para el usuario 
     }
   })
 
@@ -61,19 +63,32 @@ const usersController = {
 
   nuevoUsuario: async (req, res) => {
 
-    const { firstname, lastname, email, password } = req.body.NuevoUsuario
+    const { firstname, lastname, email, password, from } = req.body.NuevoUsuario
     
     try {
       const UsuarioExiste = await User.findOne({ email })
 
       if (UsuarioExiste) {
-        res.json({ success: "falseUE", response: "Usuario ya existe, te invitamos al SignIn" })//responseUE
+      // res.json({success:"falseUE",response:"user already exist.please sign in."})
+       
+        if (from!==signup) {
+          const passwordHash = bcryptjs.hashSync(password, 10)
+          UsuarioExiste.password = passwordHash;
+          UsuarioExiste.emailVerificado = true;
+          UsuarioExiste.from= from;
+          UsuarioExiste.connected = false;
 
+          UsuarioExiste.save();
+          res.json({ success: true,response: "actualizamos tu sign in para que lo realizes con " +from })
+        }
+      
+        else {
+          rep.json({ success: false, response: "este email ya esta en uso,realiza el signin" })
+        }
       }
-      else {
-
-        const uniqueText = crypto.randomBytes(15).toString("hex")//genera un text de 15 caracteres hexagecimal  
+      else{
         const emailVerificado = false
+        const uniqueText = crypto.randomBytes(15).toString("hex")//genera un text de 15 caracteres hexagecimal  
         const passwordHash = bcryptjs.hashSync(password, 10)
         const NewUser = new User({
           firstname,
@@ -82,25 +97,36 @@ const usersController = {
           password: passwordHash,
           uniqueText,
           emailVerificado,
-          connected:false,
-
+          connected: false,
+          from,
         })
-        if (!emailVerificado) {
-          
-          await NewUser.save()
-          await sendEmail(email, uniqueText)
-          res.json({ success: "trueUE", response: "te hemos envia un correo electronico  para verifica tu email" })
-      
+        
+
+        if (from!=="signup") {
+            NewUser.emailVerificado = true,
+            NewUser.from = from,
+            NewUser.connected = false,
+           
+            await NewUser.save()
+            res.json({ success: true,data:{ NewUser }, response: "felicitaciones hemos creados tu usuario con " +""+from  })
         }
-       
 
-      }
+        else {
+          NewUser.emailVerificado = false;
+          NewUser.from = from;
+          NewUser.connected = false;
+          await NewUser.save();
+          await sendEmail(email, uniqueText);
+          res.json({ success: "trueUE", response: "we have sent you your email", data:{NewUser} })
 
+        }
     }
+  }
 
-    catch (error) { res.json({ success: "falseUE", response: null, error: error }) }
+  catch (error) { res.json({ success: "falseVAL", from: "Signup", response: "EL correo ya esta en uso", error: error }) }
+ 
+},
 
-  },
 
   accesoUsuario: async (req, res) => {
 
@@ -114,42 +140,43 @@ const usersController = {
 
         if (usuario.emailVerificado) {
           let passwordCoincide = bcryptjs.compareSync(password, usuario.password)
-          
+
           if (passwordCoincide) {
             const token = jwt.sign({ ...usuario }, process.env.SECRETKEY)
             const datoUser = {
               firstname: usuario.firstname,
               lastname: usuario.lastname,
               email: usuario.email,
-          
+
             }
-            usuario.connected= true
+            usuario.connected = true
             await usuario.save()
             res.json({ success: true, from: "controller", response: { token, datoUser } })
           }
-          else{res.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" })}
+          else { res.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" }) }
 
-        }  
-       else{res.json({success: false, from: "controller", error:"verifica tu email para validarlo "})}
+        }
+        else { res.json({ success: false, from: "controller", error: "verifica tu email para validarlo " }) }
 
-      } 
+      }
 
-    } catch (error) {console.log(error);res.json({success:false,response:null,error:error}) }
+    } catch (error) { console.log(error); res.json({ success: false, response: null, error: error }) }
 
   },
-cerrarsesion: async (req,res)=>{
 
-  const email = req.body.email
-  console.log(req.body.email)
+cerrarsesion: async (req, res) => {
 
-  const user = await User.findOne({email})
-
-  user.connected=false
+    const email = req.body.email
   
-  await user.save()
-  res.json({success:true, response:"Cerrar sesion"})
 
-}
+    const user = await User.findOne({ email })
+
+    user.connected = false
+
+    await user.save()
+    res.json({ success: true, response: "Cerrar sesion" })
+
+  }
 
 }
 module.exports = usersController

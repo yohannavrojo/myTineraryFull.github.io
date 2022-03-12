@@ -1,7 +1,8 @@
 import React from "react";
 import "../login/login.css";
 import { Link } from "react-router-dom";
-
+import Facebook from "../Botonsignupg/Facebook";
+import Google from "../Botonsignupg/Google";
 import axios from "axios";
 import { actionType } from "../../reducer";
 import { useStateValue } from '../../StateProvider';
@@ -9,9 +10,6 @@ import { useStateValue } from '../../StateProvider';
 const Login = () => {
   const [{ user }, dispatch] = useStateValue()
  
-  
-
-
   async function loginUser(event) {
     event.preventDefault(); // previene el comportamiento por defecto del botón submit, que es limpiar el formulario
     const userData = {
@@ -44,7 +42,7 @@ const Login = () => {
 
     }
 
-    console.log(user) //trae vacio preguntar 
+    //trae vacio preguntar 
   }
   return (
     <>
@@ -72,6 +70,8 @@ const Login = () => {
               </i>
             </Link>{" "}
           </p>
+          <Facebook/>
+          <Google/>
         </div>
        
 
