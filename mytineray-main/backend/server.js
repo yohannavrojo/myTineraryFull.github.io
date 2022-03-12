@@ -6,7 +6,6 @@ const cors = require("cors")
 const Router = require("./routes/routes")
 const app = express()
 require("./config/database")
-
 app.use(express.json()) //tramo intermedio que pasa los datos a una variable
 app.use(cors())
 app.use("/api",Router)
