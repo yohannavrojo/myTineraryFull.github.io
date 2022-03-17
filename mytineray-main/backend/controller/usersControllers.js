@@ -179,6 +179,7 @@ const usersController = {
 
   },
 
+  
 cerrarsesion: async (req, res) => {
 
     const email = req.body.email
