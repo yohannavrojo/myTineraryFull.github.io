@@ -27,7 +27,7 @@ function Itinerarios(props) {
                   {itine.price} {itine.time}
                 </h2>
               </div>
-             <Comments/>
+             <Comments itinerario={itine._id}/>
             </div>
           ))}
        

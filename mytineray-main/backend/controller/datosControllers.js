@@ -47,8 +47,8 @@ const datosController = {
               error:error
           })
   
-      } // req=require res=response
-    // req=require res=response
+      } 
+    
 }
-// datosController
+
 module.exports = datosController

@@ -4,7 +4,8 @@ const {ObtenerTodosLosDatos, ObtenerItynerarios} = datosController // desestruct
 const usersController= require ("../controller/usersControllers.js")
 const {nuevoUsuario, verifyEmail,accesoUsuario,cerrarsesion} = usersController
 const validator= require("../controller/validator.js")
-
+const commentControllers= require("../controller/comentariosControllers")
+const {cargaComentarios,obtenerComentarios,borrarComentario,modificarComentario}=commentControllers
 
 Router.route("/datos") // "datos" parte de la url de la consulta
 .get(ObtenerTodosLosDatos)
@@ -23,6 +24,15 @@ Router.route("/signin") // "datos" parte de la url de la consulta
 
 Router.route("/signOut") // "datos" parte de la url de la consulta 
 .post(cerrarsesion)
+
+
+Router.route("/comments")
+.post(cargaComentarios)
+
+Router.route("/comments/:id")
+.get(obtenerComentarios)
+.delete(borrarComentario)
+.put(modificarComentario)
 
 
 module.exports = Router

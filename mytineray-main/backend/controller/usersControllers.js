@@ -68,7 +68,10 @@ const usersController = {
       res.json({ success: false, response: "It has not been possible to verfy your email" })
     }
 
+    
   },
+
+
 
 
   nuevoUsuario: async (req, res) => {
@@ -157,8 +160,10 @@ const usersController = {
               firstname: usuario.firstname,
               lastname: usuario.lastname,
               email: usuario.email,
+              id:usuario._id,
 
             }
+            
             usuario.connected = true
             await usuario.save()
             res.json({ success: true, from: "controller", response: { token, datoUser } })
