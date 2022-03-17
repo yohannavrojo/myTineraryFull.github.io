@@ -10,14 +10,15 @@ const responseFacebook = async (response) => {
     
     // console.log(response);
     const NuevoUsuario = {
-                        email:response.emai,           
+                        email:response.email,           
                         password:response.id + "Ab", 
                         from:"Facebook"    
     } ; 
 
-      await axios.post("http://localhost:4000/api/signup",{NuevoUsuario} )
+      await axios.post("http://localhost:4000/api/signin",{NuevoUsuario} )
       .then(response=> //alert(response.data.response)) 
 
+      
 
       displayMessages(response.data)
       

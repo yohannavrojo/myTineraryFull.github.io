@@ -15,20 +15,31 @@ const responseGoogle = async (response) => {
       from:"google"
       
     }
+    
 
     await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
    .then(response=>
    displayMessages(response.data),
   
   )
+  // function displayMessages(data){
+  //   if(data.success==="falseVAL"){
+  //     console.log(data)
+  //     console.log(data.response.error.details)
+  //   alert(data.response.error.details.map(error=>error.message))
+    
+  // } else if(data.success==="trueUE"){
+  //    console.log(data)
+  //   }
+  // }
   function displayMessages(data){
     if(data.success==="falseVAL"){
-      console.log(data)
-      console.log(data.response.error.details)
-    alert(data.response.error.details.map(error=>error.message))
-    
-  } else if(data.success==="trueUE"){
-     console.log(data)
+      console.log(data);
+      // console.log(data.response.error.details);
+        alert(data.response.error.details.map(error=>error.message))
+    }else if(data.success===true){
+       
+    console.log(data)
     }
   }
   

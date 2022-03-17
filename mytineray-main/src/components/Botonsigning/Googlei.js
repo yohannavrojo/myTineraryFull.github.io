@@ -14,7 +14,8 @@ const responseGoogle = async (response) => {
       
     }
 
-    await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+    
+    await axios.post("http://localhost:4000/api/signin",{NuevoUsuario})
    .then(response=>
    displayMessages(response.data),
   
