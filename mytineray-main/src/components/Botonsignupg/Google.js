@@ -18,16 +18,13 @@ function Google(){
       }
       await axios.post("http://localhost:4000/api/signup",{NuevoUsuario })
           .then(response => //alert(response.data.response))
-              //  if (response.success === "falseVAL"){
-              // console.log(response.data)
-              // }
+            
               displayMessages(response.data) //para validar los datos
 
           )
       function displayMessages(data) {
           if (data.success === "falseVAL") {
-              //  console.log(data)
-              // console.log(data.response.error.details)
+              
               alert(data.response.error.details.map(error => error.message))
           } else if (data.success === true) {
               console.log(data)
