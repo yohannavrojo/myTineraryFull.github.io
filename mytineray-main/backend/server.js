@@ -1,6 +1,5 @@
 
 require("dotenv").config()
-
 const express = require("express")  //equivalente al import de Reac, pero en Node
 const cors = require("cors")
 const Router = require("./routes/routes")

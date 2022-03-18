@@ -5,11 +5,11 @@ const validator =(req,res,next)=>{
     
     // console.log(req.body.NuevoUsuario)
     const Schema =joi.object({
-        firstname:joi.string().max(10).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
+        firstname:joi.string().max(40).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
             "string.min":"El Nombre debe contener al menos 3 caracteres",
             "string.empty":"El Campo no puede estar vacio"
         }),
-        lastname:joi.string().max(10).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
+        lastname:joi.string().max(40).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
             "string.min":"El Apellido debe contener al menos 3 caracteres",
             "string.empty":"El Campo no puede estar vacio"
         }),
@@ -28,7 +28,7 @@ const validator =(req,res,next)=>{
 const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})
 
 if (validation.error){
-    return res.json({success:"falseVAL",response:validation})
+    return res.json({success:false,response:validation})
 }
 next()
 

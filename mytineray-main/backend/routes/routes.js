@@ -13,6 +13,7 @@ Router.route("/datos") // "datos" parte de la url de la consulta
 Router.route("/itinerary/:city") // "datos" parte de la url de la consulta 
 .get(ObtenerItynerarios)
 
+
 Router.route("/signup")
 .post(validator,nuevoUsuario)
 
@@ -24,7 +25,6 @@ Router.route("/signin") // "datos" parte de la url de la consulta
 
 Router.route("/signOut") // "datos" parte de la url de la consulta 
 .post(cerrarsesion)
-
 
 Router.route("/comments")
 .post(cargaComentarios)
