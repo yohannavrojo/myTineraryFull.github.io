@@ -1,40 +1,50 @@
 import React from 'react';
 import FacebookLogin from "react-facebook-login";
 import axios from 'axios';
-
-
+import { actionType } from "../../reducer";
+import { useStateValue } from '../../StateProvider';
+ import swal from 'sweetalert';
 function Facebooki() {
-
-
+  const [{ user }, dispatch] = useStateValue()
 const responseFacebook = async (response) => {
-    
-    // console.log(response);
-    const NuevoUsuario = {
-                        email:response.email,           
-                        password:response.id + "Ab", 
-                        from:"Facebook"    
-    } ; 
-
-      await axios.post("http://localhost:4000/api/signin",{NuevoUsuario} )
-      .then(response=> //alert(response.data.response)) 
-
-      
-
-      displayMessages(response.data)
-      
-      )
-console.log(response.data)
-      
-      function displayMessages(data){
-      if(data.success==="falseVAL"){
-        console.log(data);
-        // console.log(data.response.error.details);
-          alert(data.response.error.details.map(error=>error.message))
-      }else if(data.success===true){
-         
-      console.log(data)
-      }
+  console.log(response);
+  
+    const userData= {
+     
+      email:response.email,           
+      password:response.id + "Ab", 
+      from:"Facebook"//si el usuario se carga a través de google no se pide la verificación
     }
+ 
+    await axios.post("http://localhost:4000/api/signin",{userData})
+    .then(response=>
+    displayMessages(response.data),
+   
+   )
+   function displayMessages(data) {
+    console.log(data)
+    if (!data.success) {
+    alert(data.mensaje)
+  }
+    
+  else { 
+    
+    // alert(data.mensaje) 
+    swal({
+      title:data.mensaje,
+      icon:"success",
+      buttons: "ok"
+  })
+     
+  dispatch({
+        type: actionType.USER,
+        user: data.response,
+      });
+
+  }
+}
+
+
   }
 
 

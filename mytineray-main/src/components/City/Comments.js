@@ -4,6 +4,8 @@ import { useStateValue } from "../../StateProvider";
 import { Avatar } from "@material-ui/core";
 import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
+import {FaTrashAlt} from "react-icons/fa";
+import { MdCreate } from "react-icons/md";
 
 
 function Comments(props) {
@@ -95,17 +97,18 @@ function Comments(props) {
               sx={{ width: 56, height: 56 }}
             ></Avatar>
 
-            <div className="mx-3 text-white bg-success">
+            <div className="form-floating" >
             
-             <input onKeyUp={handelChange} className="coment-user" defaultValue={itine.comment}></input>
+             <textarea onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></textarea>
                             
 
             </div>
-            <button type="submit" className="btn btn-primary" onClick={() => borrarComentario(itine._id)} >
-                    borrar<i className="fas fa-paper-plane"></i>
+            
+            <button  type="button" className="btn btn-light" onClick={() => borrarComentario(itine._id)} >
+                  <FaTrashAlt/>  
                   </button>
-                  <button type="submit" className="btn btn-primary" onClick={() => modificar(itine._id)}>
-                Modificar<i className="fas fa-paper-plane"></i>
+                  <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
+               <MdCreate/>
                   </button>
           </div> 
            )}
@@ -116,12 +119,9 @@ function Comments(props) {
 
             <form onSubmit={submitComment}>
               <div className="form-floating">
-                <textarea className="form-control" id="floatingTextarea"></textarea>
-                
-                <label for="floatingTextarea" >Comments</label> <br />
-                
+                <textarea className="form-control" id="floatingTextarea"></textarea> <br/>              
                 <div className="btn-comentario-form">
-                  <button type="submit" className="btn btn-primary">
+                  <button type="button" className="btn btn-outline-info">
                     Send<i className="fas fa-paper-plane"></i>
                   </button>
                 </div>

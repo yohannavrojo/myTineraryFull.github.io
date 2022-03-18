@@ -1,6 +1,7 @@
 import React from "react";
 import GoogleLogin from 'react-google-login';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 
 function Google(){ 
@@ -14,29 +15,30 @@ function Google(){
           lastname: response.profileObj.familyName,
           email: response.profileObj.email,
           password: response.googleId + "Ka",
-          from:"Google", //controladores
+          from:"google", //controladores
       }
-      await axios.post("http://localhost:4000/api/signup",{NuevoUsuario })
-          .then(response => //alert(response.data.response))
-            
-              displayMessages(response.data) //para validar los datos
+      await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+   .then(response=>
+   displayMessages(response.data),
+  
+  )
+  function displayMessages(data){
+    // alert (data.mensaje)
+    swal({
+      title:data.mensaje,
+      icon:"success",
+      buttons: "ok"
+  })
+    console.log(data)
+     
+}
 
-          )
-      function displayMessages(data) {
-          if (data.success === "falseVAL") {
-              
-              alert(data.response.error.details.map(error => error.message))
-          } else if (data.success === true) {
-              console.log(data)
-          }
-
-      }
   }
 
  
   
   return(
-
+<div>
      
       <GoogleLogin
       clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
@@ -45,7 +47,7 @@ function Google(){
       onFailure={responseGoogle}
       cookiePolicy={'single_host_origin'}
     />
-    
+  </div>  
   )
 
 

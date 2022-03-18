@@ -1,9 +1,10 @@
 import React from 'react';
 import './Form1.css';
 import { Link } from "react-router-dom";
-import Facebook from "../Botonsignupg/Facebook";
+ import Facebook from "../Botonsignupg/Facebook";
 import Google from "../Botonsignupg/Google";
 import axios from 'axios';
+import swal from "sweetalert";
 
 
 const FormSignup = () => {
@@ -16,7 +17,7 @@ async function NewUser(event){
     lastname:event.target[1].value,
     email:event.target[2].value,
     password:event.target[3].value,
-    from:"signup"
+    from:"signup",
 }
 
   await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
@@ -25,14 +26,14 @@ async function NewUser(event){
   
   )
   function displayMessages(data){
-    if(data.success==="falseVAL"){
-      console.log(data)
-      console.log(data.response.error.details)
-    alert(data.response.error.details.map(error=>error.message))
+  //  alert (data.mensaje)
+   swal({
+    title:data.mensaje,
+    icon:"success",
+    buttons: "ok"
+})
+   console.log(data)
     
-  } else if(data.success==="trueUE"){
-     console.log(data)
-    }
   }
 }
   return (
@@ -116,10 +117,11 @@ async function NewUser(event){
                 
               </Link>
               
-              <Facebook/>
-          
-          <Google/>
+            
         </span>
+           <Facebook/> 
+          
+          <Google/> 
       </form>
 
     </div>

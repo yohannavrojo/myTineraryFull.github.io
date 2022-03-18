@@ -6,6 +6,8 @@ import Googlei from "../Botonsigning/Googlei";
 import axios from "axios";
 import { actionType } from "../../reducer";
 import { useStateValue } from '../../StateProvider';
+import swal from "sweetalert";
+
 
 const Login = () => {
   const [{ user }, dispatch] = useStateValue()
@@ -29,11 +31,20 @@ const Login = () => {
     function displayMessages(data) {
       console.log(data)
       if (!data.success) {
-        console.log(alert(data.error))
+        swal({
+          title:data.mensaje,
+          icon:"error",
+          buttons: "ok"
+      })
+      alert(data.mensaje)
     }
       
-    else { console.log(data.response) }
-       
+    else { alert(data.mensaje) 
+      swal({
+        title:data.mensaje,
+        icon:"success",
+        buttons: "ok"
+    })
     dispatch({
           type: actionType.USER,
           user: data.response,
@@ -41,6 +52,7 @@ const Login = () => {
       
 
     }
+  }
 
     //trae vacio preguntar 
   }
@@ -69,9 +81,12 @@ const Login = () => {
                 Sign up{" "}
               </i>
             </Link>{" "}
-          </p>
+          
+          
           <Facebooki/>
           <Googlei/>
+          </p>
+          
           
         </div>
        

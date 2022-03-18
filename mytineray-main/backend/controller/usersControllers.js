@@ -82,7 +82,7 @@ const usersController = {
       const UsuarioExiste = await User.findOne({ email })
 
       if (UsuarioExiste) {
-      // res.json({success:"falseUE",response:"user already exist.please sign in."})
+      
        
         if (from!==signup) {
           const passwordHash = bcryptjs.hashSync(password, 10)
@@ -92,11 +92,11 @@ const usersController = {
           UsuarioExiste.connected = false;
 
           UsuarioExiste.save();
-          res.json({ success: true,response: "actualizamos tu sign in para que lo realizes con " +from })
+          res.json({ success: true,mensaje:"actualizamos tu sign in para que lo realizes con " +from })
         }
       
         else {
-          rep.json({ success: false, response: "este email ya esta en uso,realiza el signin" })
+          rep.json({ success: false, mensaje: "este email ya esta en uso,realiza el signin" })
         }
       }
       else{
@@ -114,6 +114,7 @@ const usersController = {
           from,
         })
         
+        
 
         if (from!=="signup") {
             NewUser.emailVerificado = true,
@@ -121,7 +122,7 @@ const usersController = {
             NewUser.connected = false,
            
             await NewUser.save()
-            res.json({ success: true,data:{ NewUser }, response: "felicitaciones hemos creados tu usuario con " +""+from  })
+            res.json({ success:true,data:{ NewUser }, mensaje: "felicitaciones hemos creados tu usuario con " + from})
         }
 
         else {
@@ -130,13 +131,13 @@ const usersController = {
           NewUser.connected = false;
           await NewUser.save();
           await sendEmail(email, uniqueText);
-          res.json({ success: "trueUE", response: "we have sent you your email", data:{NewUser} })
+          res.json({ success: true, mensaje: "we have sent you your email", data:{NewUser} })
 
         }
     }
   }
 
-  catch (error) { res.json({ success: "falseVAL", from: "Signup", response: "EL correo ya esta en uso", error: error }) }
+  catch (error) { res.json({ success: false, from: "Signup", mensaje: "EL correo ya esta en uso", error: error }) }
  
 },
 
@@ -144,11 +145,12 @@ const usersController = {
   accesoUsuario: async (req, res) => {
 
     const { email, password } = req.body.userData
+    console.log(req.body)
     try {
       const usuario = await User.findOne({ email })
 
       if (!usuario) {
-        response.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" })
+        response.json({ success: false, from: "controller", mensaje: "el usuario y/o contraseña son incorrecto" })
       } else {
 
         if (usuario.emailVerificado) {
@@ -166,16 +168,17 @@ const usersController = {
             
             usuario.connected = true
             await usuario.save()
-            res.json({ success: true, from: "controller", response: { token, datoUser } })
+            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"bienvenido nuevamente " + usuario.firstname  })
           }
-          else { res.json({ success: false, from: "controller", error: "el usuario y/o contraseña son incorrecto" }) }
+          else { res.json({ success: false, from: "controller", mensaje: "el usuario y/o contraseña son incorrecto" }) }
 
         }
-        else { res.json({ success: false, from: "controller", error: "verifica tu email para validarlo " }) }
+        else { res.json({ success: false, from: "controller", mensaje: "verifica tu email para validarlo " }) }
 
       }
 
-    } catch (error) { console.log(error); res.json({ success: false, response: null, error: error }) }
+
+    } catch (error) { console.log(error); res.json({ success: false, response: null, mensaje:"a ocurrido un error intentalo mas tarde" }) }
 
   },
 
@@ -190,7 +193,7 @@ cerrarsesion: async (req, res) => {
     user.connected = false
 
     await user.save()
-    res.json({ success: true, response: "Cerrar sesion" })
+    res.json({ success: true, mensaje: "Cerrar sesion" })
 
   }
 

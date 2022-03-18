@@ -1,36 +1,57 @@
 import React from "react";
 import GoogleLogin from 'react-google-login';
 import axios from 'axios';
-
+import { actionType } from "../../reducer";
+import { useStateValue } from '../../StateProvider';
+import swal from 'sweetalert';
 
 function Googlei(){ 
-  
+  const [{ user }, dispatch] = useStateValue()
 const responseGoogle = async (response) => {
-   
-    const NuevoUsuario = {
+  
+    const userData = {
       email: response.profileObj.email,
-      password:response.googleId+"Ep" ,
+      password:response.googleId+"Ka" ,
       from:"google"
       
     }
 
+    await axios
+    .post("http://localhost:4000/api/signin", { userData })
+    .then(response => 
+      
+      displayMessages(response.data)
     
-    await axios.post("http://localhost:4000/api/signin",{NuevoUsuario})
-   .then(response=>
-   displayMessages(response.data),
-  
-  )
-  function displayMessages(data){
-    if(data.success==="falseVAL"){
+    
+    )
+
+    function displayMessages(data) {
       console.log(data)
-      console.log(data.response.error.details)
-    alert(data.response.error.details.map(error=>error.message))
-    
-  } else if(data.success==="trueUE"){
-     console.log(data)
+      if (!data.success) {
+      // alert(data.mensaje)
+      swal({
+        title:data.mensaje,
+        icon:"success",
+        buttons: "ok"
+    })
     }
-  }
+      
+    else {
+      //  alert(data.mensaje) 
+      swal({
+        title:data.mensaje,
+        icon:"success",
+        buttons: "ok"
+    })
+    dispatch({
+          type: actionType.USER,
+          user: data.response,
+        });
+      
   
+    } 
+  }
+ 
   }
 
   return(
