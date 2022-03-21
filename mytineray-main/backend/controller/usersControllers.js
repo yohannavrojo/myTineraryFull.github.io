@@ -92,11 +92,11 @@ const usersController = {
           UsuarioExiste.connected = false;
 
           UsuarioExiste.save();
-          res.json({ success: true,mensaje:"actualizamos tu sign in para que lo realizes con " +from })
+          res.json({ success: true,mensaje:"We update your sign in so you can do it with " +from })
         }
       
         else {
-          rep.json({ success: false, mensaje: "este email ya esta en uso,realiza el signin" })
+          rep.json({ success: false, mensaje: "This email is already in use, perform the signin" })
         }
       }
       else{
@@ -122,7 +122,7 @@ const usersController = {
             NewUser.connected = false,
            
             await NewUser.save()
-            res.json({ success:true,data:{ NewUser }, mensaje: "felicitaciones hemos creados tu usuario con " + from})
+            res.json({ success:true,data:{ NewUser }, mensaje: "congratulations we have created your user with " + from})
         }
 
         else {
@@ -137,7 +137,7 @@ const usersController = {
     }
   }
 
-  catch (error) { res.json({ success: false, from: "Signup", mensaje: "EL correo ya esta en uso", error: error }) }
+  catch (error) { res.json({ success: false, from: "Signup", mensaje: "The mail is already in use", error: error }) }
  
 },
 
@@ -150,14 +150,14 @@ const usersController = {
       const usuario = await User.findOne({ email })
 
       if (!usuario) {
-        response.json({ success: false, from: "controller", mensaje: "el usuario y/o contraseña son incorrecto" })
+        response.json({ success: false, from: "controller", mensaje: "the username and/or password are incorrect" })
       } else {
 
         if (usuario.emailVerificado) {
           let passwordCoincide = bcryptjs.compareSync(password, usuario.password)
 
           if (passwordCoincide) {
-            const token = jwt.sign({ ...usuario }, process.env.SECRETKEY)
+            // const token = jwt.sign({ ...usuario }, process.env.SECRETKEY)
             const datoUser = {
               firstname: usuario.firstname,
               lastname: usuario.lastname,
@@ -168,17 +168,19 @@ const usersController = {
             
             usuario.connected = true
             await usuario.save()
-            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"bienvenido nuevamente " + usuario.firstname  })
+
+            const token = jwt.sign({ ...datoUser}, process.env.SECRETKEY,{expiresIn:60*60*24})
+            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"welcome again" + usuario.firstname  })
           }
-          else { res.json({ success: false, from: "controller", mensaje: "el usuario y/o contraseña son incorrecto" }) }
+          else { res.json({ success: false, from: "controller", mensaje: "the username and/or password are incorrect" }) }
 
         }
-        else { res.json({ success: false, from: "controller", mensaje: "verifica tu email para validarlo " }) }
+        else { res.json({ success: false, from: "controller", mensaje: "check your email to validate it " }) }
 
       }
 
 
-    } catch (error) { console.log(error); res.json({ success: false, response: null, mensaje:"a ocurrido un error intentalo mas tarde" }) }
+    } catch (error) { console.log(error); res.json({ success: false, response: null, mensaje:"an error occurred try again later" }) }
 
   },
 
@@ -193,7 +195,7 @@ cerrarsesion: async (req, res) => {
     user.connected = false
 
     await user.save()
-    res.json({ success: true, mensaje: "Cerrar sesion" })
+    res.json({ success: true, mensaje: "Sign off" })
 
   }
 

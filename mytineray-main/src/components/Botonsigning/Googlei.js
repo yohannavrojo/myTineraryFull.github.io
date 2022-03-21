@@ -28,7 +28,7 @@ const responseGoogle = async (response) => {
     function displayMessages(data) {
       console.log(data)
       if (!data.success) {
-      // alert(data.mensaje)
+      
       swal({
         title:data.mensaje,
         icon:"success",
@@ -37,7 +37,7 @@ const responseGoogle = async (response) => {
     }
       
     else {
-      //  alert(data.mensaje) 
+     
       swal({
         title:data.mensaje,
         icon:"success",

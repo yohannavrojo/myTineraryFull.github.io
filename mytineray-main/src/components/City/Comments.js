@@ -6,6 +6,8 @@ import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
 import {FaTrashAlt} from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
+import Like from "../City/Like";
+
 
 
 function Comments(props) {
@@ -99,13 +101,13 @@ function Comments(props) {
 
             <div className="form-floating" >
             
-             <textarea onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></textarea>
+             <input onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></input>
                             
 
             </div>
             
             <button  type="button" className="btn btn-light" onClick={() => borrarComentario(itine._id)} >
-                  <FaTrashAlt/>  
+                    <FaTrashAlt/>
                   </button>
                   <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
                <MdCreate/>
@@ -124,6 +126,8 @@ function Comments(props) {
                   <button type="button" className="btn btn-outline-info">
                     Send<i className="fas fa-paper-plane"></i>
                   </button>
+                  <Like/>
+                  
                 </div>
               </div>
             </form>

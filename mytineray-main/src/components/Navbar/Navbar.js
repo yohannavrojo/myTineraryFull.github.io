@@ -26,6 +26,7 @@ const Narbar = () => {
     
     await axios.post("http://localhost:4000/api/signOut", { email })
       .then(response => 
+        localStorage.removeItem("token"),
         dispatch({
           type: actionType.USER,
           user: null
@@ -77,7 +78,7 @@ const Narbar = () => {
                   <MenuItemLink
                     onClick={() => cerrarSesion()}>
                     {/* */}
-                    CERRAR SESION
+                    SIGN OFF
                   </MenuItemLink>
                 )}
               </MenuItem>

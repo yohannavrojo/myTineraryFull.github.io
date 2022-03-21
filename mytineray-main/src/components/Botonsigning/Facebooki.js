@@ -22,14 +22,19 @@ const responseFacebook = async (response) => {
    
    )
    function displayMessages(data) {
-    console.log(data)
+     console.log(data)
     if (!data.success) {
-    alert(data.mensaje)
+    
+    swal({
+      title:data.mensaje,
+      icon:"success",
+      buttons: "ok"
+  })
   }
     
   else { 
     
-    // alert(data.mensaje) 
+     
     swal({
       title:data.mensaje,
       icon:"success",
