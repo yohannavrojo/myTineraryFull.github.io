@@ -1,8 +1,9 @@
 const Router = require("express").Router();
+const passport=require("../config/passport")
 const datosController = require("../controller/datosControllers");// revisar esta ruta 
-const {ObtenerTodosLosDatos, ObtenerItynerarios} = datosController // desestructuración del controlador de Ciudades
+const {ObtenerTodosLosDatos, ObtenerItynerarios, likeDislike} = datosController // desestructuración del controlador de Ciudades
 const usersController= require ("../controller/usersControllers.js")
-const {nuevoUsuario, verifyEmail,accesoUsuario,cerrarsesion} = usersController
+const {nuevoUsuario, verifyEmail,accesoUsuario,cerrarsesion,verificarToken} = usersController
 const validator= require("../controller/validator.js")
 const commentControllers= require("../controller/comentariosControllers")
 const {cargaComentarios,obtenerComentarios,borrarComentario,modificarComentario}=commentControllers
@@ -34,5 +35,10 @@ Router.route("/comments/:id")
 .delete(borrarComentario)
 .put(modificarComentario)
 
+Router.route("/signinToken")
+.get(passport.authenticate("jwt",{session:false}),verificarToken)
+
+// Router.route("/likeDislike/:id")
+// .put(passport.authenticate("jwt",{session:false}),likeDislike)
 
 module.exports = Router
