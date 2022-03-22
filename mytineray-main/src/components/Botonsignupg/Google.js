@@ -24,6 +24,7 @@ function Google(){
   )
   function displayMessages(data){
     // alert (data.mensaje)
+    // localStorage.setItem("token",data.response.token)
     swal({
       title:data.mensaje,
       icon:"success",

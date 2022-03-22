@@ -24,7 +24,7 @@ const responseFacebook = async (response) => {
   )
   
     function displayMessages(data){
-      
+      // localStorage.setItem("token",data.response.token)
       swal({
         title:data.mensaje,
         icon:"success",

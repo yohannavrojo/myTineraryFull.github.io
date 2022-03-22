@@ -37,7 +37,7 @@ const responseGoogle = async (response) => {
     }
       
     else {
-     
+      // localStorage.setItem("token",data.response.token)
       swal({
         title:data.mensaje,
         icon:"success",

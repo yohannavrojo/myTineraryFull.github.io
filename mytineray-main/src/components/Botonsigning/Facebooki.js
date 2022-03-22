@@ -33,8 +33,8 @@ const responseFacebook = async (response) => {
   }
     
   else { 
+    // localStorage.setItem("token",data.response.token)
     
-     
     swal({
       title:data.mensaje,
       icon:"success",
