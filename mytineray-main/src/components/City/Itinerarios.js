@@ -1,11 +1,12 @@
 import React from "react";
 import "../City/Itinerarios.css";
 import Comments from "../City/Comments";
+//import Like from "../City/Like";
 
 function Itinerarios(props) {
   const itinerarios = props.itineSelecter;
 
-  console.log(props);
+  // console.log(props);
   return (
     <>
       <div>
@@ -26,9 +27,14 @@ function Itinerarios(props) {
                 <h2>
                   {itine.price} {itine.time}
                 </h2>
+             {/* <Like  Like={props.itineSelecter.Like} id={props.itineSelecter._id}/> */}
+              
               </div>
+             
              <Comments itinerario={itine._id}/>
+             
             </div>
+            
           ))}
        
         </div>

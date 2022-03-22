@@ -145,7 +145,7 @@ const usersController = {
   accesoUsuario: async (req, res) => {
 
     const { email, password } = req.body.userData
-    console.log(req.body)
+    // console.log(req.body)
     try {
       const usuario = await User.findOne({ email })
 
@@ -170,7 +170,8 @@ const usersController = {
             await usuario.save()
 
             const token = jwt.sign({ ...datoUser}, process.env.SECRETKEY,{expiresIn:60*60*24})
-            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"welcome again" + usuario.firstname  })
+            //response muestra los datos de token y datouser 
+            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"welcome again" + usuario.firstname  }) 
           }
           else { res.json({ success: false, from: "controller", mensaje: "the username and/or password are incorrect" }) }
 
@@ -197,7 +198,29 @@ cerrarsesion: async (req, res) => {
     await user.save()
     res.json({ success: true, mensaje: "Sign off" })
 
-  }
+  },
+
+  verificarToken: async(req,res)=>{
+
+    if (!req.error) {
+
+      res.json({success: true,
+         response:{
+        firstname:req.user.firstname,
+        lastname:req.user.lastname,
+        email:req.user.email,
+        id:req.user.id } , 
+         mensaje: "Welcome again" + req.user.firstname  }
+         )
+         console.log(response)
+    }else{
+      res.json({
+        success:false, mensaje:"Please sign in again "
+      })
+    }
+  },
+
+  
 
 }
 module.exports = usersController

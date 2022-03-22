@@ -6,7 +6,7 @@ import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
 import {FaTrashAlt} from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
-import Like from "../City/Like";
+//import Like from "../City/Like";
 
 
 
@@ -42,7 +42,7 @@ function Comments(props) {
                 setComment(response.data.response.comentario)
             })
 
-        console.log(comment)
+        // console.log(comment)
 
     }, [reload])
 
@@ -112,23 +112,29 @@ function Comments(props) {
                   <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
                <MdCreate/>
                   </button>
+         
+         
           </div> 
+
+          
            )}
 
            {/* BODY  */}
           <div className="accordion-body">
-           
+         
 
             <form onSubmit={submitComment}>
               <div className="form-floating">
                 <textarea className="form-control" id="floatingTextarea"></textarea> <br/>              
                 <div className="btn-comentario-form">
+
                   <button type="button" className="btn btn-outline-info">
                     Send<i className="fas fa-paper-plane"></i>
                   </button>
-                  <Like/>
-                  
+                
+                  {/* <Like like={itine.like} id={itine._id}/> */}
                 </div>
+                
               </div>
             </form>
           </div>

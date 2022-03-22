@@ -42,7 +42,8 @@ const Login = () => {
       
     else { 
       // alert(data.mensaje) 
-      localStorage.setItem("token",data.mensaje.token)
+      // console.log(data.response.token)
+     localStorage.setItem("token",data.response.token)
       swal({
         title:data.mensaje,
         icon:"success",
