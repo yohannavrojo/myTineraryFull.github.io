@@ -30,7 +30,7 @@ function Itinerarios(props) {
              {/* <Like  Like={props.itineSelecter.Like} id={props.itineSelecter._id}/> */}
               
               </div>
-             
+   
              <Comments itinerario={itine._id}/>
              
             </div>

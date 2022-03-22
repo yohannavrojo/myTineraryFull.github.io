@@ -11,7 +11,7 @@ const commentControllers={
 cargaComentarios: async (req, res) => {
 
     const {  itinerario,mensaje,user} = req.body.dataComents 
-console.log(req.body.dataComents )
+ console.log(req.body.dataComents )
 
  new Comments({itinerario: itinerario,
    user: user,
@@ -59,7 +59,7 @@ borrarComentario:async(req, res) =>{
         console.log(error)
         
     }
-    res.json({success:true, response:{comentario}, mensage:"Your comment has been deleted"})
+    res.json({success:true, response:{comentario}, mensaje:"Your comment has been deleted"})
 
 },
 
@@ -72,14 +72,14 @@ modificarComentario:async(req, res) =>{
    
     let comentario
     try {
-        comentario=await Comments.findOneAndUpdate({_id:id}, newComents )
+        comentario=await Comments.findOneAndUpdate({_id:id}, newComents,{new:true} )
 
     } catch (error) {
         console.log(error)
         
     }
 
-    res.json({success:true, response:{comentario}, mensage:"Your comment has been modified"})
+    res.json({success:true, response:{comentario}, mensaje:"Your comment has been modified"})
 
 
 }

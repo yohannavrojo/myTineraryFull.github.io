@@ -6,6 +6,7 @@ import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
 import {FaTrashAlt} from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
+import swal from 'sweetalert';
 //import Like from "../City/Like";
 
 
@@ -26,13 +27,12 @@ function Comments(props) {
       user: user.datoUser.id,
       
     }
-
    
   await axios.post("http://localhost:4000/api/comments",{dataComents})
    .then(response=>
       setComment(response.data.response.comentario)
     )   
-   
+  
    }
 
    useEffect(() => {
@@ -40,16 +40,28 @@ function Comments(props) {
         axios.get(`http://localhost:4000/api/comments/${id} `)
             .then(response => {
                 setComment(response.data.response.comentario)
-            })
+           
+          
+              })
 
-        // console.log(comment)
-
+         
+//  console.log(response)
     }, [reload])
 
     const borrarComentario = (id) => {
         axios.delete(`http://localhost:4000/api/comments/${id} `)
+        .then(response => {
+console.log(response)
+   swal({
+          title:response.data.mensaje,
+          icon:"success",
+          buttons: "ok"
+      })
+        })
         setReload(!reload)
-    }
+     
+    
+      }
 
     const handelChange = (event) => {
         setCambio(event.target.value)
@@ -57,9 +69,19 @@ function Comments(props) {
     }
 
     const modificar = (id) => {
-        console.log(id)
+        
         let data = cambio
         axios.put(`http://localhost:4000/api/comments/${id} `, { data })
+        .then(response => {
+          console.log(response)
+             swal({
+                    title:response.data.mensaje,
+                    icon:"success",
+                    buttons: "ok"
+                })
+                  })
+      
+      
         setReload(!reload)
     }
 
@@ -67,81 +89,85 @@ function Comments(props) {
 
 
   return (
-      
+    <>
+     
     <div className="accordion d-grid col-10 mx-4" id="accordionExample">
-      
-      <div className="accordion-item">
-      
-        <h2 className="accordion-header " id="headingOne">
-          <button className="accordion-button   "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
-          >
-            COMMENTS
-          </button>
 
-        </h2>
-        <br />
-        
-        <div
-          id="collapseOne"
-          className="accordion-collapse collapse"
-          aria-labelledby="headingOne"
+
+
+    <div className="accordion-item">
+    
+      <h2 className="accordion-header " id="headingOne">
+        <button className="accordion-button   "
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseOne"
+          aria-expanded="true"
+          aria-controls="collapseOne"
         >
-           {comment?.map(itine=>  
-         <div className="d-flex position-relative mx-3 ">
+          COMMENTS
+        </button>
 
-            <Avatar
-              src={imagencommenst}
-              sx={{ width: 56, height: 56 }}
-            ></Avatar>
+      </h2>
+      <br />
+      
+      <div
+        id="collapseOne"
+        className="accordion-collapse collapse"
+        aria-labelledby="headingOne"
+      >
+         {comment?.map(itine=>  
+       <div className="d-flex position-relative mx-3 ">
 
-            <div className="form-floating" >
-            
-             <input onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></input>
-                            
+          <Avatar
+            src={imagencommenst}
+            sx={{ width: 56, height: 56 }}
+          ></Avatar>
 
-            </div>
-            
-            <button  type="button" className="btn btn-light" onClick={() => borrarComentario(itine._id)} >
-                    <FaTrashAlt/>
-                  </button>
-                  <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
-               <MdCreate/>
-                  </button>
-         
-         
-          </div> 
-
+          <div className="form-floating" >
           
-           )}
+           <input onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></input>
+                          
 
-           {/* BODY  */}
-          <div className="accordion-body">
-         
-
-            <form onSubmit={submitComment}>
-              <div className="form-floating">
-                <textarea className="form-control" id="floatingTextarea"></textarea> <br/>              
-                <div className="btn-comentario-form">
-
-                  <button type="button" className="btn btn-outline-info">
-                    Send<i className="fas fa-paper-plane"></i>
-                  </button>
-                
-                  {/* <Like like={itine.like} id={itine._id}/> */}
-                </div>
-                
-              </div>
-            </form>
           </div>
+          
+          <button  type="button" className="btn btn-light" onClick={() => borrarComentario(itine._id)} >
+                  <FaTrashAlt/>
+                </button>
+                <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
+             <MdCreate/>
+                </button>
+       
+       
+        </div> 
 
+        
+         )}
+
+         {/* BODY  */}
+        <div className="accordion-body">
+       
+
+          <form onSubmit={submitComment}>
+            <div className="form-floating">
+              <textarea className="form-control" id="floatingTextarea"></textarea> <br/>              
+              <div className="btn-comentario-form">
+
+                <button type="submit" className="btn btn-outline-info">
+                  Send<i className="fas fa-paper-plane"></i>
+                </button>
+              
+                {/* <Like like={itine.like} id={itine._id}/> */}
+              </div>
+              
+            </div>
+          </form>
         </div>
+
       </div>
     </div>
+  </div>
+  </>
   );
 }
 
