@@ -13,18 +13,15 @@
     margin-bottom: 2em;
 }
 .accordion-button {
-    background: rgb(172, 252, 241)!important;
+    background: rgb(250, 173, 173)!important;
     color: black !important;
  
 }
 
-.accordion-item{
-    background: rgb(172, 252, 241)!important; 
-    
-}
+
   
 .accordion-collapse{
-    background: rgb(172, 252, 241)!important;
+    background: rgb(248, 215, 215)!important;
     
 }
 

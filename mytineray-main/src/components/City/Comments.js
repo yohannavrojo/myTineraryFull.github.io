@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useStateValue } from "../../StateProvider";
 import "../City/Comments.css";
 import { Avatar } from "@material-ui/core";
+
 import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
 import {FaTrashAlt} from "react-icons/fa";
@@ -96,7 +97,7 @@ console.log(user)
 
 
 
-    <div className="accordion-item">
+    {/* <div className="accordion-item"> */}
     
       <h2 className="accordion-header " id="headingOne">
         <button className="accordion-button   "
@@ -119,6 +120,8 @@ console.log(user)
       >
          {comment?.map(itine=>  
        <div className="d-flex position-relative mx-3 ">
+       
+       
 
           <Avatar
             src={imagencommenst}
@@ -167,7 +170,7 @@ console.log(user)
           </form>
         </div>
 
-      </div>
+      {/* </div> */}
     </div>
   </div>
   </>
