@@ -1,4 +1,7 @@
+/* cartas nuevas  */
 
+
+/* termina cartas nuevas  */
 .home {
   text-align: center;
 }
@@ -28,7 +31,33 @@
 .Img {
   object-fit: cover;
 }
+/*  */
+.informacion{
+  background: rgb(187,236,181);
+  background: linear-gradient(135deg, rgba(187,236,181,1) 13%, rgba(208,200,255,1) 48%, rgba(237,160,190,1) 100%);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.815);
+  width: 100%;
+	height: 300px;
+margin-top: 60px;
 
+border-radius: 10px;
+
+}
+.texto-info1{
+  padding-top: 60px;
+  font-family: "Oswald";
+  font-size: 35px;
+  color: rgb(102, 17, 182);
+  text-shadow: 7px 6px 15px black;
+
+}
+
+
+
+
+
+
+/*  */
 .cardshome {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -36,7 +65,7 @@
   grid-gap: 40px;
   margin-bottom: 40px;
  margin-left: 30px;
-  
+  margin-top: 90px;
 }
 
 .cardh  {
@@ -164,4 +193,14 @@ padding-top: 30px;
   color : rgb(143, 37, 153) ;
   text-align: center;
   margin-top:30px ;
+}
+
+/* carousel */
+
+
+
+.espacio{
+  width: 100%;
+  height: 600px;
+  margin-top: 150px;
 }
