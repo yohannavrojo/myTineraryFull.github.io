@@ -1,0 +1,30 @@
+.inputBoton{
+    width: 90%;
+    height: 50px;
+    padding-left: 2em;
+    border: solid 1px rgb(14, 12, 13);
+    border-radius: 10px;
+    margin-bottom: 2em;
+   
+
+}
+.floating{
+    padding-left: 2em;
+    margin-bottom: 2em;
+}
+.accordion-button {
+    background: rgb(172, 252, 241)!important;
+    color: black !important;
+ 
+}
+
+.accordion-item{
+    background: rgb(172, 252, 241)!important; 
+    
+}
+  
+.accordion-collapse{
+    background: rgb(172, 252, 241)!important;
+    
+}
+

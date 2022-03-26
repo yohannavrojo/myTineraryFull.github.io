@@ -62,6 +62,7 @@ const Login = () => {
   }
   return (
     <>
+    <div className="fondo-login">
       <form className="formulario" onSubmit={loginUser}>
         <h1>Sign In</h1>
         <div className="contenedor">
@@ -98,6 +99,7 @@ const Login = () => {
 
 
       </form>
+      </div>
     </>
   );
 };

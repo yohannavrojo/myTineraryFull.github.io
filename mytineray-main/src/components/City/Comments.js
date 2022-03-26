@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useStateValue } from "../../StateProvider";
-// import "../City/Comments.css";
+import "../City/Comments.css";
 import { Avatar } from "@material-ui/core";
 import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
@@ -31,7 +31,8 @@ function Comments(props) {
   await axios.post("http://localhost:4000/api/comments",{dataComents})
    .then(response=>
       setComment(response.data.response.comentario)
-    )   
+    
+      )   
   
    }
 
@@ -84,8 +85,8 @@ console.log(response)
       
         setReload(!reload)
     }
-
-
+    console.log(comment)
+console.log(user)
 
 
   return (
@@ -123,23 +124,25 @@ console.log(response)
             src={imagencommenst}
             sx={{ width: 56, height: 56 }}
           ></Avatar>
+            
 
-          <div className="form-floating" >
+      
+          <div className="floating" >
           
-           <input onKeyUp={handelChange} className="text-blue bg-light mx-3" defaultValue={itine.comment}></input>
-                          
+           <input onKeyUp={handelChange} className="inputBoton" defaultValue={itine.comment}></input>
+            <button  type="button" className="btn btn-info mx-3 " onClick={() => borrarComentario(itine._id)} >
+                  <FaTrashAlt/> 
+                </button>
+                <button type="button" className="btn btn-info" onClick={() => modificar(itine._id)}>
+             <MdCreate/>
+                </button>               
 
           </div>
           
-          <button  type="button" className="btn btn-light" onClick={() => borrarComentario(itine._id)} >
-                  <FaTrashAlt/>
-                </button>
-                <button type="button" className="btn btn-light" onClick={() => modificar(itine._id)}>
-             <MdCreate/>
-                </button>
+         
        
        
-        </div> 
+        </div>
 
         
          )}
@@ -153,11 +156,11 @@ console.log(response)
               <textarea className="form-control" id="floatingTextarea"></textarea> <br/>              
               <div className="btn-comentario-form">
 
-                <button type="submit" className="btn btn-outline-info">
+                <button type="submit" className="btn btn-info">
                   Send<i className="fas fa-paper-plane"></i>
                 </button>
               
-                {/* <Like like={itine.like} id={itine._id}/> */}
+               
               </div>
               
             </div>

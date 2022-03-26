@@ -1,5 +1,12 @@
 
-
+.fondo-login{
+    /* width: 900px;
+    height: 100%; */
+    background: url(../imagenes/afondologin.jpg);
+ background-size:cover;
+ padding-top: 30px;
+ padding-bottom: 50px;
+}
 .contenedor{
     width: 100%;
     font-family:"Oswald";
@@ -7,16 +14,16 @@
     margin-bottom: 50px;
 }
 .formulario{
-    background: rgb(207, 155, 236);
+  
     margin-top: 10px;
     padding: 3px;
-   
+  
 
 }
 h1{
     font-family:"Oswald";
     text-align: center;
-    color: #a719ca;
+    color: #d165ec;
     font-size: 40px;
 }
 input[type="text"],
@@ -42,7 +49,7 @@ input[type="password"]{
     width: 100%;
     color: rgb(3, 3, 3);
     font-size: 30px;
-    background: rgb(130, 7, 179);
+    background: rgb(184, 62, 233);
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
