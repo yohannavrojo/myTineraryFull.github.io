@@ -9,12 +9,13 @@ import {
   MobileMenuIcon,
 } from "../Navbar/Navbar-elements";
 import { SiYourtraveldottv } from "react-icons/si";
-import { FaBars, FaTimes, FaRegUserCircle } from "react-icons/fa";
+import { FaBars, FaTimes, FaRegUserCircle,FaUserTimes,FaUserPlus } from "react-icons/fa";
 import { IconContext } from "react-icons";
 import { Outlet, Link } from "react-router-dom";
 import { actionType } from "../../reducer";
 import { useStateValue } from "../../StateProvider";
-
+import { BsHouseFill } from "react-icons/bs";
+import { FcGlobe} from "react-icons/fc";
 import axios from "axios";
 
 const Narbar = () => {
@@ -55,30 +56,37 @@ const Narbar = () => {
             </MobileMenuIcon>
 
             <Menu showMobileMenu={showMobileMenu}>
-              <MenuItem onClick={() => handleShowMobileMenu()}>
-                <Link to="/">
+              <MenuItem   onClick={() => handleShowMobileMenu()}>
+                <Link to={"/"}>
                   {" "}
-                  <MenuItemLink>HOME</MenuItemLink>
+                  
+                  <MenuItemLink><BsHouseFill/></MenuItemLink>
                 </Link>
                 <hr />
               </MenuItem>
 
               <MenuItem onClick={() => handleShowMobileMenu()}>
-                <Link to="/Cities">
+                <Link to={"/Cities"}>
                   {" "}
-                  <MenuItemLink>CITIES</MenuItemLink>
+                  <MenuItemLink><FcGlobe/></MenuItemLink>
                 </Link>
                 <hr />
               </MenuItem>
 
               <MenuItem>
                 {!user ? (
-                  <MenuItemLink to="/Signin">SIGN IN</MenuItemLink>
+                  <MenuItemLink>
+                     <Link to={"/Signin"}>
+                    <FaRegUserCircle onClick={() => handleShowMobileMenu()} />
+                 
+                 
+                  </Link>
+                     </MenuItemLink>
                 ) : (
                   <MenuItemLink
                     onClick={() => cerrarSesion()}>
                     {/* */}
-                    SIGN OFF
+                    <FaUserTimes/>
                   </MenuItemLink>
                 )}
               </MenuItem>
@@ -86,7 +94,7 @@ const Narbar = () => {
               <MenuItem onClick={() => handleShowMobileMenu()}>
                 <MenuItemLink>
                   <Link to="/Signup">
-                    <FaRegUserCircle onClick={() => handleShowMobileMenu()} />
+                    <FaUserPlus   onClick={() => handleShowMobileMenu()} />
                  
                  
                   </Link>
