@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
-
+import { HiOutlineArrowCircleDown } from "react-icons/hi";
 function Card() {
   const [{ filterCity }, dispatch] = useStateValue();
   return (
@@ -28,7 +28,7 @@ function Card() {
         <Link to={`/CITY/${city._id}`}>
           <div className="boton">
             <a href="#">
-              <span>Read More</span>
+              <span><HiOutlineArrowCircleDown /></span>
             </a>
           </div>
         </Link>
