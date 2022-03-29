@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
 export const IconContainer = styled.div`
   
   margin-left: 0.5rem;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald";
   font-size: 1.5rem;
   height: 100%;
   display: flex;
@@ -32,12 +32,12 @@ export const Menu = styled.ul`
   height: 100%;
   display: flex;
   justify-content: space-between;
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: 990px) {
     position: absolute;
     top: 70px;
     left: ${({ showMobileMenu }) => (showMobileMenu ? "0" : "-100%")};
     width: 100%;
-    height: 30vh;
+    height: 50vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -48,14 +48,14 @@ export const Menu = styled.ul`
 `;
 
 export const MenuItem = styled.li`
-  z-index: 1;
+  z-index: 50;
   cursor: pointer;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-end;
-  
+  margin-left:80px;
  
   transition: 0.3s all ease;
   hr {
@@ -95,7 +95,7 @@ export const MobileMenuIcon = styled.div`
 
   @media screen and (max-width: 960px) {
     display: flex;
-    margin-left: 1rem;
+    margin-left: 5rem;
    
    
   }
