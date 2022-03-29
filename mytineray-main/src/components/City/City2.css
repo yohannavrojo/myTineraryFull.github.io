@@ -38,6 +38,7 @@
     justify-content:left;
     min-height: 30vh;
     margin-top: 30px;
+    flex-wrap: wrap;
     
 }
 
