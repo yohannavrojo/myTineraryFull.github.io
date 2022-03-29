@@ -1,0 +1,62 @@
+.carousel2 {
+    width: 100%;
+    height: 100% ;
+    background-color: rgb(138, 121, 121);
+   
+}
+.carouselInner2 {
+    height: 600px;
+    width: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+
+    
+}
+
+.carouselInner2 .left2 {
+    flex: 5%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: grid;
+    place-items: center;
+    color: rgb(55, 160, 160);
+    cursor: pointer;
+}
+
+.carouselInner2 .center2 {
+    flex: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-family:"Oswal";
+    text-align: justify;
+    text-align-last: center;
+   
+}
+.carouselInner2 .center2 .tite2 {
+    color: rgb(126, 253, 122);
+    background: rgba(2, 2, 2, 0.459);
+    width: 50%;
+    border-radius: 40px; 
+}
+
+.carouselInner2 .center2 .subtite2{
+
+    color: rgb(126, 253, 122);
+    background: rgba(2, 2, 2, 0.459);
+    width: 50%;
+    border-radius: 40px; 
+    font-size: 30px;
+}
+
+.carouselInner2 .right2 {
+    flex: 5%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: grid;
+    place-items: center;
+    color: rgb(55, 160, 160);
+    cursor: pointer;
+}
