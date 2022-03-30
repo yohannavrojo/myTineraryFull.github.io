@@ -16,10 +16,14 @@ module.exports=passport.use(new jwtStrategy({
          if (user) {
              
              return done(null,user)
-         }else if(error){
+         }
+        //  else if(error){
+        //      return done(error,false) 
+          
+        //  }
+         else{
              return done(error,false)
-         }else{
-             return done(null,false)
+            //  (error,false)
          }
      })
      .catch(error=>{return done(error,false)})
