@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100px;
-  font-family:'Sail', cursive;
-  
+  font-family: 'Nanum Myeongjo', serif;
+  background: rgb(10,21,96);
 `;
 export const Wrapper = styled.div`
   width: 100%;
@@ -14,12 +14,14 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  background: rgba(255, 255, 255, 0);
+  
 `;
 
 export const IconContainer = styled.div`
   
   margin-left: 0.5rem;
-  font-family: "Oswald";
+  font-family: 'Nanum Myeongjo', serif;
   font-size: 1.5rem;
   height: 100%;
   display: flex;

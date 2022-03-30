@@ -1,24 +1,24 @@
-import City1 from "../imagenes/dinamarca1.jpg";
-import City2 from "../imagenes/suiza1.jpg";
-import City3 from "../imagenes/espana1.jpg";
-import City4 from "../imagenes/roma1.jpg";
-import City5 from "../imagenes/irlanda1.jpg";
-import City6 from "../imagenes/argelia2.jpg";
-import City7 from "../imagenes/arggentina.jpg";
-import City8 from "../imagenes/bangladesh.jpg";
-import City9 from "../imagenes/caboverde.jpg";
-import City10 from "../imagenes/tailandia.jpeg";
+import City1 from "../imagenes/apaisesBajos2.jpg";
+import City2 from "../imagenes/imagenes carouselhome/Jamaicaa.jpg";
+import City3 from "../imagenes/imagenes carouselhome/Paraguayy.jpg";
+import City4 from "../imagenes/imagenes carouselhome/oranjestad.jpg";
+import City5 from "../imagenes/imagenes carouselhome/roatan.jpg";
+import City6 from "../imagenes/imagenes carouselhome/newyork.jpg";
+import City7 from "../imagenes/imagenes carouselhome/montreal.jpg";
+import City8 from "../imagenes/imagenes carouselhome/oslo.jpg";
+import City9 from "../imagenes/imagenes carouselhome/kiev.jpg";
+import City10 from "../imagenes/imagenes carouselhome/antsirabe.jpg";
 
 
 export const imagenes2 = [
-  { titlee: "Argelia", subtitle: "Hidden treasure of Europe", img: City6 },
-  { titlee: "Argentina", subtitle: "Beat to your rhythm", img: City7 },
-  {titlee: "Bangladesh",subtitle: "Beautiful Bangladesh",img: City8, },
-  {titlee: "Cape Verde",subtitle: "Meeting Cape Verde",img: City9, },
-  {titlee: "Denmark",subtitle: "The happiest place on Earth!",img: City1, },
-  { titlee: "Spain", subtitle: "Spain in detail", img: City3 },
-  { titlee: "Ireland", subtitle: "	Go to Ireland", img: City5 },
-  { titlee: "SSwitzerland", subtitle: "Get Natural", img: City2 },
-  { titlee: "Thailand", subtitle: "Incredible Thailand begins with the people", img: City10 },
-  { titlee: "Rome", subtitle: "Made in Italy", img: City4 },
+  { titlee: "Paises Bajos", subtitle: "", img: City1 },
+  { titlee: "Jamaica", subtitle: "", img: City2 },
+  {titlee: "Paraguay",subtitle: "",img: City3, },
+  {titlee: "Oranjestad",subtitle: "",img: City4, },
+  {titlee: "Roatan",subtitle: "",img: City5, },
+  { titlee: "New York", subtitle: "", img: City6 },
+  { titlee: "Montreal", subtitle: "", img: City7 },
+  { titlee: "Oslo", subtitle: "", img: City8 },
+  { titlee: "Kyiv", subtitle: "", img: City9 },
+  { titlee: "Antsirabe", subtitle: "", img: City10 },
 ];

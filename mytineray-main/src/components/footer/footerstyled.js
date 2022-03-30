@@ -2,11 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div `
 
-background: rgb(247,151,226);
-background: linear-gradient(157deg, rgba(247,151,226,0.8589987020198704) 18%, rgba(159,204,255,0.8477942202271533) 51%, rgba(215,205,205,0.9122199905352766) 69%, rgba(249,236,144,0.7805673294708508) 100%);
 height: auto;
-
-
 `;
 
 export const Wrapper = styled.div `
@@ -32,6 +28,7 @@ text-align:right;
 
 `;
 export const Row = styled.div `
+
 display:grid;
 grid-template-columns:repeat(auto-fill,minmax(25%,1fr));
 grid-gap:20px;
@@ -43,7 +40,7 @@ grid-gap:20px;
 export const Link = styled.div `
 color:#000000;
 margin-bottom:20px;
-font-size:18px;
+font-size:20px;
 text-decoration:none;
 text-align:center;
 &:hover{
@@ -52,10 +49,11 @@ text-align:center;
 }
 `;
 export const Title = styled.p `
-font-size:24px;
+font-size:30px;
 color:#000000;
 margin-bottom:40px;
 font-weight:bold;
+font-family: 'Nanum Myeongjo', serif;
 `;
 
 export const Content = styled .p `
@@ -64,6 +62,6 @@ margin-top:30px;
 `;
 
 export const Icon = styled.i`
-font-size:18px;
+font-size:20px;
 margin-right:16px;
 `;

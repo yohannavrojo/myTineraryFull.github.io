@@ -6,7 +6,7 @@ import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
 
 function Carousel2() {
 
-    const [currImg2, setCurrImg2] = useState(1);
+    const [currImg2, setCurrImg2] = useState(3);
     return (
         <div className='carousel2'>
             <div className='carouselInner2'

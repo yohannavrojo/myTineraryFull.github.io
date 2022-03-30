@@ -1,8 +1,9 @@
 import React from "react";
 import "../general/Home.css";
 import { Link } from "react-router-dom";
+import Carousel2 from "./Carousel2";
 
-// import Carousel from "../general/carouselHome";
+
 const Home = () => {
   return (
     <>
@@ -10,26 +11,27 @@ const Home = () => {
 
       <div className="home">
         <div className="homeTitle">
-          <p className="Title">MY ITINERARY </p>
+          <p className="Title">My Itinerary </p>
         </div>
         <div className="Img">
-          <img
-            src={require("../imagenes/home2.jpg")}
-            width="100%"
-            height="400"
+          <img className="Imgtitulo"
+            src={require("../imagenes/aviajes2.png")}
+           
           />
         </div>
       </div>
 
       <div className="toque">
-        <div className="linea">
+        
           <h1 className="eslogan">Pure Travel, Pure Power</h1>
           <h2 className="subtitle">
             The world is too beautiful to travel only online
           </h2>
-        </div>
+        
       </div>
 
+ {/* cartas nuevas  */}
+ 
       <div className="cardshome">
         <div className="cardh card1">
           <div className="container">
@@ -92,43 +94,33 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* cartas nuevas  */}
       <div className="informacion ">
         <p className="texto-info1">
           {" "}
           <a>
-            La felicidad humana generalmente no se logra con grandes golpes de
-            suerte, <br />
-            que pueden ocurrir pocas veces, sino con pequeñas cosas que ocurren
-            todos los días.
-            <br />
-            <strong> Benjamin Franklin (1706-1790) </strong>
+            
+          “Don't hold grudges, better save money to travel”
           </a>
         </p>
+        <div className="Img2">
+          <img className="Imgtitulo2"
+            src={require("../imagenes/avionpuntadas.png")}
+           
+          />
+        </div>
       </div>
-
+     
+<div className="espacio">
+<div className="titulo-promo">
+  <h2 className="titulo-promo2">POPULAR CITIES</h2>
+  </div>
+</div>
      
      {/* <Carousel>hola </Carousel> */}
- 
-     {/* <div class="container-face">
-  <div class="carousel-face">
-    <div class="carousel__face"></div>
-    <div class="carousel__face"><span className="palabra">Promotions for</span></div>
-    <div class="carousel__face"></div>
-    <div class="carousel__face"></div>
-    <div class="carousel__face"><span className="palabra">all seasons</span></div>
-    <div class="carousel__face"></div>
-    <div class="carousel__face"></div>
-    <div class="carousel__face"><span className="palabra">We are waiting for you</span></div>
-    <div class="carousel__face"></div>
-  </div>
-</div>  */}
      
+      <Carousel2/>
 
-      <div className="espacio">
-      
-      </div>
+     
     </>
   );
 };

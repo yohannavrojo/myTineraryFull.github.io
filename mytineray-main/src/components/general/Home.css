@@ -1,61 +1,61 @@
-/* cartas nuevas  */
-
-
-/* termina cartas nuevas  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nanum+Myeongjo&display=swap');
 .home {
   text-align: center;
 }
 .homeTitle {
-  align-items: center;
-  font-family: "Oswald";
+  align-items:stretch;
+  font-family:'Dancing Script', cursive;
   color: #f150cf;
-  margin-left: 80px;
+  margin-left: 40px;
 }
+
 .Title {
   position: absolute;
-  top: 20%;
   font-size: 100px;
-  display: flex;
-    text-align: center;
-    vertical-align: middle;
-    width: 100%;
-    justify-content: center;
-    text-shadow: 1px 2px 3px black;
 }
 .eslogan{
-  font-family: "Oswal";
+ font-family:'Dancing Script', cursive ;
 }
 .subtitle{
-  font-family: "Oswal";
+  font-family: 'Nanum Myeongjo', serif;
 }
 .Img {
-  object-fit: cover;
+ height: 100%;
+}
+.Imgtitulo{
+  width: 100%;
+  height: 650px;
+  object-fit:fill;
 }
 /*  */
-.informacion{
-  background: rgb(187,236,181);
-  background: linear-gradient(135deg, rgba(187,236,181,1) 13%, rgba(208,200,255,1) 48%, rgba(237,160,190,1) 100%);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.815);
+.informacion{ 
   width: 100%;
-	height: 300px;
-margin-top: 60px;
-
+margin-top: 30px;
+margin-bottom: 100px;
 border-radius: 10px;
+text-align: center;
 
 }
 .texto-info1{
   padding-top: 60px;
-  font-family: "Oswald";
-  font-size: 35px;
-  color: rgb(102, 17, 182);
-  text-shadow: 7px 6px 15px black;
+  font-family:'Dancing Script', cursive ;
+  font-size: 60px;
+  color: rgb(111, 25, 131);
+  /* text-shadow: 7px 6px 15px rgb(209, 84, 84); */
+  position:absolute ;
 
 }
-
-
-
-
-
+.Img2 {
+ height: 100%;
+ }
+ .Imgtitulo2{
+   width: 50%;
+   height: 300px;
+   object-fit:none;
+   margin-left: 700px;
+   padding-top: 120px;
+ }
 
 /*  */
 .cardshome {
@@ -65,16 +65,17 @@ border-radius: 10px;
   grid-gap: 40px;
   margin-bottom: 40px;
  margin-left: 20px;
-  margin-top: 90px;
+  
   
 }
 
 .cardh  {
+  font-family: 'Nanum Myeongjo', serif;
   align-content: center;
   width: 450px;
-  background-color: #fabdbd7a;
+  background-color: #ffffffef;
   border-radius: 20px;
-  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.815);
+  box-shadow: 10px 0 30px rgba(112, 46, 46, 0.815);
 }
 .container {
   position: relative;
@@ -172,37 +173,61 @@ transition: 0.5s;
 }
 
 .toque{
-	background: rgb(156, 225, 228);
+  margin-top: 30px;
   width: 100%;
 	height: 200px;
-}
-.toque .linea{
  
-
-	background: rgb(233, 169, 230);
-  width: 100%;
-	height: 20px;
-  
-
+ 
 }
 
-.toque .linea .eslogan{
-color : rgb(143, 37, 153) ;
-padding-top: 30px;
+
+.toque .eslogan{
+color : rgb(0, 0, 0) ;
+font-size: 70px;
 }
 
-.toque .linea .subtitle{
-  color : rgb(143, 37, 153) ;
+.toque .subtitle{
+  color : rgb(0, 0, 0) ;
   text-align: center;
+  font-size: 40px;
   margin-top:30px ;
+  
 }
-
-/* carousel */
-
-
 
 .espacio{
   width: 100%;
-  height: 600px;
-  margin-top: 150px;
+  height: 90px;
+text-align: center;
+}
+.titulo-promo2{
+ display: inline-block;
+ position: relative;
+ font-family: 'Nanum Myeongjo', serif;
+ font-size: 40px;
+ color: rgb(114, 108, 100);
+}
+.titulo-promo2::after, .titulo-promo2::before{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color:rgb(119, 75, 75) ;
+  top: 0.6em;
+
+}
+
+.titulo-promo2::after{
+  right: -140px;
+}
+
+.titulo-promo2::before{
+  left: -140px;
+ 
+}
+
+.fondofooter{
+background: url(../imagenes/fondofooter.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
 }
