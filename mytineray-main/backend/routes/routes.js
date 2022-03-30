@@ -38,7 +38,8 @@ Router.route("/comments/:id")
 Router.route("/signinToken")
 .get(passport.authenticate("jwt",{session:false}),verificarToken)
 
-// Router.route("/likeDislike/:id")
-// .put(passport.authenticate("jwt",{session:false}),likeDislike)
+
+Router.route("/likeDislike/:id")
+.put(passport.authenticate("jwt",{session:false}),likeDislike)
 
 module.exports = Router
