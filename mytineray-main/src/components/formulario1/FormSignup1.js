@@ -37,6 +37,7 @@ async function NewUser(event){
     
   }
 }
+
   return (
     <div className='form-content-right'>
       <form  className='form' noValidate onSubmit={NewUser}>
