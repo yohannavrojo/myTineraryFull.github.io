@@ -34,11 +34,11 @@ export default function App() {
           }
         })
         .then((user) => {
-          // console.log(user)
+         console.log(user)
           if (user.data.success) {
             dispatch({
               type: actionType.USER,
-              user: user.data
+              user: user.data.response
             });
           } else {
             localStorage.removeItem("token");
