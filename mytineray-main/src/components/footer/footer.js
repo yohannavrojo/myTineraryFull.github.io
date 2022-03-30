@@ -31,7 +31,7 @@ function FooterContainer() {
 
                 </Footer.Column>
                 </Footer.Row>
-               <Content><h4>&copy; Copyright 2018, Example Corporation</h4></Content> 
+               <Content><h4>&copy; Copyright 2018, Yohanna Rojo | 2022</h4></Content> 
             </Footer.Wrapper>
             </div>
         </Footer>
