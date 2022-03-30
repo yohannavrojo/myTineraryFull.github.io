@@ -1,18 +1,67 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../City/Itinerarios.css";
 import Comments from "../City/Comments";
-import Like from "../City/Like";
+import { useParams } from "react-router-dom";
+import { useStateValue } from "../../StateProvider";
+import { actionType } from "../../reducer";
+import axios from "axios";
+import { FcLike, FcDislike } from "react-icons/fc";
 
-function Itinerarios(props) {
-  const itinerarios = props.itineSelecter;
+function Itinerarios() {
+  const [{ cities, user ,itineraries }, dispath] = useStateValue();
+  const [ reload,setReload]=useState(false)
+  const { id } = useParams();
+  const citySelecter = cities.filter((city) => city._id === id);
+  console.log(citySelecter);
+  const itineSelecter = itineraries.filter(
+    (itine) => itine.city === citySelecter[0].name
+  );
+  console.log(itineSelecter);
 
-  console.log(props);
-  console.log(itinerarios)
+  console.log(itineraries);
+
+  useEffect(() => {
+    console.log(citySelecter);
+    citySelecter.map((city) =>
+      axios
+        .get(`http://localhost:4000/api/itinerary/${city.name}`)
+        .then((response) =>
+          dispath({
+            type: actionType.ITINERARIESDB,
+            itineraries: response.data.response.itinerary,
+          })
+        )
+    );
+  }, [ reload]);
+
+  // console.log(itineraries);
+
+  // likes
+
+  const likeDislike = async (event) => {
+    const token = localStorage.getItem("token");
+const id= event.target.id
+// console.log(id)
+    await axios
+      .put(
+        `http://localhost:4000/api/likeDislike/${id}`,
+        {},
+        {
+          headers: {
+            Authorization: "Bearer " + token,
+          },
+        }
+      )
+      .then((response) => console.log(response));
+
+      setReload(!reload)
+  };
+
   return (
     <>
       <div>
         <div className="container-card">
-          {itinerarios.map((itine) => (
+          {itineraries.map((itine) => (
             <div key={itine._id} className="card">
               <figure>
                 <img
@@ -28,18 +77,27 @@ function Itinerarios(props) {
                 <h2>
                   {itine.price} {itine.time}
                 </h2>
-              <Like  likes={itine.likes} id={itine._id}/> 
-              
+
+                <div className="heart">
+                  <button
+                    type="button"
+                    className="btn btn-outline-info"
+                    onClick={likeDislike}
+                    id={itine._id}
+                 >
+                   
+                    {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }   
+                   
+                  </button>
+
+                  <p>{itine.likes.length}</p>
+                </div>
               </div>
-   
-             <Comments itinerario={itine._id}/>
-             
+
+              <Comments itinerario={itine._id} />
             </div>
-            
           ))}
-       
         </div>
-       
       </div>
     </>
   );
