@@ -212,7 +212,7 @@ cerrarsesion: async (req, res) => {
         id:req.user.id } , 
          mensaje: "Welcome again" + req.user.firstname  }
          )
-         console.log(response)
+        
     }else{
       res.json({
         success:false, mensaje:"Please sign in again "
