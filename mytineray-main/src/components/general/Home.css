@@ -40,22 +40,23 @@ text-align: center;
 .texto-info1{
   padding-top: 60px;
   font-family:'Dancing Script', cursive ;
-  font-size: 60px;
+  font-size:90px;
   color: rgb(111, 25, 131);
-  /* text-shadow: 7px 6px 15px rgb(209, 84, 84); */
+  margin-left: 100px;
   position:absolute ;
+  margin-top: 200px;
 
 }
 .Img2 {
- height: 100%;
- }
- .Imgtitulo2{
-   width: 50%;
-   height: 300px;
+ background: url(../imagenes/avionpuntadas.jpg);
+  width: 100%;
+   height: 500px;
    object-fit:none;
-   margin-left: 700px;
-   padding-top: 120px;
+   background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
  }
+ 
 
 /*  */
 .cardshome {
@@ -65,7 +66,7 @@ text-align: center;
   grid-gap: 40px;
   margin-bottom: 40px;
  margin-left: 20px;
-  
+  margin-top: 60px;
   
 }
 
@@ -76,16 +77,18 @@ text-align: center;
   height: 700px;
   background-color: #ffffffef;
   border-radius: 20px;
-  box-shadow: 10px 0 30px rgba(112, 46, 46, 0.815);
+  box-shadow: 0 0 30px rgba(112, 46, 46, 0.815);
 }
 .container {
   position: relative;
  
 }
 img {
+  
   width: 100%;
   height: 300px;
   display: block;
+  border-radius: 10px;
  
 }
 .container:after {
@@ -97,18 +100,7 @@ img {
   left: 0;
   opacity: 0.7;
 }
-.card1 > .container:after {
-  background-image: linear-gradient(135deg, #0000ec9a, #fb36f493);
-  border-radius: 20px;
-}
-.card2 > .container:after {
-  background-image: linear-gradient(135deg, #1b5b5e, #42ffdc9f);
-  border-radius: 20px;
-}
-.card3 > .container:after {
-  background-image: linear-gradient(135deg, #fdcb74a9, #f84f1cc4);
-  border-radius: 20px;
-}
+
 .details {
   padding: 20px 10px;
 }
@@ -151,25 +143,7 @@ transition: 0.5s;
 .boton a:hover{
     color: rgb(245, 92, 92);
 }
-/* .boton a:before{
-    content: '';
-    position: absolute;
-    top:0;
-    left: 0;
-    height: 100%;
-    /* background:url(../imagenes/btn-bg1.png) ;
-    background-size: cover; */
-    /* transform-origin: left;
-    transition: 0.5s;
-}  */
-/* .boton a:hover:before{
-    width: 300px;
-} */
-/* .boton a span{
-    position: relative;
-    z-index: 1;
 
-} */
 
 .toque{
   margin-top: 30px;
@@ -182,7 +156,7 @@ transition: 0.5s;
 
 .toque .eslogan{
 color : rgb(0, 0, 0) ;
-font-size: 70px;
+font-size: 90px;
 }
 
 .toque .subtitle{
@@ -225,8 +199,10 @@ text-align: center;
 }
 
 .fondofooter{
-background: url(../imagenes/fondofooter.jpg);
+background: url(../imagenes/fondofooter.jpeg);
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;
+
+
 }

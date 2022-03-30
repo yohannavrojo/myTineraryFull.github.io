@@ -13,19 +13,19 @@ function Cities() {
   return (
     <>
       
-      <Carousel />
+     <div className="hero">
+          <h1 className="titulo"> CITIES <br/>
+        </h1>
+        </div>
 
-      <h1 className="text-cities-p">
-        Only few will understand <br />
-        traveling is our happiness
-      </h1>
+
+ <Carousel />
+
       <Search />
       <div className="text"></div>
 
       <div className="App1">
-        <div className="hero">
-          <h1 className="titulo"> CITIES </h1>
-        </div>
+        
 
         <div className="container  justify-content-center align--items-center h-100 ">
           <div className="row">

@@ -97,16 +97,12 @@ const Home = () => {
       <div className="informacion ">
         <p className="texto-info1">
           {" "}
-          <a>
-            
+          <a> 
           “Don't hold grudges, better save money to travel”
           </a>
         </p>
         <div className="Img2">
-          <img className="Imgtitulo2"
-            src={require("../imagenes/avionpuntadas.png")}
-           
-          />
+      
         </div>
       </div>
      
