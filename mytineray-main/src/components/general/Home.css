@@ -72,7 +72,8 @@ text-align: center;
 .cardh  {
   font-family: 'Nanum Myeongjo', serif;
   align-content: center;
-  width: 450px;
+  width: 400px;
+  height: 700px;
   background-color: #ffffffef;
   border-radius: 20px;
   box-shadow: 10px 0 30px rgba(112, 46, 46, 0.815);
@@ -126,10 +127,8 @@ img {
   font-weight: 400;
 }
 
-
-
 .boton{
-    min-height: 100px;
+    
     display: flex;
     justify-content: center;
     align-items:center;
@@ -138,39 +137,39 @@ img {
 
 .boton a{
 position: relative;
-width: 300px;
+width: 224px;
 height: 75px;
 margin:10px 0;
 font-size: 24px;
 color:#000;
 display: inline-flex;
-justify-content: center;
+justify-content: flex-end;
 align-items: center;
 text-decoration: none;
 transition: 0.5s;
 }
 .boton a:hover{
-    color: rgb(255, 255, 255);
+    color: rgb(245, 92, 92);
 }
-.boton a:before{
+/* .boton a:before{
     content: '';
     position: absolute;
     top:0;
     left: 0;
     height: 100%;
-    background:url(../imagenes/btn-bg1.png) ;
-    background-size: cover;
-    transform-origin: left;
+    /* background:url(../imagenes/btn-bg1.png) ;
+    background-size: cover; */
+    /* transform-origin: left;
     transition: 0.5s;
-}
-.boton a:hover:before{
+}  */
+/* .boton a:hover:before{
     width: 300px;
-}
-.boton a span{
+} */
+/* .boton a span{
     position: relative;
     z-index: 1;
 
-}
+} */
 
 .toque{
   margin-top: 30px;

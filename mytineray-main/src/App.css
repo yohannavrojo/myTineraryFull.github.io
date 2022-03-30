@@ -111,7 +111,7 @@ transition: 0.5s;
   top:0;
   left: 0;
   height: 100%;
-  background:url(./components/imagenes/btn-bg1.png) ;
+  /* background:url(./components/imagenes/btn-bg1.png) ; */
   background-size: cover;
   transform-origin: left;
   transition: 0.5s;
