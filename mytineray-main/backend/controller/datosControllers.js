@@ -1,3 +1,4 @@
+const { response } = require("express");
 const Cities = require("../models/cities.js");
 const Itinerary = require("../models/itinerary.js");
 
@@ -45,44 +46,55 @@ const datosController = {
     });
   },
 
-  // likeDislike: async (req, res) => {
-  //   const id = req.params.id;
-  //   const user =req.user.id;
+  
+  likeDislike: async (req, res) => {
+    const id = req.params.id;
+    const user =req.user.id;
 
-  //   console.log(id);
-  //   console.log(user);
-  //   let itinerary
-  //   try {
-  //     itinerary = await Itinerary.findOne({_id:id});
-  //     if (itinerary.Like.includes(user)) {
-  //       Itinerary.findOneAndUpdate(
-  //         {_id:id},
-  //         {$pull:{Like:user} },
-  //         {new:true}
-  //       )
-  //         .then((response) =>
-  //           res.json({ success: true, mensaje: mensaje.Like })
-  //         )
+    console.log(id);
+    console.log(user);
 
-  //         .catch((error) => console.log(error));
-  //     } else {
-  //       Itinerary.findOneAndUpdate(
-  //         {_id:id},
-  //         { $push: {Like:user} },
-  //         { new: true }
-  //       )
-  //         .then((response) =>
-  //           res.json({ success: true, mensaje: mensaje.Like })
-  //         )
+    // let itinerary
+  
+       await Itinerary.findOne({_id:id})
+      .then (itinerary=>{ 
 
-  //         .catch((error) => console.log(error));
-  //     }
-  //     //
-  //   } catch (err) {
-  //     error = err;
-  //     res.json({ success: false, response: error });
-  //   }
-  // },
+      if (itinerary.likes.includes(user)) {
+        Itinerary.findOneAndUpdate(
+          {_id:id},
+          {$pull:{likes:user} },
+          {new:true}
+        )
+          .then((response) =>
+            res.json({ success: true, response: response })
+          )
+
+          .catch((error) => console.log(error));
+      } 
+      else {
+        Itinerary.findOneAndUpdate(
+          {_id:id},
+          { $push: {likes:user} },
+          { new: true }
+        )
+
+          .then(  (response) =>
+
+            res.json({ success: true, response: response })
+          )}   
+      
+      })
+
+          .catch((error) => 
+          
+          console.log(error)
+          
+          
+          );
+      
+     
+    
+  },
 };
 
 module.exports = datosController;
