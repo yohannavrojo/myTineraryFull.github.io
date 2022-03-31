@@ -1,10 +1,11 @@
 
 
 .container .input{
-	border: 0;
+	border: 1px;
 	outline: none;
-	color: #000000;
-    background: #b6ebce;
+	color: #ce4949;
+    background: #4e353562;
+
 }
 .search_wrap{
 	width: 500px;
@@ -35,13 +36,14 @@
 	right: 0;
 	width: 60px;
 	height: 100%;
-	background: #f997b4;
+	background: #be1a4b;
+
 	z-index: 1;
 	cursor: pointer;
 }
 
 .search_wrap .search_box .btn:hover{
-	background: #73cfdf;	
+	background: #0b4049;	
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
@@ -49,7 +51,7 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%,-50%);
-	color: rgba(0, 0, 0, 0.568);
+	color: rgb(255, 255, 255);
 	font-size: 20px;
 }
 .search_wrap.search_wrap_4 .search_box .input{

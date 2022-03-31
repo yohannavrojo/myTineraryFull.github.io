@@ -8,11 +8,13 @@
   font-family:'Dancing Script', cursive;
   color: #750c5e;
   margin-left: 40px;
+  /* font-weight: 700px; */
 }
 
 .Title {
   position: absolute;
   font-size: 100px;
+  
 }
 .eslogan{
  font-family:'Dancing Script', cursive ;
@@ -199,7 +201,7 @@ text-align: center;
 }
 
 .fondofooter{
-background: url(../imagenes/fondofooter.jpeg);
+background: url(../imagenes/fondofooter.jpg);
 background-repeat: no-repeat;
 background-position: center center;
 background-size: cover;

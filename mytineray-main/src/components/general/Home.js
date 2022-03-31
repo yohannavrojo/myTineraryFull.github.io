@@ -3,7 +3,6 @@ import "../general/Home.css";
 import { Link } from "react-router-dom";
 import Carousel2 from "./Carousel2";
 
-
 const Home = () => {
   return (
     <>
@@ -14,24 +13,22 @@ const Home = () => {
           <p className="Title">My Itinerary </p>
         </div>
         <div className="Img">
-          <img className="Imgtitulo"
+          <img
+            className="Imgtitulo"
             src={require("../imagenes/aviajes2.png")}
-           
           />
         </div>
       </div>
 
       <div className="toque">
-        
-          <h1 className="eslogan">Pure Travel, Pure Power</h1>
-          <h2 className="subtitle">
-            The world is too beautiful to travel only online
-          </h2>
-        
+        <h1 className="eslogan">Pure Travel, Pure Power</h1>
+        <h2 className="subtitle">
+          The world is too beautiful to travel only online
+        </h2>
       </div>
 
- {/* cartas nuevas  */}
- 
+      {/* cartas nuevas  */}
+
       <div className="cardshome">
         <div className="cardh card1">
           <div className="container">
@@ -97,26 +94,17 @@ const Home = () => {
       <div className="informacion ">
         <p className="texto-info1">
           {" "}
-          <a> 
-          “Don't hold grudges, better save money to travel”
-          </a>
+          <a>“Don't hold grudges, better save money to travel”</a>
         </p>
-        <div className="Img2">
-      
+        <div className="Img2"></div>
+      </div>
+
+      <div className="espacio">
+        <div className="titulo-promo">
+          <h2 className="titulo-promo2">POPULAR CITIES</h2>
         </div>
       </div>
-     
-<div className="espacio">
-<div className="titulo-promo">
-  <h2 className="titulo-promo2">POPULAR CITIES</h2>
-  </div>
-</div>
-     
-     {/* <Carousel>hola </Carousel> */}
-     
-      <Carousel2/>
-
-     
+      <Carousel2 />
     </>
   );
 };

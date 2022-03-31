@@ -38,19 +38,19 @@ grid-gap:20px;
 }
 `;
 export const Link = styled.div `
-color:#ffffff;
+color:#000000;
 margin-bottom:20px;
 font-size:20px;
 text-decoration:none;
 text-align:center;
 &:hover{
-    color:#8d7866;
+    color:#ffffff;
     transition:200ms ease-in;
 }
 `;
 export const Title = styled.p `
 font-size:30px;
-color:#ffffff;
+color:#000000;
 margin-bottom:40px;
 font-weight:bold;
 font-family: 'Nanum Myeongjo', serif;
@@ -58,7 +58,7 @@ font-family: 'Nanum Myeongjo', serif;
 
 export const Content = styled .p `
 margin-top:30px;
-color:#ffffff;
+color:#000000;
 
 
 `;
@@ -66,4 +66,5 @@ color:#ffffff;
 export const Icon = styled.i`
 font-size:20px;
 margin-right:16px;
+
 `;
