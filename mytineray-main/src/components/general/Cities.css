@@ -1,9 +1,13 @@
-.text{
+/* .text{
 	width: 100%;
 	height: 70px;
-	background-color: rgb(226, 106, 106);
-
-}
+	/* background-color: rgb(226, 106, 106); */
+/* background:url(../imagenes/flores.jpg) ;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover; */
+ 
+/* } */ 
 
 .hero {
 	background: rgb(255, 255, 255);

@@ -75,7 +75,7 @@ export const MenuItem = styled.li`
   @media screen and (max-width: 960px) {
     width: 100%;
     height: 70px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0);
   }
 `;
 

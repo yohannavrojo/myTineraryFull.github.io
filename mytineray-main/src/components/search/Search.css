@@ -1,10 +1,23 @@
 
-
+.wrappers{
+	margin-top: 60px;
+	background: url(../imagenes/lineapunteada.jpg);
+	height: 600px;
+	object-fit:none;
+	background-repeat: no-repeat;
+ background-position: center center;
+ background-size:35%;
+ 
+}
+/* .container{
+	
+} */
 .container .input{
+margin-top: 50%;
 	border: 1px;
 	outline: none;
-	color: #ce4949;
-    background: #4e353562;
+	color: #251010;
+    background: #d6d43a91;
 
 }
 .search_wrap{
@@ -21,29 +34,30 @@
 .search_wrap .search_box .input{
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
+	/* margin-right: 70px; */
+	width: 532px;
 	height: 100%;
-	padding: 10px 20px;
+	/* padding: 10px 20px; */
 	border-radius: 3px;
 	font-size: 26px;
    
 }
 
 .search_wrap .search_box .btn{
+	margin-top: 70%;
+	margin-left: 44%;
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 60px;
 	height: 100%;
-	background: #be1a4b;
-
+	background: #e0ca48;
 	z-index: 1;
 	cursor: pointer;
 }
 
 .search_wrap .search_box .btn:hover{
-	background: #0b4049;	
+	background: #96a00e;	
 }
 
 .search_wrap .search_box .btn.btn_common .fas{
