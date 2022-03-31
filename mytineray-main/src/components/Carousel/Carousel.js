@@ -21,7 +21,7 @@ function Carousel() {
                     <BiChevronLeft size={'4em'} />
                 </div>
                 <div className="center">
-                    <h1 className='tite'>{imagenes[currImg].titlee}</h1>
+                    <h1 className='tite'>{imagenes[currImg].titlee}   </h1>
                     <p className='subtite'>{imagenes[currImg].subtitle}</p>
                 </div>
                 <div className="right"

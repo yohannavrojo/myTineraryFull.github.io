@@ -1,64 +1,65 @@
 .carousel {
-    width: 100%;
-    height: 480px;
-    background-color: rgb(138, 121, 121);
-   margin-top: 30px;
+  width: 100%;
+  height: 600px;
+  background-color: rgb(138, 121, 121);
+
 }
 .carouselInner {
-    height: 100%;
-    width: 100%;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-
-    
+  height: 100%;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
 }
 
 .carouselInner .left {
-    flex: 5%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    display: grid;
-    place-items: center;
-    color: rgb(160, 55, 55);
-    cursor: pointer;
+  flex: 5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  place-items: center;
+  color: rgb(160, 55, 55);
+  cursor: pointer;
 }
 
 .carouselInner .center {
-    flex: 80%;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    font-family: 'Dancing Script', cursive;
-    text-align: justify;
-    text-align-last: center;
-   
+  flex: 80%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: "Dancing Script", cursive;
+  text-align: justify;
+  text-align-last: center;
 }
 .carouselInner .center .tite {
-    color: rgb(253, 122, 122);
-    background: rgba(2, 2, 2, 0.61);
-    width: 30%;
-    border-radius: 40px; 
-    font-family: 'Dancing Script', cursive;
-    font-size: 70px;
+    -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke: 0.1px rgba(99, 35, 35, 0.938);
+  font-weight: bold;
+  margin-right: 65%;
+  /* margin-bottom: 20%; */
+  width: 30%;
+  border-radius: 40px;
+  font-family: "Dancing Script", cursive;
+  font-size: 300px;
 }
 
-.carouselInner .center .subtite{
-
-    color: rgb(253, 122, 122);
-    background: rgba(2, 2, 2, 0.459);
-    width: 40%;
-    border-radius: 40px; 
-    font-size: 40px;
+.carouselInner .center .subtite {
+    -webkit-text-fill-color: rgb(255, 255, 255);
+    -webkit-text-stroke: 0.1px rgba(99, 35, 35, 0.938);
+  margin-left: 80%;
+  font-weight: bold;
+  width: 40%;
+  border-radius: 40px;
+  font-size: 500%;
 }
 
 .carouselInner .right {
-    flex: 5%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0);
-    display: grid;
-    place-items: center;
-    color: rgb(160, 55, 55);
-    cursor: pointer;
+  flex: 5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  place-items: center;
+  color: rgb(160, 55, 55);
+  cursor: pointer;
 }
