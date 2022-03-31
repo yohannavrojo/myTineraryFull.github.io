@@ -6,35 +6,29 @@ import "../../App.css";
 import "../general/Cities.css";
 import Search from "../search/Search";
 
-
 function Cities() {
-
-
   return (
     <>
-      
-     <div className="hero">
-          <h1 className="titulo"> CITIES <br/>
-        </h1>
-        </div>
-
-
- <Carousel />
-
+      <Carousel />
       <Search />
+      <div className="hero">
+        <h1 className="titulo">
+          {" "}
+          Travel is the answer, no matter what <br /> 
+          the question is.      
+        </h1>
+      
+      </div>
+      
       <div className="text"></div>
 
       <div className="App1">
-        
-
         <div className="container  justify-content-center align--items-center h-100 ">
           <div className="row">
-            <Card/>
+            <Card />
           </div>
         </div>
       </div>
-      
-    
     </>
   );
 }

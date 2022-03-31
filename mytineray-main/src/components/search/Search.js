@@ -16,7 +16,8 @@ const Search = () => {
   return (
     <>
       <div   className="wrappers">
-        <div className="container">
+
+             <div className="container">
           <div className="search_wrap search_wrap_4">
             <div className="search_box">
               <div id="myInput" onkeyup="myFunction()" className="btn btn_common">

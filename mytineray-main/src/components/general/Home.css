@@ -44,15 +44,15 @@ text-align: center;
   font-family:'Dancing Script', cursive ;
   font-size:90px;
   color: rgb(111, 25, 131);
-  margin-left: 100px;
+  margin-left: 50px;
   position:absolute ;
   margin-top: 200px;
 
 }
 .Img2 {
- background: url(../imagenes/avionpuntadas.jpg);
+ background: url(../imagenes/avionpuntadas1.jpg);
   width: 100%;
-   height: 500px;
+   height: 600px;
    object-fit:none;
    background-repeat: no-repeat;
 background-position: center center;
