@@ -11,14 +11,14 @@ import City10 from "../imagenes/tailandia.jpeg";
 
 
 export const imagenes = [
-  { titlee: "Argelia", subtitle: "Hidden treasure of Europe", img: City6 },
-  { titlee: "Argentina", subtitle: "Beat to your rhythm", img: City7 },
-  {titlee: "Bangladesh",subtitle: "Beautiful Bangladesh",img: City8, },
-  {titlee: "CapeVerde",subtitle: "Meeting Cape Verde",img: City9, },
-  {titlee: "Denmark",subtitle: "The happiest place on Earth!",img: City1, },
+  { titlee: "Argelia", subtitle: "", img: City6 },
+  { titlee: "Argentina", subtitle: "", img: City7 },
+  {titlee: "Bangladesh",subtitle: "",img: City8, },
+  {titlee: "CapeVerde",subtitle: "",img: City9, },
+  {titlee: "Denmark",subtitle: "",img: City1, },
   { titlee: "Spain", subtitle: "Spain in detail", img: City3 },
   { titlee: "Ireland", subtitle: "	Go to Ireland", img: City5 },
-  { titlee: "Switzerland", subtitle: "Get Natural", img: City2 },
-  { titlee: "Thailand", subtitle: "Incredible Thailand", img: City10 },
+  { titlee: "Switzerland", subtitle: "", img: City2 },
+  { titlee: "Thailand", subtitle: "", img: City10 },
   { titlee: "Rome", subtitle: "Made in Italy", img: City4 },
 ];
