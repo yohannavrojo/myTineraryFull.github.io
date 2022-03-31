@@ -1,0 +1,13 @@
+.mytine{
+    align-items:stretch;
+    font-family:'Dancing Script', cursive;
+    color: #750c5e;
+    margin-left: 40px;
+    font-weight: bold;
+}
+.textmitine{
+    width: 10%;
+    display: inline;
+  font-size: 40px;
+  
+}

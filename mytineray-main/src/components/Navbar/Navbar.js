@@ -16,6 +16,7 @@ import { actionType } from "../../reducer";
 import { useStateValue } from "../../StateProvider";
 import { BsHouseFill } from "react-icons/bs";
 import { FcGlobe} from "react-icons/fc";
+import "../Navbar/Navbar.css"
 import axios from "axios";
 
 const Narbar = () => {
@@ -48,7 +49,10 @@ const Narbar = () => {
         <Wrapper>
           <IconContext.Provider value={{ color: "#ffffff", size: "2.5em" }}>
             <IconContainer showMobileMenu={showMobileMenu}>
-              <SiYourtraveldottv />
+              <SiYourtraveldottv /> 
+              <div className="mytine">
+               <p className="textmitine">My Itinerary</p>
+              </div>
             </IconContainer>
 
             <MobileMenuIcon onClick={() => handleShowMobileMenu()}>
