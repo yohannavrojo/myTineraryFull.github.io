@@ -10,7 +10,7 @@ function Cities() {
   return (
     <>
       <Carousel />
-      <Search />
+     
       <div className="hero">
         <h1 className="titulo">
           {" "}
@@ -19,7 +19,7 @@ function Cities() {
         </h1>
       
       </div>
-      
+       <Search />
       <div className="text"></div>
 
       <div className="App1">
