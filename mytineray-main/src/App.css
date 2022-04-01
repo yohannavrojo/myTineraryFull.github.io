@@ -57,7 +57,7 @@ margin:35px;
   height: 100%;
   position: relative;
   border-radius: 20px;
-  box-shadow: 5px 10px 15px  rgba(10, 101, 104, 0.596) !important;
+  box-shadow: 5px 10px 15px  rgb(255, 255, 255) !important;
   object-fit: cover;
 
 }
@@ -66,9 +66,11 @@ margin:35px;
   position: absolute;
   top: 0;
   right: 0;
-  color: rgb(240, 42, 157);
+  color: #750c5e;
+  font-family:'Dancing Script', cursive;
+  font-weight:bold;
 font-size: 50px;
-text-shadow: 2px 4px 5px rgb(0, 0, 0);
+text-shadow: 2px 4px 5px rgb(255, 255, 255);
 
 
 }

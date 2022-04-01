@@ -2,13 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useStateValue } from "../../StateProvider";
 import "../City/Comments.css";
 import { Avatar } from "@material-ui/core";
-
 import imagencommenst from "../imagenes/argelia.jpg";
 import axios from "axios";
 import {FaTrashAlt} from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
 import swal from 'sweetalert';
-//import Like from "../City/Like";
+
 
 
 
@@ -33,7 +32,8 @@ function Comments(props) {
    .then(response=>
       setComment(response.data.response.comentario)
     
-      )   
+      ) 
+       
   
    }
 
@@ -42,7 +42,7 @@ function Comments(props) {
         axios.get(`http://localhost:4000/api/comments/${id} `)
             .then(response => {
                 setComment(response.data.response.comentario)
-           
+              
           
               })
 
@@ -128,22 +128,28 @@ console.log(user)
             sx={{ width: 56, height: 56 }}
           ></Avatar>
             
-
-      
+           
+       {itine.user?.id == user?.user?
           <div className="floating" >
-          
+            
+          <div>
            <input onKeyUp={handelChange} className="inputBoton" defaultValue={itine.comment}></input>
+            </div>
+           
+           
             <button  type="button" className="btn btn-info mx-3 " onClick={() => borrarComentario(itine._id)} >
                   <FaTrashAlt/> 
                 </button>
                 <button type="button" className="btn btn-info" onClick={() => modificar(itine._id)}>
              <MdCreate/>
                 </button>               
-
+            
           </div>
-          
-         
-       
+          : 
+          <div>
+        <div style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"40px", padding:"2px"}}>{itine.comment}</div>
+          </div> 
+         }
        
         </div>
 
@@ -151,6 +157,8 @@ console.log(user)
          )}
 
          {/* BODY  */}
+
+          {user ?
         <div className="accordion-body">
        
 
@@ -169,8 +177,13 @@ console.log(user)
             </div>
           </form>
         </div>
+        
+        :
+ <div className="floating" >
+         <p >You must be logged in to comment</p>
+          </div> 
 
-      {/* </div> */}
+        }
     </div>
   </div>
   </>

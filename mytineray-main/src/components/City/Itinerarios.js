@@ -7,6 +7,10 @@ import { actionType } from "../../reducer";
 import axios from "axios";
 import { FcLike, FcDislike } from "react-icons/fc";
 
+
+
+
+
 function Itinerarios() {
   const [{ cities, user ,itineraries }, dispath] = useStateValue();
   const [ reload,setReload]=useState(false)
@@ -60,6 +64,8 @@ console.log(id)
       setReload(!reload)
   };
 
+  
+
   return (
     <>
       <div>
@@ -88,9 +94,9 @@ console.log(id)
                     onClick={likeDislike}
                     id={itine._id}
                  >
-                   <span>
+                  
                     {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }   
-                   </span>
+                  
                   </button>
 
                   <p>{itine.likes.length}</p>
