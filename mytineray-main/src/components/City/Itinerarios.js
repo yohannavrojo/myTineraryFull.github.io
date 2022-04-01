@@ -16,9 +16,11 @@ function Itinerarios() {
   const itineSelecter = itineraries.filter(
     (itine) => itine.city === citySelecter[0].name
   );
-  console.log(itineSelecter);
+  // const [like, setLike] = useState(itineraries.likes);
 
-  console.log(itineraries);
+  // console.log(itineSelecter);
+
+  // console.log(itineraries);
 
   useEffect(() => {
     console.log(citySelecter);
@@ -41,7 +43,8 @@ function Itinerarios() {
   const likeDislike = async (event) => {
     const token = localStorage.getItem("token");
 const id= event.target.id
-// console.log(id)
+console.log(id)
+// 
     await axios
       .put(
         `http://localhost:4000/api/likeDislike/${id}`,
@@ -52,7 +55,7 @@ const id= event.target.id
           },
         }
       )
-      .then((response) => console.log(response));
+      .then((response) => console.log(response.data.response));
 
       setReload(!reload)
   };
@@ -85,9 +88,9 @@ const id= event.target.id
                     onClick={likeDislike}
                     id={itine._id}
                  >
-                   
+                   <span>
                     {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }   
-                   
+                   </span>
                   </button>
 
                   <p>{itine.likes.length}</p>

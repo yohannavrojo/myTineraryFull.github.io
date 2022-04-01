@@ -25,7 +25,7 @@ function Comments(props) {
     const dataComents = {
       itinerario: props.itinerario,
       mensaje: event.target[0].value,
-      user: user.datoUser.id,
+      user: user.id,
       
     }
    

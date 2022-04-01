@@ -23,7 +23,7 @@ const Narbar = () => {
   const [{ user }, dispatch] = useStateValue();
 
   async function cerrarSesion() {
-    const email = user.datoUser.email;
+    const email = user.email;
     console.log(email);
     
     await axios.post("http://localhost:4000/api/signOut", { email })

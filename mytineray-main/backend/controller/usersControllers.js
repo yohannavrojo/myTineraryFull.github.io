@@ -171,7 +171,7 @@ const usersController = {
 
             const token = jwt.sign({ ...datoUser}, process.env.SECRETKEY,{expiresIn:60*60*24})
             //response muestra los datos de token y datouser 
-            res.json({ success: true, from: "controller", response: { token, datoUser },mensaje:"welcome again" + usuario.firstname  }) 
+            res.json({ success: true, from: "controller", response: { token, ...datoUser },mensaje:"welcome again" + usuario.firstname  }) 
           }
           else { res.json({ success: false, from: "controller", mensaje: "the username and/or password are incorrect" }) }
 
