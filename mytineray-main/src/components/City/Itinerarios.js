@@ -5,10 +5,6 @@ import { useParams } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import { actionType } from "../../reducer";
 import axios from "axios";
-import { FcLike, FcDislike } from "react-icons/fc";
-
-
-
 
 
 function Itinerarios() {
@@ -87,20 +83,35 @@ console.log(id)
                   {itine.price} {itine.time}
                 </h2>
 
+                {itine.likes?.includes(user?.id) ?
                 <div className="heart">
                   <button
                     type="button"
-                    className="btn btn-outline-info"
+                    className=" btn far fa-thumbs-up"
+                     style={{color:"#cb0505", size: "2.9em"}}
                     onClick={likeDislike}
                     id={itine._id}
+                    
                  >
+                     {/* <FcLike /> */}
                   
-                    {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }   
+                    {/* {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }  <i class="fad fa-hand-point-left"></i>  */}
                   
                   </button>
 
                   <p>{itine.likes.length}</p>
-                </div>
+                </div> 
+                :
+
+                <div className="heart">
+                        <button type="button"  className=" btn far fa-thumbs-up" onClick={likeDislike} id={itine._id}
+                        //  style={{color:"#080808", size: "2.9em" }}
+                        >
+                        </button>
+
+                        <p>{itine.likes.length}</p>
+                    </div>
+                }
               </div>
 
               <Comments itinerario={itine._id} />

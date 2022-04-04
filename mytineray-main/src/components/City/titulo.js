@@ -7,7 +7,7 @@ function titulo ()  {
   return (
   
   <>
-        <h2 className="animate__animated animate__rubberBand">
+        <h2 className="animate__animated">
         Know More To Visit</h2>
   </>
     

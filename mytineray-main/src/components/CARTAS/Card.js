@@ -28,7 +28,7 @@ function Card() {
         <Link to={`/CITY/${city._id}`}>
           <div className="boton">
             <a href="#">
-              <span><FcInternal/></span>
+              <span><FcInternal /></span>
             </a>
           </div>
         </Link>

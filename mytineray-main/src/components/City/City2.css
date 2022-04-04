@@ -27,7 +27,7 @@
 
 .nombreciudad>h1{
     font-size: 100px; 
-    color: rgb(155, 136, 211);
+    color: rgb(64, 8, 71);
     text-shadow: 1px 1px 2px black;
 }
 /* cards */
@@ -43,7 +43,7 @@
 }
 
 .cartas{
-    background: rgb(159, 228, 222);
+    background: rgb(16, 143, 165);
     height: 520px;
     width: 300px;
     margin:auto;
@@ -51,13 +51,14 @@
     padding: 10px 10px;
     justify-content: center;
     box-shadow: 4px 4px 10px black;
+   
     
     
 }
 .cartas .contenedor {
-    color: rgb(236, 102, 230);
+    color: rgb(90, 15, 97);
     text-align: center;
-    
+    font-family: 'Dancing Script', cursive;
    
 }
 
@@ -68,7 +69,7 @@
     justify-content: center;
     margin-left: 30px;
     border-radius: 50%;
-    box-shadow: 6px 4px 20px black;
+    box-shadow: 6px 4px 20px rgb(245, 244, 244);
     
 }
 .c1{
@@ -81,7 +82,7 @@
      margin: 20px 0;
      font-size: 50px;
      font-weight: 600;
-     text-shadow: 2px 1px 5px black;
+     text-shadow: 2px 1px 5px rgb(255, 255, 255);
  }
 
 .usuario2{
@@ -91,7 +92,7 @@
     justify-content: center;
     margin-left: 30px;
     border-radius: 50%;
-    box-shadow: 6px 4px 20px black;
+    box-shadow: 6px 4px 20px rgb(255, 255, 255);
 }
 .c2{
     width: 100%;
@@ -105,7 +106,7 @@
     justify-content: center;
     margin-left: 30px;
     border-radius: 50%;
-    box-shadow: 6px 4px 20px black;
+    box-shadow: 6px 4px 20px rgb(255, 255, 255);
 }
 .c3{
     width: 100%;

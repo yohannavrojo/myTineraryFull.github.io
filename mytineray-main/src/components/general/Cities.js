@@ -9,6 +9,7 @@ import Search from "../search/Search";
 function Cities() {
   return (
     <>
+    <div  className="fondo-cities">
       <Carousel />
      
       <div className="hero">
@@ -29,6 +30,8 @@ function Cities() {
           </div>
         </div>
       </div>
+    </div>
+    
     </>
   );
 }

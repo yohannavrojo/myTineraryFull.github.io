@@ -8,9 +8,6 @@ import {FaTrashAlt} from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
 import swal from 'sweetalert';
 
-
-
-
 function Comments(props) {
     const [comment, setComment] = useState();
   const [{ user }, dispatch] = useStateValue();
@@ -29,10 +26,17 @@ function Comments(props) {
     }
    
   await axios.post("http://localhost:4000/api/comments",{dataComents})
-   .then(response=>
-      setComment(response.data.response.comentario)
+   .then(response=>{
+
+    swal({
+      title:response.data.mensaje,
+      icon:"success",
+      buttons: "ok"
+  })
+      // setComment(response.data.response.comentario)
     
-      ) 
+    
+     } ) 
        
   
    }
@@ -129,7 +133,7 @@ console.log(user)
           ></Avatar>
             
            
-       {itine.user?.id == user?.user?
+       {itine.user?.id === user?.user?
           <div className="floating" >
             
           <div>
@@ -180,7 +184,7 @@ console.log(user)
         
         :
  <div className="floating" >
-         <p >You must be logged in to comment</p>
+         <p  style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"100%", padding:"2px"}} >You must be logged in to comment</p>
           </div> 
 
         }

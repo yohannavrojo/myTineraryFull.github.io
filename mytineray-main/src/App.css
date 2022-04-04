@@ -10,7 +10,7 @@ margin:35px;
 }
 /*css de las cartas */
 .div-imagen {
-
+  font-family: 'Nanum Myeongjo', serif;
   display:flex;
   position:relative;
   height: 390px;
