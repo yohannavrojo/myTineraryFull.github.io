@@ -21,10 +21,10 @@
 
 }
 h1{
-    font-family:"Oswald";
+    font-family: 'Dancing Script', cursive;
     text-align: center;
-    color: #d165ec;
-    font-size: 40px;
+    color: #fffeff;
+    font-size: 90px;
 }
 input[type="text"],
 input[type="password"]{
@@ -42,20 +42,20 @@ input[type="password"]{
 .icon{
     min-width: 50px;
     text-align: center;
-    color: rgb(173, 102, 201);
+    color: rgb(247, 245, 248);
 }
 .button{
     border: none;
     width: 100%;
-    color: rgb(3, 3, 3);
+    color: rgb(77, 73, 73);
     font-size: 30px;
-    background: rgb(184, 62, 233);
+    background: rgb(255, 255, 255);
     padding: 15px 20px;
     border-radius: 5px;
     cursor: pointer;
 }
 .button:hover{
-    background: rgb(180, 88, 214);
+    background: rgb(255, 170, 227);
 }
 p{
     text-align: center;
@@ -64,19 +64,19 @@ p{
 }
 .link{
     text-decoration: none;
-      color: #a719ca;
+      color: rgb(255, 254, 255);
+      
     font-weight: 600;
   
 }
 .link:hover{
-     color:#a719ca;
+     color:rgb(255, 95, 202);
 }
 @media(min-width:768px)
 {
     .formulario{
         margin: auto;
         width: 600px;
-        /* height: 530px; */
         margin-top: 150px;
         border-radius: 2%;
         margin-bottom: 90px;
