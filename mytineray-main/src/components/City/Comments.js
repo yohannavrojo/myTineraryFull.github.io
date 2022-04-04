@@ -98,10 +98,6 @@ console.log(user)
     <>
      
     <div className="accordion d-grid col-10 mx-4" id="accordionExample">
-
-
-
-    {/* <div className="accordion-item"> */}
     
       <h2 className="accordion-header " id="headingOne">
         <button className="accordion-button   "
@@ -184,7 +180,7 @@ console.log(user)
         
         :
  <div className="floating" >
-         <p  style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"100%", padding:"2px"}} >You must be logged in to comment</p>
+         <p  style={{ border:"0",backgroundColor:"#3da398", borderRadius:"5px", width:"100%", height:"100%",marginRight:"35px"}} >You must be logged in to comment</p>
           </div> 
 
         }
