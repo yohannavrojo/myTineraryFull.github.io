@@ -124,12 +124,13 @@ console.log(user)
        
 
           <Avatar
-            src={imagencommenst}
+            src={itine.user}
             sx={{ width: 56, height: 56 }}
-          ></Avatar>
-            
+           >
+            <p></p>
+          </Avatar>
            
-       {itine.user?.id === user?.user?
+       {itine.user?.id === user?._id?
           <div className="floating" >
             
           <div>

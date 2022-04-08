@@ -105,7 +105,6 @@ console.log(id)
 
                 <div className="heart">
                         <button type="button"  className=" btn far fa-thumbs-up" onClick={likeDislike} id={itine._id}
-                        //  style={{color:"#080808", size: "2.9em" }}
                         >
                         </button>
 
