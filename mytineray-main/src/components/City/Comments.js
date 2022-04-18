@@ -124,16 +124,16 @@ console.log(user)
        
 
           <Avatar
-            src={itine.user}
+            src={imagencommenst}
             sx={{ width: 56, height: 56 }}
            >
             <p></p>
           </Avatar>
            
-       {itine.user?.id === user?._id?
+       {itine.user?._id === user?.id?
           <div className="floating" >
             
-          <div>
+            <div>
            <input onKeyUp={handelChange} className="inputBoton" defaultValue={itine.comment}></input>
             </div>
            
@@ -146,9 +146,10 @@ console.log(user)
                 </button>               
             
           </div>
+          
           : 
-          <div>
-        <div style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"40px", padding:"2px"}}>{itine.comment}</div>
+          <div className="estilo comente ">
+        <div style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"40px", padding:"2px",marginLeft:"10px"}}>{itine.comment}</div>
           </div> 
          }
        
