@@ -28,115 +28,68 @@ const Home = () => {
       </div>
 
       {/* cartas nuevas  */}
-      {/* 
-      <div className="cardshome">
-        <div className="cardh card1">
-          <div className="container">
-            <img src={require("../imagenes/vegas.jpg")} alt="vegas" />
-          </div>
-          <div className="details">
-            <h3>Las Vegas</h3>
-            <p>
-              Anyone who has been to Las Vegas knows that this town in southern
-              Nevada, in the southwestern United States, rises up in the middle
-              of nowhere in the arid Mojave Desert like a mirage... or an oasis.
-            </p>
-
-            <div className="boton">
-              <Link to={"/Cities"}>
-                <span>Read More</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="cardh card2">
-          <div className="container">
-            <img src={require("../imagenes/Nueva-York.gif")} alt="york" />
-          </div>
-          <div className="details">
-            <h3>New York</h3>
-            <p>
-              It is the most populous city in the State of New York, in the
-              United States of America, and the second largest urban
-              agglomeration on the continent. It is the center of the New York
-              metropolitan area, which is among the five largest urban
-              agglomerations in the world.
-            </p>
-
-            <div className="boton">
-              <Link to={"/Cities"}>
-                <span>Read More</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="cardh card3">
-          <div className="container">
-            <img src={require("../imagenes/singapur .jpg")} alt="singapur" />
-          </div>
-          <div className="details">
-            <h3>Singapore</h3>
-            <p>
-              Singapore is a city-state located at the southern tip of the Malay
-              Peninsula. In just 700 square kilometers it has a population of
-              more than four and a half million inhabitants. Singapore is
-              characterized by plurality.
-            </p>
-
-            
-          </div>
-        </div>
-      </div> */}
-
+   
       {/* inicio */}
 
       <div className="cardshome">
-        <div class="container">
-          <div class="front1 side"></div>
-          <div class="back1 side">
-            <div class="content">
-            <h3>Las Vegas</h3>
-            <p>
-            Anyone who has been to Las Vegas knows that this town in southern
-              Nevada, in the southwestern United States.
-            </p>
+       
+        <div class="container1">
+          <div class="front1 side1"></div>
+          <div class="back1 side1">
+            <div class="content1">
+              <h3>Las Vegas</h3>
+              <p>
+                Anyone who has been to Las Vegas knows that this town in
+                southern Nevada, in the southwestern United States.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="container">
-          <div class="front2 side"></div>
-          <div class="back2 side">
-            <div class="content">
-            <h3>New York</h3>
-            <p>
-              It is the most populous city in the State of New York, in the
-              United States of America.
-            </p>
+        <div class="container2">
+          <div class="front2 side2"></div>
+          <div class="back2 side2">
+            <div class="content1">
+              <h3>New York</h3>
+              <p>
+                It is the most populous city in the State of New York, in the
+                United States of America.
+              </p>
             </div>
           </div>
         </div>
 
-        <div class="container">
-          <div class="front3 side">
-            <div class="content"></div>
-          </div>
-          <div class="back3 side">
-            <div class="content">
-            <h3>Singapore</h3>
-            <p>
-              Singapore is a city-state located at the southern tip of the Malay
-              Peninsula.
-            </p>
+        <div class="container3">
+          <div class="front3 side3"></div>
+          <div class="back3 side3">
+            <div class="content1">
+              <h3>Singapore</h3>
+              <p>
+                Singapore is a city-state located at the southern tip of the
+                Malay Peninsula.
+              </p>
             </div>
           </div>
         </div>
+ 
       </div>
-      <div className="boton">
-        <Link to={"/Cities"}>
-          <span>Read More</span>
-        </Link>
+
+     
+
+      <div id="wrapper">
+        <a href="#" class="my-super-cool-btn">
+          <div class="dots-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+          <Link to={"/Cities"}>
+          <span>READ MORE</span>
+          </Link>
+        </a>
       </div>
+
       {/* fin */}
 
       <div className="informacion ">
