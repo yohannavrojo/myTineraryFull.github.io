@@ -8,7 +8,7 @@ import Signup from "./components/sign/Signup";
 import Signin from "./components/sign/Signin";
 import axios from "axios";
 import Navbar from "./components/Navbar/Navbar";
-import FooterContainer from "./components/footer/footer";
+import Footer2 from "./components/footer/Footer2"
 import CITY from "./components/City/CITY.js";
 import { actionType, initialState } from "./reducer";
 import { useStateValue } from "./StateProvider";
@@ -62,7 +62,8 @@ export default function App() {
         <Route path="*" element={<Home />} />
       </Routes>
 
-      <FooterContainer />
+      
+      <Footer2/>
     </BrowserRouter>
   );
 }
