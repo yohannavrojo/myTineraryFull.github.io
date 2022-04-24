@@ -74,21 +74,11 @@ const Home = () => {
  
       </div>
 
-     
-
-      <div id="wrapper">
-        <a href="#" class="my-super-cool-btn">
-          <div class="dots-container">
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-          </div>
-          <Link to={"/Cities"}>
-          <span>READ MORE</span>
-          </Link>
-        </a>
-      </div>
+    
+  
+      <Link to={"/Cities"}>
+      <i  href="#"></i>
+      </Link>
 
       {/* fin */}
 
