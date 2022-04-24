@@ -1,76 +1,44 @@
 import React from "react";
 import "./Footer2.css";
-import {AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineInstagram } from "react-icons/ai";
+import { BsFacebook } from "react-icons/bs";
+import {FiTwitter } from "react-icons/fi";
 
 function Footer2() {
   return (
     <>
-     
-<footer class="footer">
-  
-  
-  <ul class="footer__nav">
-    <li class="nav__item">
-      <h2 class="nav__title">Media</h2>
+      <footer className="footer">
+        <div className="footer__nav">
+         
+            <div className="nav__ul">
+              <a className="nav__title">
+                “No me digas lo viejo que eres o lo bien educado que estás. Dime
+                cuanto has viajado y te diré cuanto sabes”.Mahoma
+              </a>
+             
 
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Online</a>
-        </li>
+              <div className="nav__ul nav__ul--extra">
+                <a href="https://www.facebook.com/" className="iconos-home">
+                  <BsFacebook />
+                </a>
+                <a href="https://www.instagram.com/"  className="iconos-home">
+                  <AiOutlineInstagram />
+                </a>
+                <a href="https://twitter.com/?lang=es"  className="iconos-home">
+                  <FiTwitter />
+                </a>
+              </div>
+            </div>
+          
+        </div>
 
-        <li>
-          <a href="#">Print</a>
-        </li>
-            
-        <li>
-          <a href="#">Alternative Ads</a>
-        </li>
-      </ul>
-    </li>
-    
-    <li class="nav__item nav__item--extra">
-      <h2 class="nav__title">Technology</h2>
-      
-      <ul class="nav__ul nav__ul--extra">
-        <li>
-          <a href="#">Hardware Design</a>
-        </li>
-        
-        <li>
-          <a href="#">Software Design</a>
-        </li>
-        
-       
-        
-       
-      </ul>
-    </li>
-    
-    <li class="nav__item">
-      <h2 class="nav__title">Legal</h2>
-      
-      <ul class="nav__ul">
-        <li>
-          <a href="#">Privacy Policy</a>
-        </li>
-        
-        <li>
-          <a href="#">Terms of Use</a>
-        </li>
-        
-        <li>
-          <a href="#">Sitemap</a>
-        </li>
-      </ul>
-    </li>
-  </ul>
-  
-  <div class="legal">
-    <p class="legal">&copy; 2022 Github <AiFillGithub/>. All rights reserved.</p>
-    
-   
-  </div>
-</footer>
+        <div className="legal">
+          <p className="legal">
+            &copy; 2022 Github  <AiFillGithub /> 
+            Yohanna V. Rojo N.
+          </p>
+        </div>
+      </footer>
     </>
   );
 }
