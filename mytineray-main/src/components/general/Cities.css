@@ -11,6 +11,8 @@ background-size: cover; */
 .fondo-cities{
 	background: rgb(109,117,200);
 	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%);
+
+
 }
 
 .hero {

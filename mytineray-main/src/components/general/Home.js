@@ -28,7 +28,7 @@ const Home = () => {
       </div>
 
       {/* cartas nuevas  */}
-
+      {/* 
       <div className="cardshome">
         <div className="cardh card1">
           <div className="container">
@@ -83,14 +83,62 @@ const Home = () => {
               characterized by plurality.
             </p>
 
-            <div className="boton">
-              <Link to={"/Cities"}>
-                <span>Read More</span>
-              </Link>
+            
+          </div>
+        </div>
+      </div> */}
+
+      {/* inicio */}
+
+      <div className="cardshome">
+        <div class="container">
+          <div class="front1 side"></div>
+          <div class="back1 side">
+            <div class="content">
+            <h3>Las Vegas</h3>
+            <p>
+            Anyone who has been to Las Vegas knows that this town in southern
+              Nevada, in the southwestern United States.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="front2 side"></div>
+          <div class="back2 side">
+            <div class="content">
+            <h3>New York</h3>
+            <p>
+              It is the most populous city in the State of New York, in the
+              United States of America.
+            </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="front3 side">
+            <div class="content"></div>
+          </div>
+          <div class="back3 side">
+            <div class="content">
+            <h3>Singapore</h3>
+            <p>
+              Singapore is a city-state located at the southern tip of the Malay
+              Peninsula.
+            </p>
             </div>
           </div>
         </div>
       </div>
+      <div className="boton">
+        <Link to={"/Cities"}>
+          <span>Read More</span>
+        </Link>
+      </div>
+      {/* fin */}
+
       <div className="informacion ">
         <p className="texto-info1">
           {" "}
