@@ -15,21 +15,21 @@ const Search = () => {
 
   return (
     <>
-      <div   className="wrappers">
+ 
+ 
+      {/* onuevo search */}
 
-             <div className="container">
-          <div className="search_wrap search_wrap_4">
-            <div className="search_box">
-              <div id="myInput" onkeyup="myFunction()" className="btn btn_common">
-                <i className="fas fa-search"></i>
-              </div>
-              <input type="text"  onChange={inputSearch} className="input" placeholder="search..." />
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <form action="" class="search-bar">
+	<input type="search" name="search" onChange={inputSearch} pattern=".*\S.*" required/>
+	<button class="search-btn" type="submit">
+		<span>Search</span>
+	</button>
+</form>
+ 
     
+
+
+
     </>
   );
 };
