@@ -24,7 +24,7 @@ function Footer2() {
                 <a href="https://www.instagram.com/"  className="iconos-home">
                   <AiOutlineInstagram />
                 </a>
-                <a href="https://twitter.com/?lang=es"  className="iconos-home">
+                <a href="https://github.com/yohannavrojo/myTineraryFull.git"  className="iconos-home">
                   <FiTwitter />
                 </a>
               </div>
