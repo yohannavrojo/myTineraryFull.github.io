@@ -9,26 +9,20 @@ background-size: cover; */
  
 /* } */ 
 .fondo-cities{
-	background: rgb(109,117,200);
-	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%);
+	/* background: rgb(109,117,200);
+	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%); */
 
 
 }
 
 .hero {
-	
-	margin-top: 5%;
+	background: rgb(109,117,200);
+	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%);
+	/* margin-top: 5%; */
 }
 
 .titulo {
-	/* margin-top: 20px; */
-	/* color: transparent;
-	text-align: center;
-	text-transform: uppercase; */
-	/* background-image: url('../imagenes/pince.jpg'); */
-	/* background-size: cover;
-	background-clip: text;
-	-webkit-text-fill-color: transparent; */
+	
     font-size: 90px;
 	color: #750c5e;
 	-webkit-text-fill-color: rgb(36, 199, 211);

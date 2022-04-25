@@ -18,10 +18,10 @@ function Cities() {
           Travel is the answer, no matter what <br /> 
           the question is.      
         </h1>
-      
+      <Search />
       </div>
-       <Search />
-      <div className="text"></div>
+       
+      {/* <div className="text"></div> */}
 
       <div className="App1">
         <div className="container  justify-content-center align--items-center h-100 ">
