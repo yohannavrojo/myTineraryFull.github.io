@@ -47,7 +47,7 @@ const Narbar = () => {
     <>
       <Container>
         <Wrapper>
-          <IconContext.Provider value={{ color: "#ffffff", size: "2.5em" }}>
+          <IconContext.Provider value={{ color: "#ffffff", size: "2em" }}>
             <IconContainer showMobileMenu={showMobileMenu}>
               <SiYourtraveldottv /> 
               <div className="mytine">

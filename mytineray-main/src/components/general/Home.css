@@ -170,11 +170,9 @@ background-size: cover;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   padding-left: 9em;
-  grid-gap: 1em;
   margin-bottom: 40px;
- margin-left: 20px;
- margin-top: 19px;
-  
+  margin-left: 20px;
+  padding-top: 2em;
 }
 .container1 {
 	max-width: 324px;

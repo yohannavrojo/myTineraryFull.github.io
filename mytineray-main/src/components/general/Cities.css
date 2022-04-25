@@ -8,29 +8,33 @@ background-position: center center;
 background-size: cover; */
  
 /* } */ 
-.fondo-cities{
+/* .fondo-cities{ */
 	/* background: rgb(109,117,200);
 	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%); */
 
 
-}
+/* } */
 
-.hero {
-	background: rgb(109,117,200);
-	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%);
-	/* margin-top: 5%; */
-}
+
+  .hero {
+	width: 100%;
+    height: 112vh;
+    background-color: #fff;
+    background-image: linear-gradient(120deg, transparent 114px, #65b1b3 114px), linear-gradient(240deg, transparent 114px, #65b1b3 114px);
+    /* background-position: 10px 10px, 10px 10px; */
+    background-size: 85px 107px;
+  }
 
 .titulo {
 	
     font-size: 90px;
-	color: #750c5e;
-	-webkit-text-fill-color: rgb(36, 199, 211);
-	-webkit-text-stroke: 2px rgba(99, 35, 35, 0.938);
+	/* color: #750c5e; */
+	-webkit-text-fill-color: rgb(8, 16, 68);
+	-webkit-text-stroke: 2px rgba(133, 141, 187, 0.938);
 	font-family: 'Nanum Myeongjo', serif;
 	width: 100%;
-	 /* height: 130px; */
-	margin-bottom: 10%;
+	font-weight: bold;
+	padding-top: 1em;
 border-radius: 10%;
 
 }

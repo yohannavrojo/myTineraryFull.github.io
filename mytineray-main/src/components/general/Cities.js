@@ -13,6 +13,7 @@ function Cities() {
       <Carousel />
      
       <div className="hero">
+        
         <h1 className="titulo">
           {" "}
           Travel is the answer, no matter what <br /> 

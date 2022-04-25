@@ -7,13 +7,13 @@ body, button, input {
 	line-height: 1.5em;
 }
 body, input {
-	color: #171717;
+	color: #0f0d65;
 }
 body, .search-bar {
 	display: flex;
 }
 body {
-	background: #f1f1f1;
+	background: #130958;
 	height: 100vh;
 }
 .search-bar input,
@@ -49,7 +49,7 @@ body {
 .search-bar input {
 	background: transparent;
 	border-radius: 1.5em;
-	box-shadow: 0 0 0 0.4em #171717 inset;
+	box-shadow: 0 0 0 0.4em #0a0a5c inset;
 	padding: 0.75em;
 	transform: translate(0.5em,0.5em) scale(0.5);
 	transform-origin: 100% 0;
@@ -62,13 +62,13 @@ body {
 }
 .search-bar input:focus,
 .search-bar input:valid {
-	background: #fff;
+	background: rgb(249, 249, 249);
 	border-radius: 0.375em 0 0 0.375em;
 	box-shadow: 0 0 0 0.1em #d9d9d9 inset;
 	transform: scale(1);
 }
 .search-btn {
-	background: #171717;
+	background: #070c3d;
 	border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
 	padding: 0.75em;
 	position: relative;
@@ -91,7 +91,7 @@ body {
 	height: 1.2em;
 }
 .search-btn:after {
-	background: #f1f1f1;
+	background: #0b0a53;
 	border-radius: 0 0.25em 0.25em 0;
 	top: 51%;
 	left: 51%;
@@ -110,7 +110,7 @@ body {
 /* Active state */
 .search-bar input:focus + .search-btn,
 .search-bar input:valid + .search-btn {
-	background: #051235;
+	background: #0c0743;
 	border-radius: 0 0.375em 0.375em 0;
 	transform: scale(1);
 }
