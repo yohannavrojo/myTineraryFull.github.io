@@ -19,7 +19,7 @@
   background-color: rgba(255, 255, 255, 0);
   display: grid;
   place-items: center;
-  color: rgb(160, 55, 55);
+  color: rgb(233, 168, 168);
   cursor: pointer;
 }
 
@@ -33,8 +33,8 @@
   text-align-last: center;
 }
 .carouselInner .center .tite {
-    -webkit-text-fill-color: rgb(255, 255, 255);
-  -webkit-text-stroke: 0.1px rgba(99, 35, 35, 0.938);
+  -webkit-text-fill-color: rgb(255 255 255);
+  -webkit-text-stroke: 0.64px rgb(255 250 250 / 94%);
   font-weight: bold;
   margin-right: 67%;
   /* margin-bottom: 20%; */
@@ -43,7 +43,7 @@
   font-family: "Dancing Script", cursive;
   font-size: 300px;
 }
-
+/* 
 .carouselInner .center .subtite {
     -webkit-text-fill-color: rgb(255, 255, 255);
     -webkit-text-stroke: 0.1px rgba(99, 35, 35, 0.938);
@@ -52,7 +52,7 @@
   width: 40%;
   border-radius: 40px;
   font-size: 500%;
-}
+} */
 
 .carouselInner .right {
   flex: 5%;
@@ -60,6 +60,6 @@
   background-color: rgba(255, 255, 255, 0);
   display: grid;
   place-items: center;
-  color: rgb(160, 55, 55);
+  color: rgb(255, 254, 254);
   cursor: pointer;
 }

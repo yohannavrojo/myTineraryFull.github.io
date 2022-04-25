@@ -22,7 +22,7 @@ function Carousel() {
                 </div>
                 <div className="center">
                     <h1 className='tite'>{imagenes[currImg].titlee}   </h1>
-                    <p className='subtite'>{imagenes[currImg].subtitle}</p>
+                    {/* <p className='subtite'>{imagenes[currImg].subtitle}</p> */}
                 </div>
                 <div className="right"
                     onClick={() => {
