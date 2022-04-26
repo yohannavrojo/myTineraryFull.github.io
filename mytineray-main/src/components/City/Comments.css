@@ -15,17 +15,17 @@
     margin-bottom: 2em;
 }
 .accordion-button {
-    background: rgb(25, 113, 134)!important;
+    background: rgba(201, 215, 219, 0.212)!important;
     color: black !important;
     font-size: 25px !important;
-   
+   font-family: "Oswald";
    
 }
 
 
   
 .accordion-collapse{
-    background: rgb(25, 113, 134)!important;
+    background: rgba(201, 215, 219, 0.212)!important;
     
 }
 

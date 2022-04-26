@@ -149,7 +149,7 @@ console.log(user)
           
           : 
           <div className="estilo comente ">
-        <div style={{border:"0",backgroundColor:"#F3E9DD", borderRadius:"5px", width:"100%", height:"40px", padding:"2px",marginLeft:"10px"}}>{itine.comment}</div>
+        <div style={{backgroundColor:"#F3E9DD", borderRadius:"0.3em", width:"100%", height:"40px", padding:"2px",marginLeft:"1em",marginTop:"0.3em" }}>{itine.comment}</div>
           </div> 
          }
        
@@ -182,7 +182,7 @@ console.log(user)
         
         :
  <div className="floating" >
-         <p  style={{ border:"0",backgroundColor:"#3da398", borderRadius:"5px", width:"100%", height:"100%",marginRight:"35px"}} >You must be logged in to comment</p>
+         <p  style={{ backgroundColor:"rgba(201, 215, 219, 0.212)", borderRadius:"1em", width:"100%", height:"100%",marginTop:"1em"}} >You must be logged in to comment</p>
           </div> 
 
         }
