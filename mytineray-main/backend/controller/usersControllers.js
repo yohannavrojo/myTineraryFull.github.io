@@ -16,7 +16,7 @@ async function sendEmail(email, uniqueText) {
     auth: {
 
       user: "mytinerariyoha@gmail.com", //crear correo para la parctica emisor 
-      pass: "mitinerari"
+      pass: "luciano181598"
 
     }
 

@@ -121,18 +121,20 @@ console.log(user)
          {comment?.map(itine=>  
        <div className="d-flex position-relative mx-3 ">
        
-       
+       {/* imagencommenst */}
 
-          <Avatar
+          {/* <Avatar
             src={imagencommenst}
             sx={{ width: 56, height: 56 }}
            >
             <p></p>
-          </Avatar>
-           
+          </Avatar> */}
+             <h5>{itine.lastname}</h5> 
        {itine.user?._id === user?.id?
+
+       
           <div className="floating" >
-            
+         
             <div>
            <input onKeyUp={handelChange} className="inputBoton" defaultValue={itine.comment}></input>
             </div>
@@ -149,7 +151,7 @@ console.log(user)
           
           : 
           <div className="estilo comente ">
-        <div style={{backgroundColor:"#F3E9DD", borderRadius:"0.3em", width:"100%", height:"40px", padding:"2px",marginLeft:"1em",marginTop:"0.3em" }}>{itine.comment}</div>
+        <div style={{backgroundColor:"#F3E9DD", borderRadius:"0.3em", padding:"2px",marginLeft:"1em",marginTop:"0.3em" }}>{itine.comment}</div>
           </div> 
          }
        

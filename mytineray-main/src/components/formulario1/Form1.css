@@ -1,11 +1,11 @@
 .form-container {
      
-    margin: 100px auto;
-    width: 1000px;
+  margin: 8em auto;
+  width: 44em;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
     position: relative;
     border-radius: 10px;
-    height: 900px;
+    height: 52em;
     display: grid;
     grid-template-columns: 1fr 1fr;
      

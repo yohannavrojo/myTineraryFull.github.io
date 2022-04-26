@@ -12,8 +12,8 @@ function Footer2() {
          
             <div className="nav__ul">
               <a className="nav__title">
-                “No me digas lo viejo que eres o lo bien educado que estás. Dime
-                cuanto has viajado y te diré cuanto sabes”.Mahoma
+                “Don't tell me how old you are or how well educated you are. Tell me
+                 how far you have traveled and I will tell you how much you know.” Muhammad
               </a>
              
 
@@ -25,7 +25,7 @@ function Footer2() {
                   <AiOutlineInstagram />
                 </a>
                 <a href="https://github.com/yohannavrojo/myTineraryFull.git"  className="iconos-home">
-                  <FiTwitter />
+                  <AiFillGithub/>
                 </a>
               </div>
             </div>
@@ -34,7 +34,7 @@ function Footer2() {
 
         <div className="legal">
           <p className="legal">
-            &copy; 2022 Github  <AiFillGithub /> 
+            &copy; 2022 
             Yohanna V. Rojo N.
           </p>
         </div>

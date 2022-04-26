@@ -83,7 +83,8 @@ const Home = () => {
     
   
       <Link to={"/Cities"}>
-      <i  href="#"></i>
+      {/* <i  href="#"></i> */}
+      <p>read more</p>
       </Link>
 
       {/* fin */}

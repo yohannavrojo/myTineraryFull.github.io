@@ -2,16 +2,21 @@
     background: rgb(250, 173, 173) 
 } */
 .inputBoton{
-    width: 110%;
-    height: 50px;
+    width: 15em;
+    height: 42px;
     padding-left: 1em;
     border: solid 1px rgb(14, 12, 13);
     border-radius: 10px;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   
 }
-.floating{
+
+.accordin-header{
     padding-left: 1em;
+}
+
+.floating{
+    padding-left: 2em;
     margin-bottom: 2em;
 }
 .accordion-button {
@@ -19,8 +24,9 @@
     color: black !important;
     font-size: 25px !important;
    font-family: "Oswald";
-   
+  
 }
+
 
 
   
