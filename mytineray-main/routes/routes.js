@@ -8,6 +8,7 @@ const validator= require("../controller/validator.js")
 const commentControllers= require("../controller/comentariosControllers")
 const {cargaComentarios,obtenerComentarios,borrarComentario,modificarComentario}=commentControllers
 
+
 Router.route("/datos") // "datos" parte de la url de la consulta
 .get(ObtenerTodosLosDatos)
 
