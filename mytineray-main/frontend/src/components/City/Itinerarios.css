@@ -1,0 +1,71 @@
+
+.container-card{
+	width: 100%;
+	display: flex;
+	max-width: 1750px;
+	margin: auto;
+    margin-top: 130px;
+	align-content: center;
+
+}
+.title-cards{
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #1f1818;
+	
+}
+.card{
+	width: 100%;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+	transition: all 400ms ease-out;
+	cursor: default;
+}
+.card:hover{
+	box-shadow: 5px 5px 20px rgba(247, 162, 162, 0.4);
+	transform: translateY(-3%);
+}
+.card img{
+	width: 100%;
+	height: 350px;
+    object-fit: cover;
+}
+.card .contenido-card{
+
+	padding: 15px;
+	text-align: center;
+	font-family: 'Nanum Myeongjo', serif;
+}
+.card .contenido-card h3{
+	margin-bottom: 18px;
+	color: #5e0e53;
+	font-family: 'Dancing Script', cursive;
+}
+.card .contenido-card p{
+	line-height: 1.8;
+	color: #000000;
+	font-size: 19px;
+	margin-bottom: 5px;
+	
+}
+
+@media only screen and (min-width:320px) and (max-width:768px){
+	.container-card{
+		flex-wrap: wrap;
+	}
+	.card{
+		margin: 15px;
+	}
+}
+.heart{
+	
+	 background: transparent;
+    align-items: center;
+
+ 
+ }

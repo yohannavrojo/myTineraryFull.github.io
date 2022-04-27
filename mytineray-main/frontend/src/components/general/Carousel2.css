@@ -1,0 +1,52 @@
+.carousel2 {
+    width: 100%;
+    height: 100% ;
+    
+}
+.carouselInner2 {
+    height: 35em;
+    width: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+}
+
+.carouselInner2 .left2 {
+    flex: 5%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: grid;
+    place-items: center;
+    color: rgb(45, 58, 58);
+    cursor: pointer;
+}
+
+.carouselInner2 .center2 {
+    flex: 80%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-family:"Oswal";
+    text-align: justify;
+    text-align-last: center;
+   
+}
+.carouselInner2 .center2 .tite2 {
+    color: rgb(9, 198, 255);
+    background: rgba(2, 2, 2, 0.699);
+    width: 40%;
+    border-radius: 40px; 
+    font-size: 60px;
+}
+
+
+.carouselInner2 .right2 {
+    flex: 5%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    display: grid;
+    place-items: center;
+    color: rgb(45, 58, 58);
+    cursor: pointer;
+}

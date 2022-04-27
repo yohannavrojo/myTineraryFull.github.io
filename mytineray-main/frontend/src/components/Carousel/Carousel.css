@@ -1,0 +1,55 @@
+.carousel {
+  width: 100%;
+  height: 37em;
+  background-color: rgb(138, 121, 121);
+
+}
+.carouselInner {
+  height: 100%;
+  width: 100%;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+
+.carouselInner .left {
+  flex: 5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  place-items: center;
+  color: rgb(233, 168, 168);
+  cursor: pointer;
+}
+
+.carouselInner .center {
+  flex: 80%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  font-family: "Dancing Script", cursive;
+  text-align: justify;
+  text-align-last: center;
+}
+.carouselInner .center .tite {
+  -webkit-text-fill-color: rgb(255 255 255);
+  -webkit-text-stroke: 0.64px rgb(255 250 250 / 94%);
+  font-weight: bold;
+  margin-right: 67%;
+  /* margin-bottom: 20%; */
+  width: 30%;
+  border-radius: 40px;
+  font-family: "Dancing Script", cursive;
+  font-size: 300px;
+}
+
+.carouselInner .right {
+  flex: 5%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  display: grid;
+  place-items: center;
+  color: rgb(255, 254, 254);
+  cursor: pointer;
+}

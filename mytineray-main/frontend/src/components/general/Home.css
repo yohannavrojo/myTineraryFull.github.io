@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Nanum+Myeongjo&display=swap');
+.home {
+  text-align: center;
+}
+.homeTitle {
+  align-items:stretch;
+  font-family:'Dancing Script', cursive;
+  color: #750c5e;
+  margin-left: 40px;
+ 
+}
+.fondo-boton{
+	padding-left: 26em;
+}
+.links{
+	color: white;
+    text-decoration: inherit;
+    font-family: "Oswald";
+    font-size: 2em;
+    background: black;
+    border-radius: 0em 1em;
+    width: 9em;
+    padding-left: 0.2em;
+}
+
+.Title {
+  position: absolute;
+  font-size: 100px;
+  
+}
+.eslogan{
+ font-family:'Dancing Script', cursive ;
+}
+.subtitle{
+  font-family: 'Nanum Myeongjo', serif;
+}
+.Img {
+ height: 100%;
+}
+.Imgtitulo{
+  width: 100%;
+  height: 650px;
+  object-fit:fill;
+}
+
+
+
+/* fin */
+
+.toque{
+  
+  width: 100%;
+	height: 200px;
+}
+
+
+.toque .eslogan{
+color : rgb(0, 0, 0) ;
+font-size: 6em;
+}
+
+.toque .subtitle{
+  color : rgb(0, 0, 0) ;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 14px;
+  
+}
+
+.espacio{
+  width: 100%;
+  height: 90px;
+text-align: center;
+}
+.titulo-promo2{
+ display: inline-block;
+ position: relative;
+ font-family: 'Nanum Myeongjo', serif;
+ font-size: 40px;
+ color: rgb(114, 108, 100);
+}
+.titulo-promo2::after, .titulo-promo2::before{
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 3px;
+  background-color:rgb(119, 75, 75) ;
+  top: 0.6em;
+
+}
+
+.titulo-promo2::after{
+  right: -140px;
+}
+
+.titulo-promo2::before{
+  left: -140px;
+ 
+}
+
+.fondofooter{
+background: url(../imagenes/fondofooter.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+
+
+}
+
+/* cartas */
+.cardshome {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  padding-left: 9em;
+  margin-bottom: 40px;
+  margin-left: 20px;
+  padding-top: 2em;
+}
+.container1 {
+	max-width: 324px;
+	min-height: 350px;
+	border-radius: 20px;
+	position: relative;
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+.container2 {
+	max-width: 324px;
+	min-height: 350px;
+	border-radius: 20px;
+	position: relative;
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+.container3 {
+	max-width: 324px;
+	min-height: 350px;
+	border-radius: 20px;
+	position: relative;
+	-webkit-transition: 1.5s ease-in-out;
+	transition: 1.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+.side1 {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px 50px;
+	color: #fff;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+.side2 {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px 50px;
+	color: #fff;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+.side3 {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 20px 50px;
+	color: #fff;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+.content1 {
+	transform: translatez(70px) scale(0.8);
+	line-height: 1.5em;
+}
+.content1 h1 {
+	position: relative;
+}
+.content1 p {
+  margin-top: 18px;
+  line-height: 1.5em;
+  color: black;
+  font-family: "Oswald";
+}
+.content1 h1:before {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	height: 3px;
+	background-color: #3e3;
+	width: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.front1 {
+	z-index: 2;
+	background-size: 100vh;
+	background-size: cover;
+	background-image: url(../imagenes/vegas.jpg);
+}
+.back1 {
+	background-color: #333;
+	transform: rotateY(180deg);
+	z-index: 0;
+	padding-top: 10px;
+	background-image: url(../imagenes/vegas.jpg);
+}
+.front2 {
+	z-index: 2;
+	background-size: 100vh;
+	background-size: cover;
+	background-image: url(../imagenes/Nueva-York.gif);
+}
+.back2 {
+	background-color: #333;
+	transform: rotateY(180deg);
+	z-index: 0;
+	padding-top: 10px;
+	background-image: url(../imagenes/Nueva-York.gif);
+}
+.front3 {
+	z-index: 2;
+	background-size: 100vh;
+	background-size: cover;
+	background-image: url(../imagenes/singapur\ .jpg);
+}
+.back3 {
+
+	transform: rotateY(180deg);
+	z-index: 0;
+	padding-top: 10px;
+	background-image: url(../imagenes/singapur\ .jpg);
+}
+.container1:hover {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.container2:hover {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.container3:hover {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+.back1 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+.back2 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+.back3 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+
+.front1 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+
+.front2 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+
+.front3 h3 {
+	margin: 0;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: bold;
+}
+/*  */
+.informacion{ 
+  width: 100%;
+margin-top: 30px;
+margin-bottom: 100px;
+border-radius: 10px;
+text-align: center;
+
+}
+.texto-info1{
+  padding-top: 60px;
+  font-family:'Dancing Script', cursive ;
+  font-size:90px;
+  color: rgb(111, 25, 131);
+  margin-left: 50px;
+  position:absolute ;
+  margin-top: 200px;
+
+}
+.Img2 {
+ background: url(../imagenes/avionpuntadas1.jpg);
+  width: 100%;
+   height: 600px;
+   object-fit:none;
+   background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+ }
+ 

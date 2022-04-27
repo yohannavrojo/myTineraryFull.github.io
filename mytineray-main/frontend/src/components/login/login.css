@@ -1,0 +1,85 @@
+
+.fondo-login{
+    /* width: 900px;
+    height: 100%; */
+    background: url(../imagenes/afondologin.jpg);
+ background-size:cover;
+ padding-top: 30px;
+ padding-bottom: 50px;
+}
+.contenedor{
+    width: 100%;
+    font-family:"Oswald";
+    padding: 15px;
+    margin-bottom: 50px;
+}
+.formulario{
+  
+    margin-top: 10px;
+    padding: 3px;
+  
+
+}
+h1{
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    color: #fffeff;
+    font-size: 90px;
+}
+input[type="text"],
+input[type="password"]{
+    font-size: 35px;
+    width: 82%;
+    padding: 10px;
+ border: none;
+   
+}
+.input-contenedor{
+    margin-bottom: 15px;
+ 
+    font-size: 40px;
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: rgb(247, 245, 248);
+}
+.button{
+    border: none;
+    width: 100%;
+    color: rgb(77, 73, 73);
+    font-size: 30px;
+    background: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover{
+    background: rgb(255, 170, 227);
+}
+p{
+    text-align: center;
+    font-size: 30px;
+    
+}
+.link{
+    text-decoration: none;
+      color: rgb(255, 254, 255);
+      
+    font-weight: 600;
+  
+}
+.link:hover{
+     color:rgb(255, 95, 202);
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 600px;
+        margin-top: 150px;
+        border-radius: 2%;
+        margin-bottom: 90px;
+
+    }
+}

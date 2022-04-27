@@ -1,0 +1,23 @@
+.hero {
+    width: 100%;
+    height: 79vh;
+    background-color: #fff;
+    background-image: linear-gradient(120deg, transparent 114px, #65b1b3 114px), linear-gradient(240deg, transparent 114px, #65b1b3 114px);
+    background-size: 85px 96px;
+  }
+
+.titulo {
+	
+    font-size: 90px;
+	
+	-webkit-text-fill-color: rgb(8, 16, 68);
+	-webkit-text-stroke: 2px rgba(133, 141, 187, 0.938);
+	font-family: 'Nanum Myeongjo', serif;
+	width: 100%;
+	font-weight: bold;
+	padding-top: 1em;
+border-radius: 10%;
+
+}
+
+
