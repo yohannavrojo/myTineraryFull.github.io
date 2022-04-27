@@ -1,34 +1,15 @@
-/* .text{
-	width: 100%;
-	height: 70px;
-	/* background-color: rgb(226, 106, 106); */
-/* background:url(../imagenes/flores.jpg) ;
-background-repeat: no-repeat;
-background-position: center center;
-background-size: cover; */
- 
-/* } */ 
-/* .fondo-cities{ */
-	/* background: rgb(109,117,200);
-	background: linear-gradient(50deg, rgba(109,117,200,0.5886729691876751) 0%, rgba(17,60,159,0.6334908963585435) 47%, rgba(109,117,200,0.48783263305322133) 97%); */
-
-
-/* } */
-
-
-  .hero {
+.hero {
     width: 100%;
     height: 79vh;
     background-color: #fff;
     background-image: linear-gradient(120deg, transparent 114px, #65b1b3 114px), linear-gradient(240deg, transparent 114px, #65b1b3 114px);
-    /* background-position: 10px 10px, 10px 10px; */
     background-size: 85px 96px;
   }
 
 .titulo {
 	
     font-size: 90px;
-	/* color: #750c5e; */
+	
 	-webkit-text-fill-color: rgb(8, 16, 68);
 	-webkit-text-stroke: 2px rgba(133, 141, 187, 0.938);
 	font-family: 'Nanum Myeongjo', serif;

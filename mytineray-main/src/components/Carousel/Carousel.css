@@ -43,16 +43,6 @@
   font-family: "Dancing Script", cursive;
   font-size: 300px;
 }
-/* 
-.carouselInner .center .subtite {
-    -webkit-text-fill-color: rgb(255, 255, 255);
-    -webkit-text-stroke: 0.1px rgba(99, 35, 35, 0.938);
-  margin-left: 80%;
-  font-weight: bold;
-  width: 40%;
-  border-radius: 40px;
-  font-size: 500%;
-} */
 
 .carouselInner .right {
   flex: 5%;
