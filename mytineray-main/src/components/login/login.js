@@ -36,13 +36,12 @@ const Login = () => {
           icon:"error",
           buttons: "ok"
       })
-      // alert(data.mensaje)
+ 
       
     }
       
     else { 
-      // alert(data.mensaje) 
-      // console.log(data.response.token)
+     
      localStorage.setItem("token",data.response.token)
       swal({
         title:data.mensaje,

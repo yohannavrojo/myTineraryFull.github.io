@@ -16,11 +16,7 @@ function Itinerarios() {
   const itineSelecter = itineraries.filter(
     (itine) => itine.city === citySelecter[0].name
   );
-  // const [like, setLike] = useState(itineraries.likes);
 
-  // console.log(itineSelecter);
-
-  // console.log(itineraries);
 
   useEffect(() => {
     console.log(citySelecter);
@@ -36,7 +32,7 @@ function Itinerarios() {
     );
   }, [ reload]);
 
-  // console.log(itineraries);
+  
 
   // likes
 
@@ -93,9 +89,9 @@ console.log(id)
                     id={itine._id}
                     
                  >
-                     {/* <FcLike /> */}
+               
                   
-                    {/* {itine.likes?.includes(user?.id) ? <FcLike />  :  <FcDislike /> }  <i class="fad fa-hand-point-left"></i>  */}
+                
                   
                   </button>
 

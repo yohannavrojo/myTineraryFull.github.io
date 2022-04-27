@@ -22,7 +22,6 @@ function Cities() {
       <Search />
       </div>
        
-      {/* <div className="text"></div> */}
 
       <div className="App1">
         <div className="container  justify-content-center align--items-center h-100 ">
