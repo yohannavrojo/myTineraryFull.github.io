@@ -10,6 +10,19 @@
   margin-left: 40px;
   /* font-weight: 700px; */
 }
+.fondo-boton{
+	padding-left: 26em;
+}
+.links{
+	color: white;
+    text-decoration: inherit;
+    font-family: "Oswald";
+    font-size: 2em;
+    background: black;
+    border-radius: 0em 1em;
+    width: 9em;
+    padding-left: 0.2em;
+}
 
 .Title {
   position: absolute;
@@ -32,11 +45,6 @@
 }
 
 
-/*  */
-/*  */
-
-
-/* boton nuevo  */
 
 /* fin */
 

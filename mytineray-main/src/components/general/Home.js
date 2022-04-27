@@ -80,12 +80,15 @@ const Home = () => {
  
       </div>
 
-    
-  
+    <div className="fondo-boton">
+
       <Link to={"/Cities"}>
-      {/* <i  href="#"></i> */}
-      <p>read more</p>
+
+      <p className="links">READ MORE</p>
       </Link>
+    </div>
+  
+      
 
       {/* fin */}
 
