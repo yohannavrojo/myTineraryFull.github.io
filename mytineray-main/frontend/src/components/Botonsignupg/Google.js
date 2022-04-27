@@ -17,7 +17,7 @@ function Google(){
           password: response.googleId + "Ka",
           from:"google", //controladores
       }
-      await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+      await axios.post("https://mytinerary-yohanna.herokuapp.com/api/signup",{NuevoUsuario})
    .then(response=>
    displayMessages(response.data),
   

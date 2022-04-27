@@ -20,7 +20,7 @@ async function NewUser(event){
     from:"signup",
 }
 
-  await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+  await axios.post("https://mytinerary-yohanna.herokuapp.com/api/signup",{NuevoUsuario})
    .then(response=>
    displayMessages(response.data),
   
@@ -51,8 +51,7 @@ async function NewUser(event){
             type='text'
             name='firstname'
             placeholder='Enter firstname'
-            // value={values.firstname}
-            // onChange={handleChange}
+           
           />
          
         </div>
@@ -63,8 +62,7 @@ async function NewUser(event){
             type='text'
             name='lastname'
             placeholder='Enter lastname'
-            // value={values.lastname}
-            // onChange={handleChange}
+           
           />
          
         </div>
@@ -78,8 +76,7 @@ async function NewUser(event){
             type='email'
             name='email'
             placeholder='Enter your email'
-            // value={values.email}
-            // onChange={handleChange}
+          
           />
          
         </div>
@@ -91,8 +88,7 @@ async function NewUser(event){
             name='password'
             placeholder='
             Enter your password'
-            // value={values.password}
-            // onChange={handleChange}
+           
           />
          
         </div>
@@ -103,8 +99,7 @@ async function NewUser(event){
             type='password'
             name='password2'
             placeholder='confirm password'
-            // value={values.password2}
-            // onChange={handleChange}
+          
           />
          
         </div>

@@ -25,7 +25,7 @@ function Comments(props) {
       
     }
    
-  await axios.post("http://localhost:4000/api/comments",{dataComents})
+  await axios.post("https://mytinerary-yohanna.herokuapp.com/api/comments",{dataComents})
    .then(response=>{
 
     swal({
@@ -43,7 +43,7 @@ function Comments(props) {
 
    useEffect(() => {
         let id = props.itinerario
-        axios.get(`http://localhost:4000/api/comments/${id} `)
+        axios.get(`https://mytinerary-yohanna.herokuapp.com/api/comments/${id} `)
             .then(response => {
                 setComment(response.data.response.comentario)
               
@@ -55,7 +55,7 @@ function Comments(props) {
     }, [reload])
 
     const borrarComentario = (id) => {
-        axios.delete(`http://localhost:4000/api/comments/${id} `)
+        axios.delete(`https://mytinerary-yohanna.herokuapp.com/api/comments/${id} `)
         .then(response => {
 console.log(response)
    swal({
@@ -77,7 +77,7 @@ console.log(response)
     const modificar = (id) => {
         
         let data = cambio
-        axios.put(`http://localhost:4000/api/comments/${id} `, { data })
+        axios.put(`https://mytinerary-yohanna.herokuapp.com/api/comments/${id} `, { data })
         .then(response => {
           console.log(response)
              swal({

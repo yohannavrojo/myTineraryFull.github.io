@@ -32,7 +32,7 @@ async function sendEmail(email, uniqueText) {
            </br>
            <h2 style="color:#000000; font-style: 20px; text-align:center;"> Click<a 
            style ="color:#6309f3; font-style:"Oswald"     
-           href=http://localhost:4000/api/verify/${uniqueText}>Aqui</a>To validate your email </h2>
+           href=https://mytinerary-yohanna.herokuapp.com/api/verify/${uniqueText}>Aqui</a>To validate your email </h2>
            </br>
            </br>
            <h6 style="color: #a03a9e; font-size: 12px;text-align: center;">All Rights Reserved Copyright - 2022</h6>

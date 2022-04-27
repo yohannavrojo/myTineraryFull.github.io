@@ -22,7 +22,7 @@ function Itinerarios() {
     console.log(citySelecter);
     citySelecter.map((city) =>
       axios
-        .get(`http://localhost:4000/api/itinerary/${city.name}`)
+        .get(`https://mytinerary-yohanna.herokuapp.com/api/itinerary/${city.name}`)
         .then((response) =>
           dispath({
             type: actionType.ITINERARIESDB,
@@ -43,7 +43,7 @@ console.log(id)
 // 
     await axios
       .put(
-        `http://localhost:4000/api/likeDislike/${id}`,
+        `https://mytinerary-yohanna.herokuapp.com/api/likeDislike/${id}`,
         {},
         {
           headers: {

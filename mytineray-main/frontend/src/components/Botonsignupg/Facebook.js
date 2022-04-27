@@ -17,7 +17,7 @@ const responseFacebook = async (response) => {
        from: "Facebook"//si el usuario se carga a través de google no se pide la verificación
    }
 
-   await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+   await axios.post("https://mytinerary-yohanna.herokuapp.com/api/signup",{NuevoUsuario})
    .then(response=>
    displayMessages(response.data),
   

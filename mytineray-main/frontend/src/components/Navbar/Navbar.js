@@ -26,7 +26,7 @@ const Narbar = () => {
     const email = user.email;
     console.log(email);
     
-    await axios.post("http://localhost:4000/api/signOut", { email })
+    await axios.post("https://mytinerary-yohanna.herokuapp.com/api/signOut", { email })
       .then(response => 
         localStorage.removeItem("token"),
         dispatch({

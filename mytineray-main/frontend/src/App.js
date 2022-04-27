@@ -19,7 +19,7 @@ export default function App() {
   const data = [];
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/datos").then((response) => {
+    axios.get("https://mytinerary-yohanna.herokuapp.com/api/datos").then((response) => {
       dispatch({
         type: actionType.CITIESDB,
         cities: response.data.response.cities,
@@ -28,7 +28,7 @@ export default function App() {
 
     if (localStorage.getItem("token")!== null) {
       const token = localStorage.getItem("token");
-      axios.get("http://localhost:4000/api/signinToken", {
+      axios.get("https://mytinerary-yohanna.herokuapp.com/api/signinToken", {
           headers:{
             "Authorization":"Bearer "+token
           }
